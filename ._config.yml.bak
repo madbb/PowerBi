@@ -1,0 +1,36 @@
+title: PL-300 Power BI Data Analyst
+author: Marcel
+logo: _static/logo.png
+
+# Sprache
+language: de
+
+# Parsing
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - deflist
+    - html_image
+  myst_heading_anchors: 3
+
+# Sphinx Konfiguration
+sphinx:
+  config:
+    html_css_files:
+      - pbi-theme.css
+    html_show_sourcelink: false
+    html_theme_options:
+      show_navbar_depth: 2
+      navigation_depth: 3
+      collapse_navbar: false
+
+# HTML-Ausgabe
+html:
+  use_repository_button: false
+  use_edit_page_button: false
+  use_issues_button: false
+  home_page_in_navbar: true
+
+# Execution (keine Code-Zellen, daher off)
+execute:
+  execute_notebooks: "off"

@@ -1,0 +1,20 @@
+format: jb-book
+root: index
+ 
+parts:
+  - caption: "Modul 1 – Power BI Grundlagen & Fabric"
+    chapters:
+      - file: Skripte/Modul1/01_einfuehrung_datenanalyse
+      - file: Skripte/Modul1/02_erste_schritte_power_bi
+      - file: Skripte/Modul1/03_microsoft_fabric
+      - file: Skripte/Modul1/04_copilot_power_bi
+ 
+  - caption: "Modul 2 – Daten abrufen, bereinigen & Modellframework"
+    chapters:
+      - file: Skripte/Modul2/05_daten_abrufen
+      - file: Skripte/Modul2/06_power_query_bereinigen
+      - file: Skripte/Modul2/07_modellframework
+ 
+  - caption: "Modul 3 – Semantisches Modell & DAX"
+    chapters:
+      - file: Skripte/Modul3/08_semantisches_modell_konfigurieren
