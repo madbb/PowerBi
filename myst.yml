@@ -26,6 +26,15 @@ project:
         - file: Skripte/Modul3/13_dax_zeitintelligenz.md
         - file: Skripte/Modul3/14_visuelle_berechnungen.md
         - file: Skripte/Modul3/15_modelloptimierung.md
+    - title: Modul 4 – Analysen 
+      children:
+        - file: Skripte/Modul4/16_berichtsanforderungen.md
+        - file: Skripte/Modul4/17_berichte_layouten_gestalten.md
+        - file: Skripte/Modul4/18_berichtsobjekte_visual_auswahl.md
+        - file: Skripte/Modul4/19_filtern_interaktivitaet_ux.md
+        - file: Skripte/Modul4/20_berichtsleistung_mobile.md
+        - file: Skripte/Modul4/21_analysen_power_bi.md
+
 site:
   options:
     logo: _static/logo.png
