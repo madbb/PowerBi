@@ -1,365 +1,263 @@
 /* ============================================================
-   PBI-THEME.CSS  –  Power BI Kurs Jupyter Book Theme
-   Farbpalette: Navy #1a1a2e / #16213e  ·  Gold #c9a84c / #8a6e2f
+   PBI-THEME.CSS  –  Erweiterung: Aufgabenblätter
+   Ergänzung zu pbi-theme.css  –  nicht eigenständig verwenden
+   Akzentfarbe Aufgaben: Teal #4fc3f7 / Hintergrund #0a2030
    ============================================================ */
 
-/* ---------- Seiten-Header (Titelblock jeder Seite) ---------- */
-.pbi-page-header {
-  background: #1a1a2e;
+/* ---------- Aufgaben-Container ---------- */
+.pbi-task {
+  background: #0f1e2e;
+  border: 1px solid #1e3a50;
+  border-left: 4px solid #4fc3f7;
   border-radius: 6px;
-  padding: 1.8rem 2.2rem;
-  margin-bottom: 2rem;
-  border-bottom: 3px solid #c9a84c;
+  margin: 1.8rem 0;
   font-family: 'Segoe UI', system-ui, sans-serif;
-}
-.pbi-page-meta {
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #c9a84c;
-  font-weight: 600;
-  margin-bottom: 0.45rem;
-}
-.pbi-page-title {
-  font-size: 1.9rem;
-  font-weight: 700;
-  color: #f0f0f5;
-  line-height: 1.15;
-  margin-bottom: 0.35rem;
-}
-.pbi-page-sub {
-  font-size: 0.95rem;
-  color: #8888a8;
-  font-weight: 300;
+  overflow: hidden;
 }
 
-/* ---------- Kapitel-Header (Tag-Übersichtsseite) ---------- */
-.pbi-chapter-header {
-  background: #1a1a2e;
-  border-radius: 6px;
-  padding: 1.4rem 2rem;
-  margin-bottom: 1.8rem;
-  border-left: 5px solid #c9a84c;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+/* ---------- Aufgaben-Header (Nummer + Titel) ---------- */
+.pbi-task-header {
+  background: #0a2030;
+  padding: 0.75rem 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  border-bottom: 1px solid #1e3a50;
 }
-.pbi-chapter-tag {
-  font-size: 0.68rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: #c9a84c;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-}
-.pbi-chapter-title {
-  font-size: 1.5rem;
+.pbi-task-num {
+  background: #4fc3f7;
+  color: #0a1520;
   font-weight: 700;
-  color: #f0f0f5;
+  font-size: 0.85rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
-
-/* ---------- Hero (Startseite) ---------- */
-.pbi-hero {
-  background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
-  border-radius: 8px;
-  padding: 2.5rem 2.8rem;
-  margin-bottom: 2.2rem;
-  border-bottom: 4px solid #c9a84c;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-}
-.pbi-hero-badge {
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #c9a84c;
-  font-weight: 600;
-  margin-bottom: 0.6rem;
-}
-.pbi-hero-title {
-  font-size: 2.4rem;
+.pbi-task-title {
+  color: #e0f0ff;
   font-weight: 700;
-  color: #f0f0f5;
-  line-height: 1.1;
-  margin-bottom: 0.4rem;
-}
-.pbi-hero-sub {
-  font-size: 1rem;
-  color: #8888a8;
-  font-weight: 300;
-}
-
-/* ---------- Hauptüberschrift (Abschnitt) ---------- */
-.pbi-section {
-  background: #1a1a2e;
-  border-left: 4px solid #c9a84c;
-  border-radius: 4px;
-  padding: 0.65rem 1.2rem;
-  margin: 2.2rem 0 1rem 0;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-}
-.pbi-section span {
-  font-size: 1.12rem;
-  font-weight: 700;
-  color: #f0f0f5;
+  font-size: 0.98rem;
   letter-spacing: -0.01em;
 }
 
-/* ---------- Unterüberschrift ---------- */
-.pbi-subsection {
-  background: #16213e;
-  border-left: 3px solid #8a6e2f;
-  border-radius: 3px;
-  padding: 0.55rem 1rem;
-  margin: 1.6rem 0 0.8rem 0;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+/* ---------- Aufgaben-Body ---------- */
+.pbi-task-body {
+  padding: 1.1rem 1.3rem;
+  color: #b8c8d8;
+  font-size: 0.9rem;
+  line-height: 1.65;
 }
-.pbi-subsection span {
-  font-size: 0.98rem;
-  font-weight: 600;
+.pbi-task-body p {
+  margin: 0 0 0.75rem 0;
+}
+
+/* ---------- Teilschritte (a / b / c) ---------- */
+.pbi-task-steps {
+  margin: 0.9rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.pbi-task-step {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  background: #16213e;
+  border-radius: 4px;
+  padding: 0.6rem 0.95rem;
+}
+.pbi-step-label {
+  background: #8a6e2f;
+  color: #f0e8d0;
+  font-weight: 700;
+  font-size: 0.75rem;
+  min-width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.pbi-step-text {
+  color: #c8c8d8;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.pbi-step-text strong {
   color: #e8d9b0;
 }
-
-/* ---------- Definitions-Box ---------- */
-.pbi-definition {
-  background: #16213e;
-  border-left: 3px solid #c9a84c;
+.pbi-step-text code {
+  background: #1a1a2e;
+  color: #4fc3f7;
+  padding: 0.1em 0.4em;
   border-radius: 3px;
-  padding: 0.85rem 1.25rem;
-  margin: 1rem 0 1.2rem 0;
-  font-style: italic;
-  color: #c8c8d8;
-  font-size: 0.95rem;
-  line-height: 1.65;
+  font-size: 0.85em;
+}
+
+/* ---------- Antwortfeld ---------- */
+.pbi-task-answer {
+  background: #0d1a28;
+  border: 1px dashed #2a4a5e;
+  border-radius: 4px;
+  padding: 0.85rem 1.1rem;
+  margin-top: 0.9rem;
+  color: #8888a8;
+  font-size: 0.85rem;
   font-family: 'Segoe UI', system-ui, sans-serif;
 }
-.pbi-definition strong {
-  color: #c9a84c;
-  font-style: normal;
+.pbi-task-answer strong {
+  color: #4fc3f7;
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.82rem;
+}
+.pbi-answer-field {
+  min-height: 3.5rem;
+  border-bottom: 1px dashed #2a4a5e;
+  margin: 0.3rem 0 0.9rem 0;
+}
+.pbi-answer-field:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
 }
 
-/* ---------- Aufgaben-Karten (nummeriert) ---------- */
-.pbi-card {
+/* ---------- Zuordnungsaufgabe ---------- */
+.pbi-task-match {
   background: #16213e;
+  border-radius: 4px;
+  padding: 0.85rem 1.1rem;
+  margin: 0.9rem 0;
+  font-size: 0.88rem;
+  color: #b8b8cc;
+  line-height: 1.6;
+}
+.pbi-task-match strong {
+  color: #c9a84c;
+  display: block;
+  margin: 0.6rem 0 0.25rem 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.pbi-task-match strong:first-child {
+  margin-top: 0;
+}
+.pbi-task-match ul {
+  margin: 0.2rem 0 0.5rem 1.2rem;
+  padding: 0;
+}
+.pbi-task-match li {
+  margin-bottom: 0.2rem;
+}
+
+/* ---------- Szenario-Box (orange, abweichend von Warning) ---------- */
+.pbi-szenario {
+  background: #1e1a0a;
   border-left: 3px solid #c9a84c;
   border-radius: 4px;
-  padding: 0.7rem 1.1rem;
+  padding: 0.75rem 1.1rem;
+  margin: 0.9rem 0;
+  font-size: 0.9rem;
+  color: #c8b898;
+  line-height: 1.6;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+.pbi-szenario .pbi-admonition-title {
+  color: #c9a84c;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+}
+
+/* ---------- Fortschritts-Checkliste (Ende jedes Blatts) ---------- */
+.pbi-checklist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+.pbi-checklist-item {
+  background: #16213e;
+  border: 1px solid #2a2a4e;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+.pbi-checklist-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+.pbi-checklist-label {
+  font-size: 0.82rem;
+  color: #8888a8;
+  line-height: 1.4;
+}
+.pbi-checklist-label strong {
+  display: block;
+  color: #c9a84c;
+  font-size: 0.8rem;
+  margin-bottom: 0.15rem;
+}
+
+/* ---------- Reflexionsfrage ---------- */
+.pbi-reflect {
+  background: #16213e;
+  border-left: 3px solid #8a6e2f;
+  border-radius: 4px;
+  padding: 0.75rem 1.1rem;
   margin: 0.55rem 0;
   font-family: 'Segoe UI', system-ui, sans-serif;
   display: flex;
   align-items: baseline;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  gap: 0.85rem;
 }
-.pbi-card-num {
+.pbi-reflect-label {
+  background: #2a2a0e;
   color: #c9a84c;
   font-weight: 700;
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-.pbi-card-title {
-  color: #e8d9b0;
-  font-weight: 700;
-  font-size: 0.92rem;
-  flex-shrink: 0;
-}
-.pbi-card-body {
-  color: #b8b8cc;
-  font-size: 0.9rem;
-  line-height: 1.55;
-}
-
-/* ---------- Beispiel-Box ---------- */
-.pbi-example {
-  background: #1a1a2e;
-  border: 1px solid #8a6e2f;
-  border-radius: 5px;
-  padding: 0.85rem 1.2rem;
-  margin: 1.4rem 0;
-  color: #b8b8cc;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-}
-.pbi-badge {
-  font-size: 0.62rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #c9a84c;
-  background: rgba(201, 168, 76, 0.12);
-  border: 1px solid rgba(201, 168, 76, 0.3);
+  font-size: 0.72rem;
+  padding: 0.15em 0.5em;
   border-radius: 3px;
-  padding: 0.15em 0.55em;
-  margin-right: 0.65em;
-  vertical-align: middle;
-  font-weight: 600;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-}
-
-/* ---------- Wochen-Karten Grid (Startseite) ---------- */
-.pbi-card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin: 1.2rem 0;
-}
-.pbi-week-card {
-  background: #16213e;
-  border: 1px solid #2a2a4e;
-  border-top: 3px solid #c9a84c;
-  border-radius: 5px;
-  padding: 1rem 1.2rem;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-}
-.pbi-week-label {
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
+  flex-shrink: 0;
   text-transform: uppercase;
-  color: #c9a84c;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
+  letter-spacing: 0.05em;
+  border: 1px solid #8a6e2f;
 }
-.pbi-week-title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #e8d9b0;
-  margin-bottom: 0.4rem;
-}
-.pbi-week-body {
-  font-size: 0.82rem;
-  color: #8888a8;
-  line-height: 1.5;
-}
-
-/* ---------- Zusammenfassungs-Grid ---------- */
-.pbi-summary-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 1rem;
-  margin: 1.2rem 0;
-}
-.pbi-summary-card {
-  background: #16213e;
-  border: 1px solid #2a2a4e;
-  border-radius: 6px;
-  padding: 1.1rem 1.2rem;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  text-align: center;
-}
-.pbi-summary-icon {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
-}
-.pbi-summary-title {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #c9a84c;
-  margin-bottom: 0.35rem;
-}
-.pbi-summary-body {
-  font-size: 0.8rem;
-  color: #8888a8;
-  line-height: 1.5;
-}
-
-/* ---------- Tabellen ---------- */
-.bd-content table {
-  border-collapse: collapse;
-  width: 100%;
+.pbi-reflect-text {
+  color: #b8b8cc;
   font-size: 0.88rem;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  margin: 1rem 0 1.4rem 0;
-}
-.bd-content table th {
-  background: #1a1a2e;
-  color: #c9a84c;
-  font-weight: 600;
-  padding: 0.55rem 0.9rem;
-  text-align: left;
-  border-bottom: 2px solid #c9a84c;
-}
-.bd-content table td {
-  padding: 0.5rem 0.9rem;
-  border-bottom: 1px solid #2a2a4e;
-  color: #c8c8d8;
-  vertical-align: top;
-}
-.bd-content table tr:hover td {
-  background: #16213e;
+  line-height: 1.6;
 }
 
-/* ---------- PDF-Druck Optimierungen ---------- */
+/* ---------- Druck-Optimierungen Aufgabenblätter ---------- */
 @media print {
-  .pbi-page-header,
-  .pbi-chapter-header,
-  .pbi-hero,
-  .pbi-section,
-  .pbi-subsection,
-  .pbi-definition,
-  .pbi-card,
-  .pbi-example,
-  .pbi-week-card,
-  .pbi-summary-card {
+  .pbi-task,
+  .pbi-task-step,
+  .pbi-task-answer,
+  .pbi-task-match,
+  .pbi-szenario,
+  .pbi-checklist-item,
+  .pbi-reflect {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
     break-inside: avoid;
   }
-
-  .pbi-section,
-  .pbi-subsection {
-    break-after: avoid;
+  .pbi-task {
+    break-before: auto;
+  }
+  .pbi-answer-field {
+    min-height: 4rem;
   }
 }
-
-/* ---------- Screenshot-Platzhalter ---------- */
-.pbi-screenshot {
-  background: #16213e;
-  border: 1px dashed #8a6e2f;
-  border-radius: 4px;
-  padding: 0.6rem 1rem;
-  margin: 1rem 0;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  display: flex;
-  align-items: baseline;
-  gap: 0.7rem;
-}
-.pbi-screenshot-label {
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #c9a84c;
-  font-weight: 600;
-  flex-shrink: 0;
-}
-.pbi-screenshot-desc {
-  color: #6868a8;
-  font-size: 0.82rem;
-  font-style: italic;
-  line-height: 1.5;
-}
-
-/* ---------- Admonitions (Hinweis, Warnung) ---------- */
-.pbi-admonition {
-  border-radius: 4px;
-  padding: 0.75rem 1.1rem;
-  margin: 1rem 0;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-.pbi-admonition-title {
-  display: block;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-  font-size: 0.85rem;
-}
-.pbi-info {
-  background: #0f2a3d;
-  border-left: 3px solid #4fc3f7;
-  color: #b8c8d8;
-}
-.pbi-info .pbi-admonition-title { color: #4fc3f7; }
-
-.pbi-warning {
-  background: #2a1f0f;
-  border-left: 3px solid #e0a040;
-  color: #c8b898;
-}
-.pbi-warning .pbi-admonition-title { color: #e0a040; }
