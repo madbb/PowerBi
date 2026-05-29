@@ -35,6 +35,7 @@ project:
         - file: Skripte/Modul4/19_filtern_interaktivitaet_ux.md
         - file: Skripte/Modul4/20_berichtsleistung_mobile.md
         - file: Skripte/Modul4/21_analysen_power_bi.md
+    - file: downloads.md
 
 site:
   options:

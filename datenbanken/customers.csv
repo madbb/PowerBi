@@ -1,0 +1,401 @@
+﻿CustomerID;Firma;Ansprechpartner;Segment;Stadt;Region;PLZ;Telefon;Email;Kundenseit
+K0001;Löchel;Erika Förster;KMU;LÜBECK;Nord;51161;05940781618;marit95@groettner.com;2022-11-12
+K0002;Speer GbR;Annelore Heintze;Großkunde;Aachen;West;64752;05341928327;ohiller@roht.net;2022-09-29
+K0003;Ju nk;Erdal Beckmann;Kleinstunternehmen;Erfurt;Ost;64139;03767242388;justine96@kuhl.de;2020-04-22
+K0004;Etzler GmbH & Co. OHG;Frau Notburga Biggen B.Sc.;KMU;Wiesbaden;Mitte;26916;0978480184;engelbert46@metz.org;2017-10-26
+K0005;Wiek;Prof. Urban Döring;Kleinstunternehmen;München;Süd;89325;+49 (0) 8809 570154;bogdanhendriks@budig.com;2018-02-06
+K0006;Neureuther;Raimund Reichmann;KMU;Wiesbaden;Mitte;27824;09638 34657;pdussen-van@bolnbach.com;2015-02-27
+K0007;Röhrdanz;Prof. Emil Albers B.Sc.;Kleinstunternehmen;Hannover;Mitte;31051;03473 82997;lilianmuehle@grein.de;2016-02-25
+K0008;Löchel Langern GmbH & Co. KG;Michail Söding;Privatkunde;Rostock;Nord;06513;+49(0) 387262473;margrafmandy@dippel.com;2016-04-12
+K0009;Reuter;Zbigniew Davids;Kleinstunternehmen;Lübeck;Nord;26773;0026064746;mfoerster@harloff.com;2018-05-29
+K0010;Johann;Andrei Sauer;Kleinstunternehmen;Bremen;Nord;88208;+49(0)2191 361939;scholldarius@sontag.de;2019-12-19
+K0011;Haase Staude Stiftung & Co. KG;Edith Hettner;Privatkunde;Aachen;West;24751;+49(0)7991183842;raissa13@hoelzenbecher.org;2017-05-14
+K0012;Söding;Meinolf Röhrdanz;Privatkunde;Köln;West;12411;02449 35348;dhermann@schulz.org;2020-04-08
+K0013;Adler GmbH;Marcel Hesse-Fritsch;Großkunde;Köln;West;86801;+49(0)2805 982620;ottokar05@stoll.com;2017-12-19
+K0014;Zahn Römer GmbH & Co. KG;Vincenzo Hellwig-Fröhlich;KMU;Hannover;Mitte;60256;(03421) 60733;tkiller@hauffer.net;2016-11-10
+K0015;Jüttner Holsten AG;Gina Segebahn;Privatkunde;Aachen;West;85014;+49 (0) 9401 965569;krauserotraut@grein.org;2019-07-07
+K0016;Trommler GmbH & Co. KG;Johan Renner;Großkunde;Aachen;West;56159;01484656482;siegmarstadelmann@stey.org;2015-04-16
+K0017;Rogge Ackermann GmbH;Denise Losekann;Privatkunde;Bremen;Nord;77738;02148 951343;gaetanobarth@henschel.com;2018-01-08
+K0018;Liebelt Schuchhardt KG;Oscar Textor MBA.;Großkunde;Frankfurt;Mitte;63201;0328708317;luziemitschke@radisch.de;2021-07-25
+K0019;Schmidtke Tschentscher GmbH & Co. OHG;Prof. Ingelore Freudenberger;KMU;Erfurt;Ost;74348;03471 434558;etzlergerard@kraus.com;2018-09-12
+K0020;Hamann;Harry Ladeck;Privatkunde;Erfurt;Ost;87603;0690967054;ilindner@waehner.net;2018-08-17
+K0021;Hartmann Heydrich GmbH & Co. KG;;Großkunde;LÜBECK;Nord;72980;0990162720;rafael53@junken.de;2019-01-21
+K0022;Weller Linke GbR;Horst-Peter Bähr;Kleinstunternehmen;Darmstadt;Mitte;53100;+49(0) 309232719;vittoriothies@wilms.com;2022-10-31
+K0023;Jockel AG;Vito Jockel;Kleinstunternehmen;Berlin;Ost;63193;+49(0)4919 058651;;2019-07-30
+K0024;Fliegner;Dr. Nadeschda Preiß;Privatkunde;Bremen;Nord;98776;(04531) 473799;bkallert@junk.net;2018-04-10
+K0025;Heser Karge GbR;Kriemhild Atzler;Großkunde;Kassel;Mitte;13678;+49(0) 777014363;gina95@roehrdanz.de;2021-09-21
+K0026;Rogner;Giovanna Tintzmann;Großkunde;HANNOVER;Mitte;44431;+49(0) 518233749;eckhardt34@klingelhoefer.org;2017-12-30
+K0027;Trommler KG;Fred Bien-Bloch;Großkunde;Kiel;Nord;27109;+49(0)7775 20471;kuehnertadriana@rust.com;2020-06-06
+K0028;Fischer e.V.;Anni Hering;KMU;Dortmund;West;86999;+49(0) 867749649;schmidtvesna@dippel.net;2017-09-05
+K0029;Hahn;Maria Butte;Großkunde;Darmstadt;Mitte;32812;+49(0)6797403447;striebitzhorst@zirme.net;2019-05-01
+K0030;Drewes Ring GbR;Ulf Hethur-Faust;KMU;Stuttgart;Süd;02499;+49(0)7174 64887;mbutte@loewer.de;2019-12-09
+K0031;He rmann;Bartholomäus Hein;Kleinstunternehmen;rostock;Nord;49027;07429 67175;ukade@doehn.com;2017-12-21
+K0032;Langern Täsche GmbH & Co. KGaA;Maria-Theresia Kühnert;Großkunde;Aachen;West;71545;+49(0)6808 760385;cschomber@haase.com;2020-06-21
+K0033;Mangold Thanel GmbH & Co. KGaA;Alexander Schuchhardt;KMU;Frankfurt;Mitte;24808;0131712748;selim77@meyer.com;2019-11-13
+K0034;Grein Groth Scheuermann GmbH & Co. OHG;Steve Bohnbach-Hofmann;Privatkunde;Hamburg;Nord;58404;+49(0)9972 78755;umeyer@thanel.de;2019-01-08
+K0035;Wulf GmbH & Co. KG;Giovanni Weinhage;Kleinstunternehmen;Essen;West;66270;+49 (0) 8951 718702;jsoelzer@moechlichen.org;2019-04-16
+K0036;Scholz Süßebier GmbH;Slavko Jüttner;KMU;Hannover;Mitte;57809;+49(0)3431 611724;bienmarten@hornig.de;2020-03-20
+K0037;Fiebig Henschel GmbH & Co. OHG;Prof. Marit Zorbach;KMU;Aachen;West;22196;(03792) 374740;rhoevel@franke.com;2017-10-21
+K0038;Kaul Schaaf GmbH;Univ.Prof. Elfriede Meyer;Kleinstunternehmen;Dresden;Ost;36713;0959440640;auch-schlauchinjuliane@hoerle.net;2018-04-26
+K0039;Kitzmann;Univ.Prof. Donald Scholl B.Eng.;Privatkunde;Koeln;West;10470;(05214) 562328;anni84@hertrampf.org;2018-03-18
+K0040;Kambs;Horst-Dieter Bruder;KMU;FREIBURG;Süd;36851;0048175496;ekrem37@scholl.de;2022-05-24
+K0041;Hartung;Manuel Mitschke;Großkunde;münchen;Süd;61200;;vschaaf@foerster.de;2016-06-22
+K0042;Dippel;Prof. Helma Holt B.Sc.;KMU;Kiel;Nord;37735;+49(0)5850 643171;florentineschwital@baerer.com;2016-11-04
+K0043;Henk Eberth e.V.;Apostolos Wieloch B.A.;Privatkunde;Essen;West;35290;+49(0)2284 21020;lisbeth39@bachmann.com;2017-07-13
+K0044;Weihmann GmbH & Co. KG;;Privatkunde;Halle;Ost;75891;08390 847007;rloos@noack.de;2022-07-16
+K0045;Butte GmbH;Antonio Eberth-Höfig;Kleinstunternehmen;Aachen;West;69847;09611 83673;dkambs@liebelt.de;2021-04-18
+K0046;Johann Stadelmann GbR;Walli Fliegner;KMU;Aachen;West;11116;+49(0)5280 988516;patricia60@schinke.com;2015-07-05
+K0047;Patberg;Curt Sontag MBA.;Kleinstunternehmen;Kiel;Nord;15851;+49(0)9368 99809;angelo24@wiek.org;2022-10-23
+K0048;Killer Albers AG & Co. KGaA;Karl-Wilhelm Sontag-Kühnert;Privatkunde;Darmstadt;Mitte;20183;0675254599;birnbaumgerold@wende.com;2018-02-19
+K0049;Butte;Inge Speer;KMU;Kiel;Nord;79764;+49(0) 815614978;bartholomaeus36@bluemel.com;2021-02-08
+K0050;Jacobi Jäckel AG & Co. OHG;Ralf-Peter Hermighausen-Hoffmann;Großkunde;Köln;West;10762;+49 (0) 6838 851606;miessonia@johann.de;2022-03-04
+K0051;Lachmann;Ing. Belinda Lachmann;Kleinstunternehmen;Frankfurt;Mitte;52975;;heinz-willi52@pergande.com;2017-04-28
+K0052;Pergande;Torsten Wulf B.Eng.;Privatkunde;HANNOVER;Mitte;23124;+49(0) 292127799;kstiffel@schuster.de;2016-06-16
+K0053;Jopich;Heinz-Walter Börner-Möchlichen;Kleinstunternehmen;Kassel;Mitte;44905;;schmiedeckedesiree@kraus.de;2017-09-01
+K0054;Röhrdanz;Helmuth Rudolph;Großkunde;Kassel;Mitte;59782;+49(0)7151820377;ottokoehler@kraushaar.de;2020-05-04
+K0055;Scheuermann;Rico Schüler;Privatkunde;Dresden;Ost;15186;+49(0)4925 19254;mehlert@caspar.org;2022-05-22
+K0056;Kohl;Roselinde Eckbauer;Großkunde;Kassel;Mitte;68505;+49(0)2357 33221;michaela18@warmer.com;2016-03-18
+K0057;Kallert;Kornelius Kohl-Fliegner;Privatkunde;Erfurt;Ost;29270;0537947383;wally73@stiebitz.de;2021-07-25
+K0058;Wulff Kranz GmbH & Co. OHG;Dr. Rosita Gute;Großkunde;Kassel;Mitte;40758;+49(0)8141 247826;hartungmargitta@keudel.com;2022-05-05
+K0059;Paffrath Köster GbR;Annemie Köster-Hauffer;Großkunde;Hannover;Mitte;51522;+49(0)4727790104;martinafischer@vogt.de;2018-07-04
+K0060;Wulf GmbH;Ing. Burghard Biggen B.A.;Großkunde;Dresden;Ost;97117;;ilias96@stadelmann.com;2016-01-17
+K0061;Klingelhöfer;Winfried Putz;Privatkunde;Berlin;Ost;67065;+49(0)0515 31952;kitzmannbenita@seifert.de;2018-09-12
+K0062;Naser;Dr. Anto Trubin;Privatkunde;Lübeck;Nord;04303;+49(0)5486874034;nelli05@ebert.de;2018-12-11
+K0063;Mans;Gerti Gotthard-Oestrovsky;Privatkunde;Rostock;Nord;58416;+49(0)6928 451154;tilo96@stumpf.de;2016-04-15
+K0064;Berger Vogt GmbH;Ing. Mandy Zorbach;Privatkunde;Aachen;West;16582;+49(0)2970213556;schleichgerhart@mende.de;2022-10-11
+K0065;Martin Wiek AG;Joseph Kobelt-Kruschwitz;KMU;Köln;West;43102;08681 447394;hgute@briemer.com;2016-08-09
+K0066;Martin;Roy Stoll;Privatkunde;Darmstadt;Mitte;51884;+49(0)2258 31323;xbauer@ruppersberger.de;2019-09-16
+K0067;Rohleder Ehlert KG;Antonio Jessel;Privatkunde;Dresden;Ost;78669;+49(0)2517 785289;kristinehlert@paffrath.com;2021-12-05
+K0068;Gehringer Fritsch GmbH;Ing. Willfried Pohl B.Eng.;Großkunde;Hamburg;Nord;43842;(04981) 82992;gertraudescholz@schleich.de;2020-09-29
+K0069;Berger;Artur Bien;Großkunde;Kiel;Nord;39690;08447 364710;theodorliebelt@mitschke.com;2017-06-22
+K0070;Trupp Juncken Stiftung & Co. KGaA;Zehra Kuhl;Kleinstunternehmen;Halle;Ost;58815;+49(0) 714732104;aschmiedt@freudenberger.de;2016-05-06
+K0071;Wiek AG & Co. KGaA;Prof. Irmtraut Ortmann B.Eng.;Kleinstunternehmen;Lübeck;Nord;01687;+49(0) 395004797;ariane01@eimer.de;2018-12-21
+K0072;K obelt Bien GmbH;Kasimir Rörricht;Privatkunde;LÜBECK;Nord;58416;07849 91216;loretta58@wende.de;2021-06-06
+K0073;Benthin;Ali Etzler;Kleinstunternehmen;Erfurt;Ost;78729;02595 26949;amelie88@trommler.de;2022-09-25
+K0074;Koch GmbH;Hartmuth Säuberlich;Großkunde;Köln;West;09749;(03097) 289623;ruppersbergertrudi@doerschner.net;2018-06-24
+K0075;Mans GmbH;Dr. Henriette Stumpf;Privatkunde;Düsseldorf;West;68970;+49 (0) 8385 786527;benita54@nette.net;2018-12-02
+K0076;Holsten KG;Dorota Huhn;Kleinstunternehmen;Düsseldorf;West;37575;04419 86652;august41@margraf.de;2016-12-26
+K0077;Gutknecht KG;Valentine Rörricht;KMU;Erfurt;Ost;21993;+49(0) 083301657;stiffelkaete@adolph.com;2016-09-10
+K0078;Söding Mülichen GmbH & Co. KGaA;Pirmin Hövel B.Eng.;Privatkunde;Berlin;Ost;01938;+49(0)2620672400;catharina91@hoelzenbecher.de;2020-03-06
+K0079;Pärtzelt GmbH & Co. KG;Corinne Dowerg;Privatkunde;Berlin;Ost;27420;04932966851;gstaude@etzold.de;2020-03-10
+K0080;Albers GbR;Edeltraut Matthäi-Weller;Kleinstunternehmen;Wiesbaden;Mitte;54990;+49(0)5301 74268;helena14@schmiedecke.com;2016-09-09
+K0081;Fliegner Metz Stiftung & Co. KGaA;Herma Tintzmann;Privatkunde;Lübeck;Nord;83391;07851 91088;christareising@gehringer.de;2017-10-11
+K0082;Stiffel AG & Co. OHG;Frau Tanja Pergande MBA.;KMU;Erfurt;Ost;72867;(00874) 064039;biensigmund@thies.com;2022-08-12
+K0083;Mude AG;Helmtrud Girschner;Privatkunde;Frankfurt;Mitte;65676;0182512868;jacquelinehauffer@wernecke.org;2017-10-29
+K0084;Steinberg Tschentscher KG;Prof. Halina Hein;KMU;Hannover;Mitte;75243;+49(0)0690 331190;rscheuermann@biggen.net;2022-06-05
+K0085;Beyer;Imke Heintze-Reuter;Großkunde;Leipzig;Ost;02843;(05995) 342836;karl-heinz08@waehner.com;2016-06-07
+K0086;Stiebitz;Prof. Jelena Biggen;KMU;Frankfurt;Mitte;68566;+49 (0) 4628 733427;roerrichtsandor@roht.de;2018-10-31
+K0087;Hermighausen AG & Co. OHG;Maren Budig;Privatkunde;Leipzig;Ost;51830;+49(0)6990 13983;vhaenel@austermuehle.com;2020-11-26
+K0088;Wende;Dr. Mary Schleich B.A.;Kleinstunternehmen;kiel;Nord;38546;08544 587717;silja35@lehmann.net;2022-01-02
+K0089;Fiebig;Francesco Röhrdanz;Großkunde;Stuttgart;Süd;42353;0937854777;jannakitzmann@etzold.de;2020-01-13
+K0090;Riehl KGaA;Jonas Beer;Kleinstunternehmen;Freiburg;Süd;00623;+49(0)2038 750997;abachmann@rohleder.de;2019-12-10
+K0091;Bachmann GmbH & Co. OHG;Kathleen Hörle;Kleinstunternehmen;Dresden;Ost;86211;02339 84546;koesterveronika@mies.net;2016-07-20
+K0092;Stolze Butte KGaA;Bayram Lachmann;Privatkunde;Köln;West;68700;+49 (0) 1765 918033;chiller@stolze.com;2016-05-25
+K0093;Jopich AG;Klaus-Peter Fechner MBA.;Kleinstunternehmen;Köln;West;42939;0856218501;eheinrich@schleich.de;2017-06-28
+K0094;Becker Schulz GbR;Jasmin Heidrich B.Eng.;KMU;dresden;Ost;62961;(04311) 426265;eitel10@martin.org;2019-03-16
+K0095;Eigenwillig AG;Dipl.-Ing. Helmut Roht;KMU;München;Süd;10158;+49(0)9956 046618;charlottepoelitz@stolze.com;2018-03-21
+K0096;Heuser GmbH;Jeanette Fiebig;Privatkunde;Leipzig;Ost;26464;;leifalbers@kade.de;2016-09-04
+K0097;Käster Losekann KGaA;Gerald Jungfer-Schleich;KMU;Wiesbaden;Mitte;75265;+49(0)7935 64651;dariaritter@stoll.com;2022-03-02
+K0098;Misicher;Heinz-Otto Hornich B.Sc.;Privatkunde;Darmstadt;Mitte;72434;(02661) 79796;cring@tintzmann.com;2016-08-11
+K0099;Wilmsen GbR;Chantal Seifert;Kleinstunternehmen;Essen;West;96561;+49(0)1438889937;remo79@otto.com;2019-01-17
+K0100;Barth Nette AG;Herma Caspar;Privatkunde;Rostock;Nord;25457;+49(0) 875717751;balthasar10@seifert.com;2022-02-16
+K0101;H enk;Prof. Daniel Kabus;Privatkunde;Dresden;Ost;73622;(06609) 37966;tlustekheinz-dieter@holsten.com;2018-09-23
+K0102;Dobes;Ing. Gotthold Gunpf;Großkunde;München;Süd;14785;(06969) 155792;slavica99@steinberg.de;2017-01-16
+K0103;Henck GmbH;;Kleinstunternehmen;München;Süd;86692;;hans-guentherjopich@scholl.com;2015-06-21
+K0104;Ernst Gude GmbH;Dipl.-Ing. Marjan Noack MBA.;KMU;Dortmund;West;72190;;grogner@ruppersberger.org;2018-03-17
+K0105;Kobelt;Raimund Tschentscher;KMU;KÖLN;West;83613;+49(0)0745 17133;natascha96@schmiedt.net;2019-12-07
+K0106;Bonbach KG;Katharine Holt;KMU;Dresden;Ost;54494;01260 42232;marion36@faust.org;2015-11-20
+K0107;Liebelt;Inken Bruder-Schulz;Privatkunde;Halle;Ost;68457;05901 751863;fhahn@junitz.com;2018-06-09
+K0108;Neureuther;Sylvie Stoll;Großkunde;Halle;Ost;01701;;james15@seip.com;2018-12-15
+K0109;Kroker KGaA;Miroslawa Thies;Privatkunde;Darmstadt;Mitte;61103;01293 870051;itaesche@boucsein.com;2020-10-02
+K0110;Dobes;Gert Koch;Privatkunde;München;Süd;26221;09092 75326;fharloff@etzold.com;2022-03-27
+K0111;Vollbrecht;Gina Lorch-Jopich;Großkunde;Dortmund;West;34138;(09940) 438983;phuebel@ziegert.net;2015-11-11
+K0112;Krause Dowerg GbR;Univ.Prof. Liliane Boucsein B.Sc.;Kleinstunternehmen;Hannover;Mitte;52696;08271091043;;2017-02-01
+K0113;Tintzmann Kühnert AG;Fredi Carsten-Jessel;KMU;Halle;Ost;83285;0914630316;metzeleonore@bluemel.org;2021-11-11
+K0114;Weihmann;Herr Adrian Trommler;Kleinstunternehmen;Essen;West;02758;04252 41056;annegrete14@rust.com;2015-12-26
+K0115;Meyer Pergande GmbH;Jakob Rosenow;KMU;Dortmund;West;52419;(01380) 00307;ramazan22@roehrdanz.de;2022-11-08
+K0116;Jungfer GbR;Univ.Prof. Friederike Hiller;Kleinstunternehmen;Nürnberg;Süd;95180;+49 (0) 3806 174451;xanders@hornich.org;2019-01-18
+K0117;Scholtz;Dipl.-Ing. Hans-Erich Schäfer MBA.;Privatkunde;Wiesbaden;Mitte;83206;;siegfriednoack@faust.org;2020-05-14
+K0118;Beyer GbR;Univ.Prof. Tabea Köhler;KMU;Darmstadt;Mitte;19182;(06199) 06234;mirjana56@waehner.de;2022-08-17
+K0119;Mentzel Heydrich GbR;Wieslaw Gutknecht;Kleinstunternehmen;Kassel;Mitte;91212;07561 853747;monica11@striebitz.com;2020-08-21
+K0120;Junken AG & Co. KG;Nurettin Hering;Kleinstunternehmen;Hamburg;Nord;68044;+49 (0) 0678 831712;aumannburkhard@ehlert.de;2018-03-09
+K0121;Striebitz Schuchhardt KGaA;Klaus-D. Schaaf;KMU;Kiel;Nord;10137;+49 (0) 1510 702966;ybecker@loos.com;2022-03-10
+K0122;Hamann Gotthard GbR;Ingelore Fischer;KMU;Freiburg;Süd;99934;06870 146263;eugeniering@kranz.de;2015-04-27
+K0123;Ring Zänker GmbH & Co. KGaA;Tina Rosemann;Kleinstunternehmen;Hamburg;Nord;64205;(03040) 785932;hentschelgerlinde@hethur.com;2022-03-02
+K0124;Ruppert e.V.;Gislinde Gerlach-Gierschner;KMU;lübeck;Nord;95590;09929378427;conradibirger@schleich.com;2022-09-06
+K0125;Müller;Guenther Schmiedecke;Großkunde;Dresden;Ost;25250;+49(0)2921851569;kallertlambert@ernst.de;2021-10-20
+K0126;Neuschäfer;Christina Trommler;KMU;NÜRNBERG;Süd;39264;+49(0)2209 69029;sonia93@rosemann.com;2019-02-26
+K0127;Faust Kabus Stiftung & Co. KGaA;Ernst Kensy;Großkunde;Wiesbaden;Mitte;21570;+49(0)3315 41006;awagner@lehmann.de;2018-04-03
+K0128;Ritter Kohl AG;Prof. Margarete Werner B.A.;KMU;Halle;Ost;71040;04115262181;desiree97@becker.de;2017-02-16
+K0129;Gehringer;Dr. Anka Ditschlerin;Großkunde;Stuttgart;Süd;33688;;bertklingelhoefer@loos.org;2020-09-01
+K0130;Schomber;Dr. Ariane Bauer B.A.;Großkunde;Leipzig;Ost;41714;0774186256;hans-guenter70@mans.net;2022-07-17
+K0131;Rose Bolander AG & Co. KG;Augustin Staude;KMU;Dresden;Ost;86938;+49(0)6868793741;ctrueb@rudolph.com;2019-02-07
+K0132;Wernecke GmbH & Co. KG;Dr. Zeljko Hahn;KMU;Lübeck;Nord;20616;+49(0) 294511686;nadin48@aumann.de;2021-03-02
+K0133;Liebelt AG & Co. KG;Karlfried Schacht-Säuberlich;Großkunde;Aachen;West;19148;06467997024;nfechner@stiffel.de;2021-04-03
+K0134;Kroker GmbH;Herr Petar Mülichen B.Eng.;Privatkunde;Düsseldorf;West;05444;;thomashahn@weihmann.de;2020-04-24
+K0135;Pieper e.V.;Herr Gerold Tröst;KMU;Darmstadt;Mitte;28902;+49(0) 303070534;marie-theres78@schuster.com;2018-05-10
+K0136;Köhler GmbH & Co. KGaA;Cilli Mühle B.Eng.;KMU;Kassel;Mitte;24140;0029333346;;2018-09-18
+K0137;Seifert AG & Co. KGaA;Engin Herrmann;Privatkunde;Lübeck;Nord;46657;+49(0)3748 96910;camilla99@huhn.de;2022-05-09
+K0138;Kallert  GbR;Sofia Hofmann;Großkunde;Wiesbaden;Mitte;43283;+49(0)9652074466;cwalter@trommler.net;2015-05-10
+K0139;van der Dussen Trüb GbR;Univ.Prof. Gloria Patberg B.Eng.;Großkunde;Frankfurt;Mitte;82417;+49 (0) 4825 135346;peer49@mitschke.com;2021-11-09
+K0140;Säuberlich;Hubertus Gude;Großkunde;Berlin;Ost;68460;+49 (0) 2356 972521;okade@johann.com;2016-12-10
+K0141;Mentzel GbR;Rainer Wohlgemut B.A.;KMU;Halle;Ost;71296;(06667) 60083;ulrike05@grein.com;2017-10-06
+K0142;Adolph;Dr. Necati Kaul B.Eng.;KMU;Aachen;West;16894;+49 (0) 1044 789856;miroslawniemeier@weitzel.de;2020-06-25
+K0143;Heidrich GbR;Ehrenfried Wagner-Barkholz;KMU;Essen;West;15064;09090 10016;hkramer@herrmann.de;2021-02-02
+K0144;Fliegner;Nick Striebitz B.Sc.;KMU;ERFURT;Ost;61849;;eileengute@preiss.de;2015-11-20
+K0145;Fritsch Benthin KG;Dr. Marlene Nerger B.Eng.;KMU;Essen;West;00119;(07218) 11437;jose70@gertz.org;2016-07-16
+K0146;Stey Johann GmbH & Co. KG;Bela Werner;Kleinstunternehmen;Rostock;Nord;02255;09415 521667;martine67@seip.com;2019-08-20
+K0147;van der Dussen;;Kleinstunternehmen;Essen;West;69797;+49 (0) 9659 027716;ebien@soelzer.net;2020-05-02
+K0148;Kambs;Heinz-Günter Speer;Privatkunde;Leipzig;Ost;75628;(00028) 772175;maximholsten@patberg.de;2021-06-09
+K0149;Heinz Budig GmbH & Co. KG;;Kleinstunternehmen;Freiburg;Süd;77517;(00166) 08801;romana88@soelzer.de;2015-05-29
+K0150;Knappe Bloch GbR;Georgine Römer MBA.;KMU;Erfurt;Ost;71130;05488510272;;2021-05-15
+K0151;Kreusel AG & Co. OHG;Ruthild Zänker B.A.;Großkunde;frankfurt;Mitte;16091;07982 708086;xpechel@suessebier.com;2020-08-27
+K0152;Eckbauer;Hans-Jürgen Sontag;Großkunde;Dresden;Ost;86693;+49(0)6547 22698;meryem85@walter.net;2015-02-27
+K0153;Häring KG;Marlen Kaul;Großkunde;Dortmund;West;28851;08799684608;barthralf@bloch.com;2015-12-22
+K0154;Hethur e.G.;Ing. Mirko Hermann;Kleinstunternehmen;Berlin;Ost;04380;;kranzreimer@zirme.com;2020-01-04
+K0155;Weimer GbR;;KMU;Dortmund;West;59893;+49(0) 472122816;lorchkarl-heinz@hettner.com;2016-04-29
+K0156;Sauer GbR;Guenter Mohaupt;KMU;Dresden;Ost;02590;(09479) 85158;valeskagorlitz@boerner.com;2018-04-23
+K0157;Ring Reising GmbH;Hannes Hartung;Großkunde;Aachen;West;55543;(08780) 157399;veronicabenthin@jungfer.de;2019-08-31
+K0158;Krause GbR;Alida Plath;Kleinstunternehmen;Darmstadt;Mitte;88770;+49(0)3581 12880;haeringgrete@wohlgemut.net;2015-12-02
+K0159;Löffler;Eduard Renner;Privatkunde;Darmstadt;Mitte;12075;;ckraushaar@lachmann.de;2020-09-01
+K0160;Bachmann Krebs OHG mbH;Jozef Albers;Großkunde;Freiburg;Süd;90158;+49(0)4491 476607;antjehartmann@weinhold.org;2021-07-16
+K0161;Fechner;Marika Vollbrecht;Kleinstunternehmen;berlin;Ost;08821;+49(0)0996881435;sandorseidel@faust.com;2015-08-25
+K0162;Hartung KG;;KMU;Darmstadt;Mitte;90878;+49(0)4141 397552;eckhardhoelzenbecher@bohnbach.net;2021-06-26
+K0163;Neureuther Mende GmbH;Martina Sauer;Privatkunde;Hamburg;Nord;99556;+49 (0) 0533 645257;wmatthaei@neuschaefer.com;2020-04-17
+K0164;auch Schlauchin;Siegmar Holt;Großkunde;Kiel;Nord;83411;+49(0)8099693084;xsoeding@kobelt.net;2020-01-12
+K0165;Wagner;Bozena Mitschke;Kleinstunternehmen;Erfurt;Ost;65803;(02827) 229927;arthur37@bolnbach.de;2017-01-01
+K0166;Berger OHG mbH;Jochen Zorbach B.Eng.;Privatkunde;Darmstadt;Mitte;77005;+49(0)8449 892665;plathjanko@hauffer.de;2020-03-11
+K0167;Neuschäfer Zorbach GmbH & Co. KGaA;Jan Etzold;KMU;Darmstadt;Mitte;23184;+49(0) 222591365;nergergunhild@naser.com;2016-04-07
+K0168;Langern;Eugen Beyer;Kleinstunternehmen;Lübeck;Nord;99228;+49(0)9202428699;tschentscherjacqueline@hoelzenbecher.com;2015-05-18
+K0169;Meister KG;Dipl.-Ing. Christel Hartmann MBA.;Privatkunde;Halle;Ost;92984;+49 (0) 5799 136621;gutknechtannedore@stolze.de;2017-06-08
+K0170;auch Schlauchin AG;Dipl.-Ing. Toni Schmiedecke;KMU;Bremen;Nord;88117;(02980) 68650;zhein@zobel.de;2018-08-06
+K0171;Weihmann;Heini Eimer;Großkunde;nürnberg;Süd;73149;06430 09818;kohlgeraldine@stroh.de;2021-08-20
+K0172;Klotz Döring  AG & Co. KG;Univ.Prof. Lidwina Herrmann;Großkunde;Stuttgart;Süd;86959;+49(0)6368 87258;therrmann@kaul.de;2019-09-02
+K0173;Etzler;Peter-Michael Hein;Kleinstunternehmen;Leipzig;Ost;21386;08902601279;ecichorius@hartung.com;2022-12-08
+K0174;Kraus;Lotte Sölzer-Pölitz;Kleinstunternehmen;stuttgart;Süd;90277;+49(0)3843098839;gundibeier@henck.com;2018-09-14
+K0175;Hofmann e.G.;Gisa Staude-Kroker;Kleinstunternehmen;LÜBECK;Nord;93801;;kkusch@hess.de;2021-10-13
+K0176;Döring;Janko Hornig;Kleinstunternehmen;frankfurt;Mitte;18489;+49(0)7697 35779;nergereric@boerner.net;2018-09-25
+K0177;Tintzmann;Ing. Harri Kitzmann B.Sc.;Großkunde;Köln;West;34165;+49(0)8275 539423;mwalter@waehner.org;2022-11-22
+K0178;Hein AG & Co. OHG;Prof. Hans Georg Förster B.Sc.;Großkunde;stuttgart;Süd;17908;+49(0)7595794728;robin39@bloch.de;2018-06-17
+K0179;Reuter Beckmann GmbH & Co. OHG;Heide Striebitz;Großkunde;Dortmund;West;71875;+49(0)0369155942;hueseyin47@karz.de;2017-04-12
+K0180;Ortmann GmbH & Co. KG;Hassan Thies B.Eng.;Kleinstunternehmen;Dortmund;West;64729;;wilfriedanders@linke.com;2021-07-20
+K0181;Plath;Raissa Neuschäfer;Kleinstunternehmen;Darmstadt;Mitte;48906;+49(0)2034 717545;bruni84@baerer.de;2022-09-06
+K0182;auch Schlauchin;Kevin Ruppert B.A.;Großkunde;Dortmund;West;55877;+49(0)6947 225699;fboucsein@karz.de;2018-12-13
+K0183;Söding Hornich Stiftung & Co. KG;Lisette Seidel;Privatkunde;Augsburg;Süd;47598;06220 234132;gdobes@muehle.com;2015-11-01
+K0184;Winkler GmbH;Berndt Hesse;Kleinstunternehmen;Hamburg;Nord;16433;;imosemann@rogge.com;2019-03-09
+K0185;Schenk;Magda Weiß MBA.;Großkunde;Rostock;Nord;57831;;kemal78@stroh.de;2019-08-12
+K0186;Anders Wilms GmbH & Co. KG;Lilly Heinrich;Privatkunde;Hamburg;Nord;85368;0632663416;annawieloch@taesche.org;2019-10-30
+K0187;Seip Weimer KG;Henriette Graf;KMU;münchen;Süd;22417;(07497) 350208;gotthardwiltrud@holzapfel.com;2019-06-14
+K0188;Mangold;Eric Conradi;Kleinstunternehmen;Kiel;Nord;07356;+49(0)7570 51204;iboucsein@girschner.de;2015-11-27
+K0189;Eberhardt e.G.;Dipl.-Ing. Raymund Margraf B.A.;Privatkunde;Hamburg;Nord;37183;06452 088147;hans-ulrich50@harloff.com;2019-11-13
+K0190;Schulz GmbH & Co. KG;Agnieszka Geisel;Privatkunde;Aachen;West;91630;+49(0)9792513271;svenja00@seidel.com;2022-10-06
+K0191;Neuschäfer GbR;Kristiane Zirme;KMU;Darmstadt;Mitte;73065;+49 (0) 4077 848739;beatakeudel@wagenknecht.com;2015-05-15
+K0192;Radisch AG & Co. KG;Ewa Hesse B.Eng.;Großkunde;Nürnberg;Süd;08620;(05935) 186387;elfieholzapfel@lange.com;2021-04-28
+K0193;Preiß OHG mbH;Anastasios Ehlert;KMU;FREIBURG;Süd;03173;+49(0)0967 899405;edeltraudtrupp@aumann.de;2022-09-24
+K0194;Mosemann e.V.;Hans-Adolf Roht;Kleinstunternehmen;Rostock;Nord;50948;+49(0)1413811386;hans-joergputz@hering.com;2021-11-19
+K0195;Weiß;Univ.Prof. Aysel Wilms;Großkunde;Darmstadt;Mitte;76122;06852 89755;michaele56@losekann.de;2019-03-18
+K0196;Hendriks;Hans-H. Wilms B.Eng.;KMU;Leipzig;Ost;77600;+49(0)9082 40433;anastasios48@roehricht.com;2015-12-03
+K0197;Bender GmbH & Co. KG;Carolin Etzler;Großkunde;Düsseldorf;West;59334;+49(0)1969 31572;sstumpf@dehmel.org;2015-01-22
+K0198;Wagenknecht e.V.;Annelise Zahn-Blümel;Kleinstunternehmen;Essen;West;56613;(09060) 48058;matopaffrath@hartung.com;2020-09-29
+K0199;Steinberg Stiftung & Co. KGaA;Yasmin Matthäi-Weller;KMU;Berlin;Ost;36462;+49 (0) 5179 086416;;2019-08-22
+K0200;Gumprich;Dipl.-Ing. Margaretha Rudolph B.A.;Kleinstunternehmen;Berlin;Ost;31465;(09116) 65535;desiree04@killer.de;2019-04-09
+K0201;Fiebig;Angela Heintze B.A.;Kleinstunternehmen;Augsburg;Süd;21103;(02405) 147705;johannarenner@haase.org;2020-06-06
+K0202;Nette;Nick Thanel-Staude;Kleinstunternehmen;Kiel;Nord;69804;+49 (0) 0439 407016;giesela51@hornich.de;2015-01-28
+K0203;Kramer GmbH & Co. OHG;Toralf Jopich;Großkunde;DRESDEN;Ost;98123;07800 38457;kweinhage@kensy.de;2022-04-20
+K0204;Schomber Jacobi Jäckel GbR;Rosel Bolander;Großkunde;Hannover;Mitte;60843;+49 (0) 5621 689363;slawomirjockel@juettner.de;2018-07-31
+K0205;Eigenwillig;Mathias Etzler B.A.;KMU;Essen;West;48262;(09251) 88125;iwonabecker@lehmann.de;2016-04-11
+K0206;Schweitzer;Carmela Wulff;Privatkunde;Hannover;Mitte;12209;(04999) 393305;strohlidia@eimer.de;2022-12-11
+K0207;Seip;Cläre Kraushaar;Großkunde;Stuttgart;Süd;72233;+49(0)6046333127;ustroh@hentschel.com;2018-05-25
+K0208;Wähner;Mira Johann-Kreusel;Privatkunde;Nürnberg;Süd;81770;+49(0) 886086803;theodor64@misicher.org;2021-07-12
+K0209;Bloch;Hilmar Seidel-Mentzel;Privatkunde;Halle;Ost;81298;+49 (0) 6657 027937;hermannmarkus@seip.com;2021-01-08
+K0210;Wagner;Bartholomäus Drewes;Kleinstunternehmen;Frankfurt;Mitte;51868;(02686) 025922;hans-joergwilmsen@birnbaum.de;2022-03-27
+K0211;Jessel Vollbrecht e.G.;;KMU;Dresden;Ost;23094;+49(0)7778097339;ametz@budig.com;2021-04-04
+K0212;Rogge GbR;Andree Gorlitz B.A.;Kleinstunternehmen;Wiesbaden;Mitte;50209;(04510) 162249;;2016-03-04
+K0213;Davids e.G.;Friedlinde Koch;Kleinstunternehmen;essen;West;16814;02145 868339;doerrchantal@schuchhardt.com;2017-04-27
+K0214;Ullrich Stroh KG;Hiltraud Schlosser;Großkunde;Darmstadt;Mitte;48995;+49 (0) 9978 772934;abrahamdrubin@mohaupt.com;2022-12-21
+K0215;Hänel;Dipl.-Ing. Angelica Kade;Kleinstunternehmen;HAMBURG;Nord;83034;+49(0)1448 85015;robby99@gertz.de;2020-10-14
+K0216;Steinberg Naser GmbH & Co. KGaA;Mark Ernst;Kleinstunternehmen;Freiburg;Süd;27857;0084958803;luise51@holt.de;2017-02-02
+K0217;Schomber Reinhardt AG & Co. KGaA;Constance Scheibe-Drub;Großkunde;Erfurt;Ost;50461;03574 384215;wulffhansgeorg@martin.com;2017-04-22
+K0218;Otto Fliegner AG & Co. OHG;Ulrike Nette;KMU;Köln;West;52182;+49(0) 076810409;kadevolker@dobes.org;2017-12-10
+K0219;Rust e.G.;Mandy Häring;Großkunde;Halle;Ost;33448;07142241098;haeringbabette@rogner.com;2020-02-19
+K0220;Hölzenbecher;Dr. Arif Jockel B.Eng.;Privatkunde;HANNOVER;Mitte;02070;+49(0)6016 629979;ludwig53@werner.com;2017-09-04
+K0221;Rosenow Eigenwillig AG;Ariane Meyer B.Eng.;Großkunde;Köln;West;73329;+49(0)5625 57701;wdowerg@misicher.de;2019-09-29
+K0222;Ruppert;Jaroslav Dobes-Lachmann;Kleinstunternehmen;Stuttgart;Süd;58148;06963 938276;kargehartmuth@schaefer.de;2016-07-28
+K0223;Rosenow Zirme GmbH;Dr. Maximilian Staude B.Sc.;Privatkunde;NÜRNBERG;Süd;19975;01724 61919;fjunken@speer.com;2019-04-22
+K0224;Harloff AG & Co. KG;Pius Finke;Großkunde;Wiesbaden;Mitte;78469;(07335) 494651;schmidtkeangela@eckbauer.de;2015-05-07
+K0225;Bloch;Nikolai Römer;Großkunde;Nürnberg;Süd;14036;(06566) 668327;hans-heinrichroehricht@klingelhoefer.org;2020-07-21
+K0226;Eberth;Adolf Boucsein-Seifert;KMU;Wiesbaden;Mitte;27621;+49 (0) 6796 927868;wkraus@gotthard.com;2019-12-13
+K0227;Ortmann;Univ.Prof. Jan Heuser MBA.;Kleinstunternehmen;Hannover;Mitte;00975;+49(0)9712 847818;henschelwigbert@weihmann.com;2020-01-17
+K0228;Schulz;Loretta Bloch;Privatkunde;DORTMUND;West;80778;09565 442094;burkard79@ruppersberger.org;2021-08-05
+K0229;Scholz;Friedo Neureuther;Kleinstunternehmen;Aachen;West;28144;+49 (0) 9444 019292;zkoch-ii@hess.net;2021-05-24
+K0230;Girschner Rädel AG;Annette Fiebig;KMU;Aachen;West;76637;(02395) 04102;ekuhl@muelichen.net;2020-10-08
+K0231;Stoll Trapp GmbH;Ing. Bärbel Radisch MBA.;KMU;Bremen;Nord;47658;(00185) 69454;madeleine14@sauer.de;2016-06-27
+K0232;Wirth Steuer Stiftung & Co. KGaA;Univ.Prof. Michael Schacht B.A.;Großkunde;Augsburg;Süd;25800;+49(0)0618 175344;antoniusbarth@davids.com;2018-01-05
+K0233;Sontag;Willibald Scheuermann B.Sc.;Privatkunde;Erfurt;Ost;19269;+49 (0) 1244 717465;gotthard14@kranz.de;2022-10-16
+K0234;Heser GbR;;Privatkunde;Essen;West;96271;+49 (0) 8639 174101;rudolphjacqueline@wulf.de;2022-06-13
+K0235;Söding KGaA;Vlado Bender;Kleinstunternehmen;Köln;West;42569;+49(0)8776618306;keberhardt@klemt.de;2018-03-07
+K0236;Jähn;Ann Schüler-Seifert;KMU;Aachen;West;58517;+49(0)3280 63461;zenon17@grein.com;2015-07-08
+K0237;Gröttner AG;Dipl.-Ing. Hans-Ludwig Bolnbach B.Eng.;Großkunde;Lübeck;Nord;87005;;stellaboucsein@waehner.de;2017-04-08
+K0238;Bähr;Prof. Angelica Henk B.A.;KMU;Nürnberg;Süd;20417;(02911) 179931;slavkokallert@stiebitz.de;2022-04-11
+K0239;Dussen van Stolze KG;Gordon Hamann-Wieloch;Kleinstunternehmen;München;Süd;92511;+49(0)2625 82739;eimereckhard@schmidtke.de;2016-01-25
+K0240;Bachmann GmbH & Co. KGaA;Ada Albers;Großkunde;Bremen;Nord;19467;;irinaortmann@cichorius.org;2016-05-08
+K0241;Lindner Adolph KG;Dr. Branko Radisch B.Sc.;Privatkunde;Leipzig;Ost;88373;+49(0)0312 77220;seidelotto@haering.de;2018-05-10
+K0242;Werner;Anette Döhn B.Sc.;Kleinstunternehmen;Stuttgart;Süd;20781;;henryk13@lehmann.net;2021-11-04
+K0243;Hartmann Briemer GmbH & Co. KGaA;Frau Sybille Mälzer B.A.;Großkunde;Stuttgart;Süd;97265;+49 (0) 7354 352090;franz-xaver17@lindner.de;2017-06-08
+K0244;Hübel KG;Univ.Prof. Willy Schmidtke;KMU;Hamburg;Nord;98316;07397 74063;matteoluebs@hartung.com;2016-07-26
+K0245;Adolph;Frau Andrea Möchlichen;KMU;Nürnberg;Süd;68671;07318 063254;friederickeconradi@naser.org;2022-05-20
+K0246;Tlustek GmbH & Co. KG;Zoran Metz;KMU;Düsseldorf;West;26257;(00165) 80464;linastolze@scholl.com;2017-09-07
+K0247;Steuer;Swetlana Birnbaum;Privatkunde;Erfurt;Ost;65790;05281832538;seipwojciech@weller.net;2016-06-24
+K0248;Wesack;Ing. Hans Hethur MBA.;Großkunde;Halle;Ost;01557;08817 884795;grafrosalia@christoph.com;2015-03-10
+K0249;Buchholz Dörr AG & Co. KGaA;Beate Textor;Großkunde;Frankfurt;Mitte;72380;+49(0)6827 56704;calogerobarkholz@poelitz.de;2020-08-14
+K0250;Sager Karz KGaA;Janin Scheel;Kleinstunternehmen;Erfurt;Ost;74924;+49 (0) 4375 402547;ellifritsch@reising.org;2020-09-25
+K0251;Gertz Stiftung & Co. KG;Danilo Hellwig-Drub;Privatkunde;Augsburg;Süd;59274;02380552578;antjejacobi-jaeckel@barth.de;2017-09-04
+K0252;Mielcarek GmbH;Abram Warmer-Ritter;Privatkunde;Bremen;Nord;47492;(07517) 028140;oschoenland@klemm.com;2016-12-20
+K0253;Segebahn;Klaus-Dieter Putz B.A.;KMU;Hamburg;Nord;30187;(01863) 75998;stahroswin@finke.de;2017-11-27
+K0254;Köhler Aumann GmbH;Gina Jäntsch;Privatkunde;Nürnberg;Süd;81376;04266 299123;;2019-10-25
+K0255;Albers GmbH & Co. KG;Herlinde Gertz;Privatkunde;Aachen;West;92326;+49(0)8704 94787;andrewzorbach@fliegner.org;2015-08-16
+K0256;Schuster;Frau Margarita Stadelmann B.Eng.;Privatkunde;Halle;Ost;27301;+49(0)7195 97964;htaesche@peukert.com;2015-06-30
+K0257;Fröhlich Salz AG;Giuseppe Misicher-Süßebier;Kleinstunternehmen;Bremen;Nord;52045;0504481832;scheuermannkatarina@ring.de;2021-03-14
+K0258;Jacobi Jäckel;Marjan Thanel;KMU;Leipzig;Ost;18952;+49(0)2845765213;almuthartung@roemer.com;2016-05-04
+K0259;Mies Buchholz AG;Viktor Bachmann-Naser;Großkunde;Frankfurt;Mitte;45279;;fatih32@loeffler.com;2018-03-02
+K0260;Bähr e.G.;Dipl.-Ing. Anett Gunpf B.Sc.;KMU;Dortmund;West;89071;+49(0)0140 11939;hans-friedrichsteckel@baum.org;2021-12-25
+K0261;Keudel;Catherine Otto;Kleinstunternehmen;Stuttgart;Süd;89119;+49(0)8334280138;skobelt@gorlitz.de;2017-10-01
+K0262;Dörin g;Ing. Hans-Herbert Löffler;Privatkunde;münchen;Süd;83615;+49(0)7182 754801;;2022-05-16
+K0263;Martin;Prof. Hanspeter Hoffmann MBA.;Großkunde;Dresden;Ost;17520;(07167) 81126;ltaesche@weihmann.com;2016-08-06
+K0264;Gumprich Kambs AG & Co. OHG;Betti Heintze-Löffler;Großkunde;Köln;West;49946;07967842711;adelheid73@eimer.com;2015-12-14
+K0265;Walter AG;Jacob Stiebitz;Privatkunde;Frankfurt;Mitte;26952;+49(0)9911 87734;gnoack@riehl.com;2017-08-27
+K0266;Losekann AG;Ingried Jopich-Kohl;KMU;DORTMUND;West;70028;(04276) 24671;jsorgatz@reuter.de;2015-11-02
+K0267;Rörricht Franke GmbH & Co. OHG;Hans-Michael Hesse;Kleinstunternehmen;Augsburg;Süd;96954;00090255905;bdietz@klemm.com;2016-05-09
+K0268;Henschel;Dr. Markus Jockel B.Sc.;KMU;Kassel;Mitte;41520;05076 98640;bschacht@kostolzin.de;2022-09-11
+K0269;Dippel;Frau Marlis Steuer B.A.;Privatkunde;Aachen;West;78529;+49(0)5637 18344;huhnchristel@hecker.com;2019-06-12
+K0270;Sager;Knut Kallert;Privatkunde;Frankfurt;Mitte;19876;+49(0) 514846853;qkuehnert@pieper.de;2021-03-27
+K0271;Wiek;Herr Lukas Tlustek;Privatkunde;Hannover;Mitte;97374;;iliasflantz@stolze.org;2017-06-29
+K0272;Langern Juncken AG;Sigmar Lehmann B.Eng.;Privatkunde;AUGSBURG;Süd;24936;+49(0) 123034778;ploechel@gutknecht.org;2015-11-04
+K0273;Baum GbR;Margret Rogner;Privatkunde;Hamburg;Nord;07001;09416516231;preissgiovanna@wohlgemut.org;2018-09-20
+K0274;Conradi Hellwi g KG;Reginald Johann;Großkunde;Hamburg;Nord;96363;+49 (0) 1234 764907;hildegard15@loechel.de;2019-10-14
+K0275;Hentschel;Susanna Ziegert;Kleinstunternehmen;Nürnberg;Süd;57540;;reinhardtnuray@margraf.com;2017-10-03
+K0276;Hermighausen Jacobi Jäckel AG;Ing. Egon Fritsch MBA.;KMU;Essen;West;60417;06561 248156;traugott00@segebahn.com;2022-03-17
+K0277;Martin;Abraham Kühnert-Gute;Großkunde;Hannover;Mitte;59112;+49(0) 829657724;heidemariescheel@holzapfel.de;2021-02-08
+K0278;Gnatz Kreusel GmbH;Herr Willfried Barkholz B.A.;Kleinstunternehmen;dresden;Ost;73420;;austermuehleirmela@luebs.de;2015-05-01
+K0279;Oderwald;Engin Trüb;Kleinstunternehmen;KÖLN;West;34476;+49 (0) 6393 436262;hoffmannzenta@heinz.net;2022-05-14
+K0280;Säuberlich Stolze KGaA;Anni Atzler MBA.;Kleinstunternehmen;Nürnberg;Süd;56366;(04118) 005375;adolphjanusz@scholl.de;2019-05-10
+K0281;Kroker Steckel GmbH;Yusuf Römer-Berger;KMU;Düsseldorf;West;42875;02158 624150;;2022-11-09
+K0282;Hesse Schmidtke e.G.;Justine Johann;Großkunde;Aachen;West;25728;(07032) 03207;gottlieb76@oderwald.de;2015-06-05
+K0283;Tröst Rörricht GmbH & Co. KGaA;Jeanette Dowerg B.A.;Privatkunde;Hamburg;Nord;51342;+49 (0) 8499 390892;pbuchholz@stey.com;2016-06-18
+K0284;Stiffel Stiffel AG;Gunhild Schäfer-Döring;Privatkunde;düsseldorf;West;20177;04905 097592;nerminbiggen@holzapfel.de;2016-08-03
+K0285;Weimer AG;Antonia Kuhl-Hermighausen;Großkunde;ROSTOCK;Nord;36103;+49 (0) 6642 147649;oscarstadelmann@koch.net;2018-08-14
+K0286;Matthäi Kraushaar GmbH & Co. KGaA;Kunigunda Schinke;Großkunde;Augsburg;Süd;16592;0610857327;hoffmannvolkmar@budig.com;2021-04-20
+K0287;Stolze GmbH;Prof. Heinrich Hübel B.Sc.;KMU;Kassel;Mitte;08186;0179454918;drewesjohanne@misicher.com;2016-12-28
+K0288;Kreusel AG;Hartmuth Tlustek;Privatkunde;Rostock;Nord;59779;+49(0)5232 19416;adolphrico@aumann.de;2021-11-09
+K0289;Süßebier Lachmann OHG mbH;Ing. Ludmila Schmiedt B.Eng.;Privatkunde;Freiburg;Süd;41220;+49(0) 103037236;diedrichjacobi-jaeckel@finke.com;2016-11-18
+K0290;Geisel AG & Co. KG;Wibke Neureuther MBA.;Privatkunde;Kiel;Nord;79334;(06050) 166799;arndt76@peukert.de;2015-01-06
+K0291;Trüb AG;Heimo Rust;Großkunde;Lübeck;Nord;81467;+49(0)7957 602437;thaddaeus38@schaaf.de;2021-02-14
+K0292;Trubin;Birte Hornig MBA.;Kleinstunternehmen;BERLIN;Ost;57293;+49(0)1722 32971;tnohlmans@haering.com;2015-05-17
+K0293;Klemt GbR;Marika Freudenberger;Kleinstunternehmen;Köln;West;80156;+49(0)9318 374550;rosina28@staude.com;2015-11-04
+K0294;Binner;Resi Mielcarek B.Sc.;Privatkunde;Frankfurt;Mitte;99180;01213 52478;gwagner@seifert.de;2021-10-23
+K0295;Eberhardt AG & Co. OHG;Xenia Liebelt B.Sc.;Großkunde;Leipzig;Ost;75482;+49(0)4565 328632;alehmann@plath.com;2021-01-21
+K0296;Fiebig Winkler AG;August Kambs;Großkunde;Dortmund;West;62606;+49(0)2908466845;alan48@finke.de;2019-10-18
+K0297;Seifert Haering KG;Mathilde Kaul MBA.;Privatkunde;KIEL;Nord;41085;;kathy20@reuter.org;2018-04-10
+K0298;Wohlgemut GmbH;Prof. Beata Wagenknecht;Großkunde;LÜBECK;Nord;54851;+49(0)1749075399;niklasjacob@stahr.com;2022-03-14
+K0299;Kostolzin;Herr Gottlob Plath B.A.;Großkunde;Darmstadt;Mitte;71266;;jschacht@wulff.de;2017-12-14
+K0300;Sauer Ortmann KGaA;Dipl.-Ing. Marlies Niemeier;Privatkunde;Nürnberg;Süd;22827;02881 377028;sonja19@doerschner.org;2021-01-26
+K0301;Preiß AG & Co. KG;Hans-Gerd Jäkel;Großkunde;Halle;Ost;44702;+49 (0) 9604 432701;cengiz06@ruppersberger.de;2020-04-28
+K0302;Zänker Kostolzin GmbH & Co. KGaA;Ralf Etzler-Pärtzelt;Privatkunde;Hannover;Mitte;77251;(09663) 658074;gehringerimelda@rudolph.org;2021-05-29
+K0303;Seidel;Marius Römer;Kleinstunternehmen;Hannover;Mitte;39890;(08378) 018204;isidortrapp@martin.com;2016-05-31
+K0304;auch Schlauchin;Heike Schacht;Kleinstunternehmen;Lübeck;Nord;70562;0085641118;kasparfechner@hermighausen.com;2015-10-02
+K0305;Jäntsch GmbH & Co. KG;Herr Leonid Junk;Großkunde;Lübeck;Nord;00461;02654610339;;2022-11-08
+K0306;Bolander Junck GmbH & Co. KG;Frau Janett Baum;Kleinstunternehmen;Wiesbaden;Mitte;30489;(01382) 49671;lieselfaust@reuter.net;2016-02-15
+K0307;Löchel;Aneta Ackermann MBA.;KMU;Rostock;Nord;20074;(04653) 984028;jacobdietrich@thanel.org;2022-05-06
+K0308;Häring Sc hmidt GmbH & Co. OHG;Svea Stoll;Großkunde;Halle;Ost;47435;;steinberghakan@roehricht.de;2018-09-19
+K0309;Renner Butte e.V.;Julius Becker;Privatkunde;München;Süd;15695;0201753703;wernerkarl-ludwig@troest.de;2018-06-27
+K0310;Conradi KG;Rosalie Trupp;Kleinstunternehmen;ESSEN;West;37504;09303 614987;birgidgude@warmer.com;2019-12-20
+K0311;Schacht AG & Co. KG;Carl-Heinz Heser;Großkunde;Dortmund;West;84308;(04870) 605664;stiffelanna-maria@oderwald.com;2020-06-07
+K0312;Hauffer;Fredi Linke;KMU;KASSEL;Mitte;50635;+49(0)9036 133254;schomberemmi@baum.de;2020-11-17
+K0313;Scheel e.V.;Sibel Hermann;Privatkunde;Frankfurt;Mitte;17350;08319971791;bolandersimona@kostolzin.com;2019-01-16
+K0314;Bolander e.V.;Ann Jacobi Jäckel MBA.;Privatkunde;Nürnberg;Süd;10804;0619639907;ymitschke@scholl.de;2020-06-25
+K0315;Steuer;Henrik Plath;KMU;Darmstadt;Mitte;93110;(01939) 284567;pgotthard@beyer.com;2017-11-25
+K0316;Sauer Mälzer GmbH &  Co. OHG;Franka Säuberlich;Kleinstunternehmen;Kiel;Nord;27495;+49(0)5089 20388;loechelmohammed@gute.net;2022-08-07
+K0317;Karge AG & Co. OHG;Univ.Prof. Marta Mosemann B.Eng.;Privatkunde;Nürnberg;Süd;94652;+49(0)7073 033793;wolf-ruedigerwaehner@warmer.de;2016-12-10
+K0318;Albers GmbH;Arndt Klemt;KMU;Frankfurt;Mitte;81247;+49(0) 950033423;irmengard25@henschel.com;2018-11-29
+K0319;Barkholz AG & Co. KGaA;Theresia Ditschlerin;Großkunde;Dresden;Ost;26153;+49(0)7355 28961;;2022-06-06
+K0320;Köster;Lina Lorch;Privatkunde;Aachen;West;09938;+49(0)2530 42897;iwonabutte@zobel.com;2018-02-06
+K0321;Pechel GmbH;Jessica Pohl;KMU;Dortmund;West;25587;07496 903337;rizaharloff@loeffler.com;2017-09-11
+K0322;Hermighausen Rogner AG;Philippe Caspar-Hübel;Privatkunde;Rostock;Nord;85390;08956 776657;juergen60@margraf.org;2017-11-28
+K0323;Brude r;Telse Carsten;KMU;Erfurt;Ost;88814;+49(0) 111508353;james44@trapp.com;2020-12-29
+K0324;Warmer;Adriane Winkler;Kleinstunternehmen;Dresden;Ost;45669;(00782) 63337;annschaaf@wernecke.de;2017-11-25
+K0325;Misicher;Regine Caspar;Kleinstunternehmen;Hannover;Mitte;36637;08052 924075;hendrik66@weller.de;2018-06-11
+K0326;Renner;Gabriele Schaaf;Privatkunde;Dresden;Ost;90225;(09996) 636186;williamdoerr@roskoth.org;2021-07-18
+K0327;Geißler AG;Herr Sandro Stroh;Großkunde;Wiesbaden;Mitte;02316;+49(0)3348 17058;geisslermato@krein.com;2016-09-09
+K0328;Lindner;Univ.Prof. Annedore Krebs B.A.;Großkunde;Augsburg;Süd;34672;(09493) 874302;zbolnbach@hentschel.de;2017-01-08
+K0329;Noack;Irmgard Ruppert B.Sc.;Privatkunde;Lübeck;Nord;47546;;kreuselhildburg@henck.org;2016-11-21
+K0330;Renner;Marica Börner;Großkunde;Hannover;Mitte;76815;+49(0)1856 724380;ebauer@taesche.de;2020-05-09
+K0331;Karz Weinhage GmbH;Hans-Ulrich Bender B.Sc.;Privatkunde;Berlin;Ost;12577;01183 727422;auch-schlauchineckhardt@hornig.de;2020-12-15
+K0332;Buchholz OHG mbH;Mike Heydrich;KMU;München;Süd;75230;(08370) 81647;scheuermannadelbert@wirth.net;2020-08-23
+K0333;Köster GbR;Bartholomäus Bachmann MBA.;KMU;Kassel;Mitte;05313;+49(0)2206 815583;sylvanariehl@lorch.net;2020-11-16
+K0334;Klemm GmbH;Herr Hans-Willi Söding;Großkunde;essen;West;06373;+49(0)4950 136497;trubapollonia@geissler.org;2019-07-11
+K0335;Schinke GmbH;Marina Winkler-Täsche;Privatkunde;Bremen;Nord;52571;00997683890;amirschmiedt@jessel.de;2019-02-10
+K0336;Scholl AG;Charles Köster;Privatkunde;lübeck;Nord;43263;(00397) 52450;sseifert@hein.de;2016-03-18
+K0337;Henk Haering KG;Traugott Stadelmann;KMU;Hamburg;Nord;39685;+49 (0) 7017 130232;gerlachdeborah@haase.net;2022-10-18
+K0338;Budig;Univ.Prof. Irmtraut Jockel;Kleinstunternehmen;Kiel;Nord;33629;+49(0) 449734715;kkostolzin@mans.de;2020-09-26
+K0339;Nerger AG;Hiltraud Carsten-Werner;Kleinstunternehmen;Frankfurt;Mitte;98282;+49(0)6747 46897;kadefranz-xaver@moechlichen.net;2017-04-06
+K0340;Grein Gr oth AG;Stephan Otto;Großkunde;Essen;West;76665;0749160169;;2022-07-14
+K0341;Tröst;Univ.Prof. Marlies Koch B.Sc.;Privatkunde;HAMBURG;Nord;63370;00249724399;aleksandrdrub@seifert.de;2016-02-19
+K0342;Trapp Schaaf AG;Thaddäus Löchel B.A.;Privatkunde;Düsseldorf;West;44886;(04611) 952436;ahmad27@dietz.de;2015-06-11
+K0343;Lindau;Nada Losekann;Privatkunde;DORTMUND;West;25223;02817 932302;joerglange@schomber.com;2015-02-09
+K0344;Hornig AG;Betty Hofmann-Bolnbach;KMU;Augsburg;Süd;09377;(01004) 09013;kohldragica@wesack.org;2018-11-04
+K0345;Mühle Wernecke GmbH;Ing. Gundel Stoll;Großkunde;München;Süd;53566;(00551) 076209;radischkarl-hermann@weitzel.net;2019-09-24
+K0346;Mentzel Schönland OHG mbH;Prof. Henrike Speer B.A.;Kleinstunternehmen;München;Süd;50505;(07397) 69156;ssorgatz@wagner.org;2020-05-31
+K0347;Gude;Sylvio Pölitz-Rudolph;Privatkunde;Darmstadt;Mitte;27148;02717 833321;luebsira@fritsch.de;2016-06-19
+K0348;Hartmann Tschentscher GbR;Univ.Prof. Bettina Stadelmann B.A.;KMU;Erfurt;Ost;15399;+49(0)5668 633414;;2022-08-08
+K0349;Koch;Slawomir Johann-Kramer;KMU;Wiesbaden;Mitte;40983;0655289931;ianders@jopich.net;2021-12-07
+K0350;Stiffel Meyer AG & Co. KG;Camilla Weinhold;Großkunde;Lübeck;Nord;95481;+49(0)9737 46052;minnawagner@thies.com;2021-11-15
+K0351;Neuschäfer Stiftung & Co. KGaA;Fatima Sorgatz-Freudenberger;Großkunde;Hamburg;Nord;86567;06618443861;markoweller@bloch.org;2020-07-06
+K0352;Sölzer Fröhlich KG;Heinz-Wilhelm Textor-Nette;Großkunde;Düsseldorf;West;23330;09126620157;traudebirnbaum@pieper.de;2020-02-24
+K0353;Lübs;Lukas Ullmann-Kusch;Privatkunde;Halle;Ost;01367;+49(0)9261 76475;dussen-vaneric@eberhardt.net;2015-03-14
+K0354;Schaaf KG;;Privatkunde;Lübeck;Nord;67649;+49 (0) 1518 260688;hbolnbach@renner.com;2022-02-24
+K0355;Sorgatz AG;Prof. Nick Girschner;KMU;Aachen;West;87510;+49 (0) 9321 840118;ottmar82@sontag.org;2017-07-02
+K0356;Pohl e.V.;Margret Reinhardt;KMU;Dresden;Ost;29758;09883103032;nadia32@rohleder.net;2022-05-22
+K0357;Klemt;Birgit Vollbrecht;KMU;München;Süd;18446;(02671) 46283;schuchhardtjanna@schulz.net;2016-03-11
+K0358;Köhler;Dipl.-Ing. Salvatore Fliegner;Großkunde;Bremen;Nord;66093;+49(0)4181 861515;leopoldine42@hoefig.com;2017-02-07
+K0359;Hartung Kostolzin AG;Diethard Putz;KMU;Lübeck;Nord;97185;(04849) 102562;magrit88@kusch.de;2022-02-06
+K0360;Eckbauer;Aenne Striebitz;Kleinstunternehmen;Frankfurt;Mitte;22694;+49(0)5396727578;;2015-07-18
+K0361;Christoph;Hella Winkler;Kleinstunternehmen;DARMSTADT;Mitte;11131;+49 (0) 9014 870682;goestrovsky@stey.com;2016-06-09
+K0362;Austermühle Schmiedt AG & Co. OHG;Ole Löffler;Großkunde;Lübeck;Nord;38909;02832 152850;yoderwald@koester.de;2022-10-07
+K0363;Hering;Frithjof Jacob;Kleinstunternehmen;Nürnberg;Süd;44309;0348079705;schmiedtveit@huhn.com;2020-09-29
+K0364;Ullmann Gotthard GmbH;Aenne Ditschlerin;Kleinstunternehmen;AACHEN;West;73188;+49 (0) 6170 243765;ottokar62@heuser.com;2018-04-05
+K0365;Sontag Mangold AG & Co. KGaA;Hans D. Weinhold-Lübs;KMU;Duesseldorf;West;53134;+49(0)2665023741;jniemeier@stoll.de;2021-04-22
+K0366;Otto van der Dussen Stiftung & Co. KGaA;Birte Dörschner-Dörr;KMU;Halle;Ost;22580;(03056) 90674;zeljko16@schoenland.com;2015-02-22
+K0367;Holt e.G.;Steve Hesse;Kleinstunternehmen;Frankfurt;Mitte;63718;(02392) 312604;susefiebig@baehr.com;2018-03-19
+K0368;Kramer GmbH & Co. KG;Mechthild Schulz;Privatkunde;DÜSSELDORF;West;35670;06041 45456;marekbiggen@benthin.com;2021-11-28
+K0369;Weinhage;Diana Hörle;KMU;Hannover;Mitte;49162;+49(0)7554 11082;oswald59@schleich.de;2019-04-12
+K0370;Seip GbR;Klaus-Günter Kraus B.Sc.;Privatkunde;Erfurt;Ost;29109;;mwesack@ullmann.com;2021-12-16
+K0371;Eckbauer AG & Co. OHG;Prof. Mia Herrmann;Kleinstunternehmen;leipzig;Ost;57161;06880 294240;taeschehans-hermann@kruschwitz.de;2018-04-19
+K0372;Reichmann;Darko Mangold;Privatkunde;Leipzig;Ost;86694;+49(0) 202939087;laurenz34@heuser.com;2021-03-29
+K0373;Hauffer AG;;Großkunde;Düsseldorf;West;24033;01059 55184;ruedigerschmidtke@junk.com;2016-09-21
+K0374;Hartmann Wagenknecht GbR;Ing. Zeki Bachmann;KMU;Aachen;West;64983;03543 962736;geert71@girschner.com;2019-01-06
+K0375;Roskoth GmbH & Co. KGaA;Univ.Prof. Friedbert Bärer;Kleinstunternehmen;Kiel;Nord;22693;+49(0)2163 761820;kostolzinrandolf@doerschner.com;2016-01-12
+K0376;Hering e.G.;Frank-Peter Fechner;KMU;düsseldorf;West;01851;+49(0) 279724572;bertramring@hethur.com;2020-12-12
+K0377;Beyer AG;;KMU;HALLE;Ost;20303;0625436172;haufferedgar@klemm.de;2021-11-18
+K0378;Klingelhöfer AG;Lars Flantz;Privatkunde;Hannover;Mitte;68592;(06249) 45147;sybilla41@fischer.com;2018-03-04
+K0379;Finke Krebs GmbH & Co. KG;Frau Beatrice Rust MBA.;Großkunde;ROSTOCK;Nord;21522;0557676952;ramazanlindner@oestrovsky.de;2022-04-22
+K0380;Reising;Dipl.-Ing. Attila Salz MBA.;Privatkunde;Nürnberg;Süd;13503;+49(0)5872105524;jfechner@henk.com;2022-01-22
+K0381;Etzler;Wolfgang Textor;Großkunde;STUTTGART;Süd;60650;+49(0)9179 202521;cosimoaumann@lindau.com;2022-09-11
+K0382;Möchlichen Stiftung & Co. KGaA;Petros Rädel-Thanel;Privatkunde;München;Süd;76570;+49(0)1200 92820;rloechel@roehrdanz.org;2015-10-16
+K0383;Heidrich;Dr. Emine Davids;Großkunde;hannover;Mitte;23690;+49(0) 628917756;;2022-07-20
+K0384;Döhn AG;Lisbeth Wulff;Privatkunde;Rostock;Nord;03428;+49(0)1390 438303;detlef99@rose.de;2020-08-21
+K0385;Biggen GmbH;Wieslaw Jessel;Großkunde;Kiel;Nord;54683;06521568182;schaaflouise@mueller.org;2015-05-07
+K0386;Flantz OHG mbH;Annelise Schomber B.Sc.;KMU;Leipzig;Ost;32288;(08572) 545960;nhenck@auch.com;2022-08-06
+K0387;Rosenow KGaA;Frau Rosa Austermühle B.A.;Privatkunde;Köln;West;81717;02421495511;ingeburgwirth@heser.de;2021-02-20
+K0388;Etzold;Zeljko Roskoth;Kleinstunternehmen;Kiel;Nord;05466;(02758) 955168;rhesse@scholl.com;2020-09-30
+K0389;Zobel;Univ.Prof. Salih Rörricht B.Sc.;Privatkunde;Augsburg;Süd;14629;0136715778;fdoerr@wagenknecht.de;2015-08-11
+K0390;Gute Kühnert GmbH;Giorgio Karz;KMU;Darmstadt;Mitte;37147;+49(0)8272359096;klotzlisbeth@muehle.net;2020-06-18
+K0391;Werner OHG mbH;Ing. Elisa Schuster;Privatkunde;Dortmund;West;12146;+49(0)4768 342016;viviane42@keudel.de;2020-01-20
+K0392;Reising Stroh e.V.;Univ.Prof. Heinz-Jürgen Klapp;KMU;Aachen;West;08931;(09925) 50272;hjunck@ladeck.org;2016-11-21
+K0393;Ullmann;Hendrik Eberth;Großkunde;Kiel;Nord;91033;0829635339;koch-iimargarete@bachmann.com;2022-08-15
+K0394;Ortmann;Henrike Langern B.Eng.;Privatkunde;Essen;West;86851;+49 (0) 7652 892866;michaele64@scholl.com;2018-02-23
+K0395;Döhn AG;Leszek Langern;Privatkunde;Freiburg;Süd;79817;09046 33786;gunpfnadia@ebert.de;2022-01-31
+K0396;Seidel Tlustek e.V.;Adriana Köster-Zänker;Privatkunde;Rostock;Nord;84444;0306000258;metin29@hendriks.net;2021-01-19
+K0397;Seifert;Samira Birnbaum-Rust;KMU;Leipzig;Ost;26265;02631 28196;mathilde82@haase.com;2016-01-06
+K0398;Atzler Schottin e.G.;Alex Schönland-Trommler;Kleinstunternehmen;Dresden;Ost;96027;(05233) 43836;gertraut04@fechner.com;2016-10-14
+K0399;Sager;Bertold Mies;Großkunde;Freiburg;Süd;12442;+49(0)1753 617061;eschomber@striebitz.de;2020-06-20
+K0400;Schulz Mende e.V.;Dr. George Atzler;KMU;München;Süd;99015;07998028413;reisinganatolij@peukert.com;2015-07-10

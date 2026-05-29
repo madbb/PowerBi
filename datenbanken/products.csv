@@ -1,0 +1,101 @@
+﻿ProductID;Produktname;Kategorie;Listenpreis;Aktiv
+P0001;Jahresabo Premium;Software;762.00;Ja
+P0002;Desktop Basic;Hardware;1534.00;Ja
+P0003;Hub USB-C;Zubehör;147.99;Ja
+P0004;Maus Silent;Zubehör;208.99;Ja
+P0005;Dockingstation Wireless 3;Zubehör;143.99;Ja
+P0006;Desktop Slim;Hardware;1113.49;Ja
+P0007;Desktop Business;Hardware;1932.00;Ja
+P0008;Drucker Enterprise 365;Hardware;3086.99;Ja
+P0009;Server Pro v2;Hardware;3318.00;Ja
+P0010;Migration 24/7;Dienstleistung;978.49;Ja
+P0011;Headset Silent;Zubehör;171.99;Ja
+P0012;Tool Solo;Software;964.49;Ja
+P0013;Kabel USB-C;Zubehör;199.95;Ja
+P0014;NAS Slim 2;Hardware;1248.49;Ja
+P0015;Server Pro X;Hardware;299.00;Ja
+P0016;Support Express 3;Dienstleistung;313.95;Ja
+P0017;Beratung Standard v2;Dienstleistung;596.49;Ja
+P0018;Audit 24/7;Dienstleistung;229.00;Ja
+P0019;Scanner Business;Hardware;1686.00;Ja
+P0020;Migration Pro;Dienstleistung;142.95;Ja
+P0021;Plattform Enterprise;Software;134.49;Ja
+P0022;Webcam Kompakt;Zubehör;134.99;Ja
+P0023;Adapter Ergonomisch;Zubehör;36.00;Ja
+P0024;Lizenz Team;Software;839.00;Ja
+P0025;Server Basic;Hardware;1735.95;Ja
+P0026;Maus Ergonomisch Pro;Zubehör;90.95;Ja
+P0027;Schulung 24/7;Dienstleistung;742.95;Ja
+P0028;Jahresabo Professional 2;Software;590.00;Ja
+P0029;Drucker Pro Pro;Hardware;1808.49;Ja
+P0030;Maus Kompakt 3;Zubehör;34.00;Ja
+P0031;Webcam USB-C v2;Zubehör;84.00;Ja
+P0032;Setup Basis;Dienstleistung;603.99;Ja
+P0033;Tablet Ultra;Hardware;1167.99;Ja
+P0034;Suite Professional;Software;319.99;Ja
+P0035;Cloud-Dienst Standard v2;Software;997.00;Ja
+P0036;Support Standard 365;Dienstleistung;174.99;Ja
+P0037;Support Premium 3;Dienstleistung;465.99;Ja
+P0038;Kabel Silent 3;Zubehör;90.00;Ja
+P0039;Headset HD 3;Zubehör;218.49;Ja
+P0040;Kabel Kompakt;Zubehör;272.00;Ja
+P0041;Tastatur Silent;Zubehör;93.00;Ja
+P0042;Drucker Basic;Hardware;989.95;Ja
+P0043;Tool Team;Software;38.00;Ja
+P0044;Desktop Pro;Hardware;2079.49;Ja
+P0045;Hub Ergonomisch 365;Zubehör;270.00;Ja
+P0046;Drucker Ultra;Hardware;2366.99;Ja
+P0047;Hub Kompakt;Zubehör;277.49;Ja
+P0048;Laptop Basic;Hardware;1228.95;Ja
+P0049;Audit Pro;Dienstleistung;819.99;Ja
+P0050;Beratung Pro 2;Dienstleistung;864.49;Ja
+P0051;Server Enterprise 3;Hardware;856.49;Ja
+P0052;Wartung Express 2;Dienstleistung;967.99;Ja
+P0053;Paket Team;Software;688.99;Ja
+P0054;Lizenz Standard;Software;282.99;Ja
+P0055;Maus Wireless;Zubehör;113.99;Ja
+P0056;Wartung Standard;Dienstleistung;158.49;Ja
+P0057;Paket Standard;Software;30.49;Ja
+P0058;Dockingstation USB-C X;Zubehör;276.99;Ja
+P0059;Migration Basis;Dienstleistung;334.99;Ja
+P0060;Hub HD;Zubehör;98.49;Ja
+P0061;Jahresabo Basic;Software;396.49;Ja
+P0062;Maus HD Pro;Zubehör;238.99;Ja
+P0063;Adapter USB-C;Zubehör;75.95;Ja
+P0064;Cloud-Dienst Solo;Software;668.99;Ja
+P0065;Drucker Slim;Hardware;2652.99;Ja
+P0066;Server Ultra 2;Hardware;931.95;Ja
+P0067;Tastatur USB-C;Zubehör;193.49;Ja
+P0068;Plattform Team Pro;Software;265.00;Ja
+P0069;Tastatur RGB;Zubehör;64.95;Ja
+P0070;Maus Kompakt 2;Zubehör;144.95;Ja
+P0071;Migration Standard;Dienstleistung;614.95;Ja
+P0072;Scanner Enterprise;Hardware;2627.95;Ja
+P0073;Adapter HD;Zubehör;253.99;Ja
+P0074;Plattform Professional 2;Software;721.49;Ja
+P0075;Paket Enterprise v2;Software;107.49;Ja
+P0076;Server Home;Hardware;2500.00;Ja
+P0077;Suite Basic Pro;Software;432.49;Ja
+P0078;Scanner Home;Hardware;2084.00;Ja
+P0079;Scanner Enterprise 365;Hardware;1114.95;Ja
+P0080;Beratung 24/7 Pro;Dienstleistung;510.95;Ja
+P0081;Suite Team Pro;Software;920.00;Ja
+P0082;Suite Premium;Software;55.95;Ja
+P0083;Beratung 24/7 365;Dienstleistung;409.49;Ja
+P0084;Wartung Express Pro;Dienstleistung;313.95;Ja
+P0085;Schulung Basis;Dienstleistung;760.00;Ja
+P0086;Schulung Premium;Dienstleistung;791.00;Nein
+P0087;Maus Ergonomisch 2;Zubehör;191.49;Nein
+P0088;Desktop Enterprise;Hardware;2016.49;Nein
+P0089;NAS Plus;Hardware;669.00;Nein
+P0090;Audit Premium;Dienstleistung;151.00;Nein
+P0091;Schulung Standard;Dienstleistung;959.95;Nein
+P0092;Plattform Professional X;Software;834.49;Nein
+P0093;Monitor Plus;Hardware;2140.00;Nein
+P0094;Cloud-Dienst Premium;Software;365.95;Nein
+P0095;Plattform Enterprise X;Software;359.95;Nein
+P0096;Cloud-Dienst Basic 365;Software;645.95;Nein
+P0097;Migration Premium;Dienstleistung;746.99;Nein
+P0098;Setup Standard;Dienstleistung;490.99;Nein
+P0099;Paket Solo 2;Software;299.95;Nein
+P0100;Beratung 24/7;Dienstleistung;683.99;Nein
