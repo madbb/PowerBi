@@ -1,6 +1,220 @@
 /* ============================================================
-   PBI-THEME.CSS  –  Erweiterung: Aufgabenblätter
-   Ergänzung zu pbi-theme.css  –  nicht eigenständig verwenden
+   PBI-THEME.CSS  –  Vollständige Theme-Datei
+   Akzentfarbe: #E8472F (Enders-Coral) / Dark-Mode
+   ============================================================ */
+
+/* ============================================================
+   ABSCHNITT 1: HAUPTSTYLES (Skripte)
+   ============================================================ */
+
+/* ---------- Seiten-Header ---------- */
+.pbi-page-header {
+  background: linear-gradient(135deg, #1a0f0d 0%, #2a1410 100%);
+  border-left: 4px solid #E8472F;
+  border-radius: 6px;
+  padding: 1.4rem 1.8rem;
+  margin: 0 0 2rem 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+.pbi-page-meta {
+  color: #E8472F;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+}
+.pbi-page-title {
+  color: #f0e8e8;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.02em;
+}
+.pbi-page-sub {
+  color: #a89898;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ---------- Admonitions (Info / Warning) ---------- */
+.pbi-admonition {
+  border-radius: 5px;
+  padding: 0.85rem 1.2rem;
+  margin: 1.4rem 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+.pbi-info {
+  background: #0d1a2e;
+  border-left: 4px solid #4a90d9;
+  color: #b8cce0;
+}
+.pbi-info .pbi-admonition-title {
+  color: #4a90d9;
+}
+.pbi-warning {
+  background: #1e1408;
+  border-left: 4px solid #E8472F;
+  color: #d0b8a0;
+}
+.pbi-warning .pbi-admonition-title {
+  color: #E8472F;
+}
+.pbi-admonition-title {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Screenshot-Platzhalter ---------- */
+.pbi-screenshot {
+  background: #111827;
+  border: 1px dashed #2a3a4a;
+  border-radius: 5px;
+  padding: 0.75rem 1.1rem;
+  margin: 1.2rem 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+.pbi-screenshot-label {
+  background: #1e2a3a;
+  color: #6090b0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2em 0.6em;
+  border-radius: 3px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+.pbi-screenshot-desc {
+  color: #5a7080;
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ---------- Flow-Cards ---------- */
+.pbi-card {
+  background: #141e2e;
+  border: 1px solid #1e2e3e;
+  border-radius: 6px;
+  padding: 0.9rem 1.2rem;
+  margin: 0.65rem 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+.pbi-card-num {
+  background: #E8472F;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  min-width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+.pbi-card-title {
+  color: #e0d0d0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.pbi-card-body {
+  color: #9090a8;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  display: block;
+}
+
+/* ---------- Definitionen ---------- */
+.pbi-definition {
+  background: #141e14;
+  border-left: 4px solid #4a9a4a;
+  border-radius: 4px;
+  padding: 0.85rem 1.2rem;
+  margin: 1.2rem 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: #a8c0a8;
+  line-height: 1.65;
+}
+.pbi-definition strong {
+  color: #6ab86a;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* ---------- Zusammenfassungs-Grid ---------- */
+.pbi-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.pbi-summary-card {
+  background: #141420;
+  border: 1px solid #2a2a3e;
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+.pbi-summary-icon {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.pbi-summary-title {
+  color: #c0c0e0;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+.pbi-summary-body {
+  color: #7878a0;
+  font-size: 0.83rem;
+  line-height: 1.55;
+}
+
+/* ---------- Druck-Optimierungen Skripte ---------- */
+@media print {
+  .pbi-page-header,
+  .pbi-admonition,
+  .pbi-card,
+  .pbi-definition,
+  .pbi-summary-card {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    break-inside: avoid;
+  }
+  .pbi-screenshot {
+    display: none;
+  }
+  .pbi-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ============================================================
+   ABSCHNITT 2: AUFGABENBLATT-ERWEITERUNG
    Akzentfarbe Aufgaben: Teal #4fc3f7 / Hintergrund #0a2030
    ============================================================ */
 
@@ -157,7 +371,7 @@
   margin-bottom: 0.2rem;
 }
 
-/* ---------- Szenario-Box (orange, abweichend von Warning) ---------- */
+/* ---------- Szenario-Box ---------- */
 .pbi-szenario {
   background: #1e1a0a;
   border-left: 3px solid #c9a84c;
@@ -177,7 +391,7 @@
   font-size: 0.85rem;
 }
 
-/* ---------- Fortschritts-Checkliste (Ende jedes Blatts) ---------- */
+/* ---------- Fortschritts-Checkliste ---------- */
 .pbi-checklist {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
