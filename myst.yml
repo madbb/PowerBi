@@ -14,6 +14,7 @@ project:
     - title: Modul 2 – Daten abrufen, bereinigen & Modellframework
       children:
         - file: Skripte/Modul2/05_daten_abrufen.md
+        - file: Skripte/Modul2/05_daten_abrufen_aufgaben.md
         - file: Skripte/Modul2/06_power_query_bereinigen.md
         - file: Skripte/Modul2/07_modellframework.md
     - title: Modul 3 – Semantisches Modell & DAX
