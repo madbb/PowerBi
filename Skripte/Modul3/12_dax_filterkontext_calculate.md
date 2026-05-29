@@ -9,7 +9,7 @@
 Der Filterkontext ist eines der zentralsten — und anfangs schwierigsten — Konzepte in DAX. Wer verstehen will, warum ein Measure genau diesen Wert liefert, muss verstehen, welche Filter zum Zeitpunkt der Auswertung aktiv sind. Und wer Measures bauen will, die Vergleiche, Anteile oder bedingte Berechnungen liefern, muss wissen, wie man diesen Filterkontext gezielt verändert. Dieses Skript legt dafür das Fundament.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Der Filterkontext ist ein Konzept, das Zeit und Übung braucht, um vollständig zu verinnerlichten. Es lohnt sich, dieses Skript nach dem ersten Durcharbeiten noch einmal zu lesen — die Konzepte erschließen sich mit wachsender Praxiserfahrung immer klarer.
 </div>
 
@@ -28,12 +28,12 @@ Filter entstehen auf zwei Arten:
 **Indirekte Filter** entstehen durch Modellbeziehungen. Wenn auf die Tabelle `Date` ein Filter für FY2020 angewendet wird, wird dieser über die Beziehung an die Tabelle `Sales` weitergegeben — nur die Sales-Zeilen mit einem `OrderDateKey` in FY2020 werden berücksichtigt.
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Berechnete Tabellen und berechnete Spalten werden <strong>nicht</strong> im Filterkontext ausgewertet — sie verwenden den Zeilenkontext. Nur Measures werden im Filterkontext ausgewertet. Der Übergang vom Zeilen- zum Filterkontext ist ein eigenes Konzept (Kontextübergang) und wird am Ende dieses Skripts behandelt.
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-filter-group-visual-ss.png — Berichtsseite mit einem Datenschnitt für das Geschäftsjahr und einem Säulendiagramm für Umsatz nach Monat. Der Datenschnittfilter ist unsichtbar im Visual; die Monatsgruppierung ist sichtbar als Spalten.</span>
 </div>
 
@@ -42,7 +42,7 @@ Filter entstehen auf zwei Arten:
 Das Measure `Revenue` berechnet immer die Summe der Umsätze — aber *welche* Umsätze hängt vollständig vom Filterkontext ab. In einem nach Region gruppierten Visual liefert `Revenue` für jede Zeile nur den Umsatz der jeweiligen Region. Um daraus einen **prozentualen Anteil am Gesamtumsatz** zu berechnen, muss der Regionsfilter im Nenner aufgehoben werden:
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-table-region-ratio-over-total-region-ss.png — Tabellenvisual mit den Spalten Region, Revenue und Revenue % Total Region. Jede Zeile zeigt den regionalen Umsatz und seinen prozentualen Anteil am Gesamtumsatz.</span>
 </div>
 
@@ -63,7 +63,7 @@ CALCULATE(<Ausdruck>, [[<Filter1>], <Filter2>]…)
 - Mehrere Filter werden mit **AND** verknüpft — alle müssen gleichzeitig TRUE sein
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   <code>CALCULATETABLE</code> funktioniert identisch wie <code>CALCULATE</code>, gibt aber ein Tabellenobjekt statt eines Skalars zurück.
 </div>
 
@@ -115,7 +115,7 @@ CALCULATE(
 ```
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Boolesche Filterausdrücke sind eine Kurzschreibweise — Power BI übersetzt sie intern in Tabellenfilterausdrücke. <code>'Product'[Color] = "Red"</code> wird intern zu <code>FILTER('Product', 'Product'[Color] = "Red")</code>.
 </div>
 
@@ -134,7 +134,7 @@ Wenn `CALCULATE` einen Filterausdruck erhält, gibt es zwei mögliche Ergebnisse
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-table-color-revenue-red-ss.png — Tabellenvisual mit Spalten Color, Revenue und Revenue Red. Revenue Red ist für jede Farbzeile identisch, weil CALCULATE den Farbfilter überschreibt.</span>
 </div>
 
@@ -203,12 +203,12 @@ RETURN
 ```
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-matrix-sales-territory-revenue-4-ss.png — Matrixvisual mit den Spalten Revenue % Total Region, Revenue % Total Country und Revenue % Total Group, gruppiert nach Group, Country und Region.</span>
 </div>
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   In älteren DAX-Formeln findet man anstelle von <code>REMOVEFILTERS</code> häufig <code>ALL()</code>, <code>ALLEXCEPT()</code> oder <code>ALLNOBLANKROW()</code> als Filtermodifizierer in CALCULATE. Diese Funktionen funktionieren auch als Filtermodifizierer, haben aber primär eine andere Bedeutung als Tabellenfunktionen. <code>REMOVEFILTERS</code> ist die modernere, klarere Schreibweise für das Entfernen von Filtern in CALCULATE.
 </div>
 
@@ -227,7 +227,7 @@ CALCULATE(
 In einem nach Farbe gruppierten Visual: Ohne `KEEPFILTERS` überschreibt CALCULATE den Farbfilter — jede Zeile zeigt denselben Wert. Mit `KEEPFILTERS` wird der bestehende Farbfilter beibehalten und mit "Red" kombiniert. Nur die Zeile "Red" liefert einen Wert; alle anderen Farben ergeben BLANK, da keine Zeile gleichzeitig beide Farben erfüllen kann.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-table-color-revenue-red-keep-filters-ss.png — Tabellenvisual: Revenue Red zeigt nur für die Zeile "Red" einen Wert; alle anderen Farben sind BLANK.</span>
 </div>
 
@@ -340,7 +340,7 @@ RETURN
 ```
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-pie-customer-segment-2-ss.png — Kreisdiagramm mit zwei Segmenten "High" und "Low" nach Kundensegmentierung auf Basis des korrekten Kontextübergangs.</span>
 </div>
 
@@ -383,32 +383,32 @@ SUMX(
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔍</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Filterkontext</div>
     <div class="pbi-summary-body">Alle aktiven Filter bei der Measure-Auswertung. Entsteht durch direkte Filterung (Datenschnitte, Groupings) und indirekte Weitergabe über Beziehungen. Berechnete Spalten haben keinen Filterkontext — sie haben Zeilenkontext.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">⚙️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">CALCULATE</div>
     <div class="pbi-summary-body">Wertet einen Ausdruck in einem modifizierten Filterkontext aus. Filter können als boolesche Ausdrücke (einfache Bedingungen) oder Tabellenausdrücke (FILTER-Funktion für komplexe Bedingungen) übergeben werden.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔄</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Filterverhalten</div>
     <div class="pbi-summary-body">Neue Filter auf Spalten, die noch nicht im Kontext sind, werden hinzugefügt. Neue Filter auf Spalten, die bereits im Kontext sind, überschreiben den bestehenden Filter. KEEPFILTERS verhindert das Überschreiben.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🧹</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Filtermodifizierer</div>
     <div class="pbi-summary-body">REMOVEFILTERS: Filter entfernen (ganze Tabelle oder einzelne Spalten). KEEPFILTERS: Filter beibehalten statt überschreiben. USERELATIONSHIP: inaktive Beziehung aktivieren. CROSSFILTER: Beziehungsrichtung ändern.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔎</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Filterkontext untersuchen</div>
     <div class="pbi-summary-body">VALUES gibt eindeutige Werte im Kontext zurück. HASONEVALUE prüft ob genau ein Wert gefiltert ist. SELECTEDVALUE gibt diesen Wert zurück. ISFILTERED, ISCROSSFILTERED, ISINSCOPE testen den Filterzustand.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔀</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Kontextübergang</div>
     <div class="pbi-summary-body">CALCULATE ohne Filter überführt Zeilenkontextwerte in den Filterkontext. Unverzichtbar in berechneten Spalten, die aggregieren, und in Iteratorfunktionen. Measure-Referenzen lösen den Übergang automatisch aus.</div>
   </div>

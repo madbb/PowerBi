@@ -28,14 +28,14 @@ Ship Date = 'Date'
 Diese Formel erzeugt eine neue Tabelle `Ship Date` mit denselben Spalten und Zeilen wie `Date`. Wird die Quelltabelle `Date` aktualisiert, wird `Ship Date` automatisch neu berechnet — die Tabellen bleiben synchron.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-sales-date-relationships.png — Modelldiagramm: Tabelle Sales mit drei Beziehungen zur Tabelle Date — eine aktiv (durchgezogene Linie), zwei inaktiv (gestrichelte Linien).</span>
 </div>
 
 **Nach dem Duplizieren:** Alle benutzerdefinierten Konfigurationen müssen auf die neue Tabelle übertragen werden — z. B. Spalten umbenennen, Sortierreihenfolge festlegen, nicht benötigte Spalten ausblenden.
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Berechnete Tabellen erhöhen die Modellgröße und können Datenaktualisierungszeiten verlängern, insbesondere wenn sie von anderen Tabellen abhängen. Sparsam einsetzen.
 </div>
 
@@ -52,12 +52,12 @@ Due Date = CALENDARAUTO(6)
 Das Argument `6` legt Juni als letzten Monat des Geschäftsjahres fest. Die resultierende Tabelle enthält eine einzige Datumsspalte mit lückenlosen Werten vom Beginn bis Ende aller Jahre im Modell.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Alternativ bietet <strong>CALENDAR(Startdatum, Enddatum)</strong> mehr Kontrolle — Start- und Enddatum können als statische Werte oder als Ausdrücke angegeben werden.
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-due-date-table-data-view-1.png — Datenansicht der Tabelle "Due Date" mit einer einzigen Datumsspalte, sortiert vom frühesten zum spätesten Datum (Beginn: 1. Juli 2017).</span>
 </div>
 
@@ -136,7 +136,7 @@ FORMAT('Due Date'[Due Date], "yyyy mmm, dd")
 ```
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-due-date-table-data-view-2.png — Datenansicht der Tabelle "Due Date" mit sechs Spalten: die originale Datumsspalte plus fünf berechnete Spalten.</span>
 </div>
 
@@ -152,7 +152,7 @@ Wenn eine Formel Werte aus einer **anderen Tabelle** benötigt, gibt es zwei Weg
 | Keine Beziehung vorhanden | `LOOKUPVALUE()` |
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   <code>RELATED()</code> ist deutlich schneller als <code>LOOKUPVALUE()</code> — Power BI nutzt die vorhandenen Beziehungsindizes. Wenn möglich immer <code>RELATED()</code> bevorzugen.
 </div>
 
@@ -193,7 +193,7 @@ Nicht numerische Spalten (Text, Datum, Boolean) können ebenfalls aggregiert wer
 Implizite Measures funktionieren nur für **einfache Aggregationen** — einen Spaltenwert mit einer einzigen Funktion zusammenfassen. Sobald eine Berechnung mehrere Spalten kombiniert, einen Quotienten berechnet oder zeitbasierte Logik benötigt, muss ein **explizites Measure** geschrieben werden.
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Implizite Measures lassen sich von Berichtsautoren umprogrammieren — z. B. kann ein Berichtsautor <em>Unit Price</em> auf Sum setzen, was zu irreführend hohen Werten führt (Summe aller Einzelpreise statt eines Durchschnittspreises). Empfehlung: Numerische Spalten mit expliziten Measures absichern und die Originalspalte ausblenden.
 </div>
 
@@ -226,7 +226,7 @@ COUNTROWS(Sales)
 ```
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Sofort nach dem Erstellen eines Measures die Formatierungsoptionen im Menüband <strong>Measure-Tools</strong> festlegen (Dezimalstellen, Währungssymbol, Prozent). Das stellt sicher, dass Werte in allen Visuals konsistent aussehen.
 </div>
 
@@ -243,7 +243,7 @@ DIVIDE([Profit], [Revenue])
 ```
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Änderungen an einem Measure wirken sich auf alle abhängigen Measures aus. Verbundmeasures immer sorgfältig testen, bevor Änderungen eingecheckt werden.
 </div>
 
@@ -319,7 +319,7 @@ SUMX(
 ```
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-table-month-revenue-2.png — Tabellenvisual mit den Spalten Month, Revenue und Discount auf Basis der SUMX-Measures.</span>
 </div>
 
@@ -346,7 +346,7 @@ AVERAGEX(
 `VALUES()` gibt die eindeutigen Verkaufsauftragsnummern im aktuellen Filterkontext zurück. `AVERAGEX` durchläuft dann jeden Auftrag und berechnet den Durchschnitt des Gesamtumsatzes.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-table-month-revenue-4.png — Tabellenvisual mit fünf Spalten: Month, Revenue, Discount, Revenue Avg Order Line, Revenue Avg Order.</span>
 </div>
 
@@ -396,7 +396,7 @@ IF(
 `HASONEVALUE()` prüft, ob die Produktspalte im aktuellen Filterkontext genau einen Wert enthält. Für die Gesamtzeile, die alle Produkte repräsentiert, ist das nicht der Fall — das Measure gibt dann BLANK zurück.
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Iteratorfunktionen mit großen Tabellen und komplexen Ausdrücken können die Abfrageleistung erheblich beeinflussen. Funktionen wie <code>SEARCH()</code> und <code>LOOKUPVALUE()</code> im Iterationsausdruck sind kostspielig — wenn möglich <code>RELATED()</code> bevorzugen.
 </div>
 
@@ -406,12 +406,12 @@ IF(
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📅</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Datumstabellen</div>
     <div class="pbi-summary-body">Mit CALENDARAUTO() oder CALENDAR() als berechnete Tabelle erzeugen. Anschließend als Datumstabelle markieren — zwingend für Zeitintelligenz. Muss eindeutige, lückenlose Datumsangaben enthalten.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📋</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Berechnete Spalten</div>
     <div class="pbi-summary-body">Für Attribute, die zusammengefasste Daten oder DAX-Modellierungsfunktionen (RELATED, RELATEDTABLE) benötigen. Zeilenkontext gilt immer. In Power Query-Spalten bevorzugen wenn möglich — geringere Modellgröße.</div>
   </div>
@@ -426,12 +426,12 @@ IF(
     <div class="pbi-summary-body">Einfach (eine Spalte aggregieren), Verbund (andere Measures referenzieren) oder über Quickmeasures erstellen. Format sofort nach Erstellung festlegen. Measures niemals mit Tabellenpräfix referenzieren.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔄</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Iteratorfunktionen</div>
     <div class="pbi-summary-body">SUMX, AVERAGEX, COUNTX, MINX, MAXX — werten einen Ausdruck zeilenweise aus. Ermöglichen mehrspaltige Berechnungen und Granularitätskontrolle. RANKX für Rangfolgen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🎯</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Spalte oder Measure?</div>
     <div class="pbi-summary-body">Berechnete Spalte: statisches Attribut, das für Slicing oder Beziehungen benötigt wird. Measure: dynamische Berechnung, die vom Filterkontext abhängt. Im Zweifelsfall Measure bevorzugen — geringere Modellgröße.</div>
   </div>

@@ -19,12 +19,12 @@ Der Power Query-Editor wird über **Start → Daten transformieren** geöffnet. 
 </div>
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Viele Operationen sind sowohl über das Menüband (Registerkarte <strong>Transformieren</strong>) als auch über Rechtsklick auf Spalten oder Zellen erreichbar.
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 02-shape-data-query-editor-overview-ss.png — Gesamtansicht des Power Query-Editors mit Abfragen-Bereich links, Datenvorschau in der Mitte und Abfrageeinstellungen rechts.</span>
 </div>
 
@@ -37,7 +37,7 @@ Der Power Query-Editor wird über **Start → Daten transformieren** geöffnet. 
 Beim Import nimmt Power Query an, dass alle Zeilen Daten enthalten. Enthält die erste Zeile jedoch Spaltenüberschriften, muss sie explizit als Kopfzeile markiert werden: **Start → Erste Zeile als Überschriften verwenden**, oder über das Dropdown-Menü neben der ersten Spaltenüberschrift.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 02-use-first-row-headers-ssm.png — Menüoptionen zum Höherstufen der ersten Zeile als Spaltenüberschriften.</span>
 </div>
 
@@ -57,7 +57,7 @@ Unnötige Spalten sollten so früh wie möglich entfernt werden — idealerweise
 - Spalten auswählen → **Start → Spalten entfernen → Andere Spalten entfernen** (nur die ausgewählten behalten)
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Nicht benötigte Spalten belasten das semantische Modell und verlangsamen Berichte. Spalten früh zu entfernen verbessert die Leistung und reduziert die Modellgröße.
 </div>
 
@@ -73,7 +73,7 @@ Vorgehen: Die betreffenden Spalten auswählen → Registerkarte **Transformieren
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 02-unpivot-ss.png — Power Query mit dem Ergebnis des Entpivotierens: aus zwei Jahresspalten wurden die Spalten Year und SalesAmount.</span>
 </div>
 
@@ -94,7 +94,7 @@ Tabellennamen aus Datenquellen enthalten häufig technische Präfixe wie `Fact`,
 Mit **Transformieren → Werte ersetzen** lassen sich einzelne Werte in einer Spalte durch korrekte Werte ersetzen — z. B. Rechtschreibfehler oder inkonsistente Schreibweisen. In Power Query können keine einzelnen Zellen direkt bearbeitet werden, wie es in Excel möglich ist.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 03-replace-value-ssm.png — Dialog "Werte ersetzen" im Power Query-Editor mit Feldern für alten und neuen Wert.</span>
 </div>
 
@@ -131,7 +131,7 @@ Falsche Datentypen verhindern:
 - Korrekte Beziehungen zwischen Tabellen
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Datentypen sollten immer im Power Query-Editor korrigiert werden, <em>bevor</em> die Daten ins semantische Modell geladen werden — nicht nachträglich in der Berichtsansicht.
 </div>
 
@@ -145,7 +145,7 @@ Zwei Wege im Power Query-Editor:
 Die Änderung wird als Schritt **Geänderter Typ** gespeichert und bei jeder Aktualisierung automatisch angewendet.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 04-select-data-type-ssm.png — Auswahl eines Datentyps über die Registerkarte Transformieren im Power Query-Editor.</span>
 </div>
 
@@ -167,7 +167,7 @@ Aufruf: **Start → Abfragen anfügen → Abfragen als neu anfügen** (erzeugt e
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 05-append-new-window-ss.png — Fenster "Abfragen als neu anfügen" mit verfügbaren und anzufügenden Tabellen.</span>
 </div>
 
@@ -186,7 +186,7 @@ Verfügbare Join-Typen:
 | **Innerer Join** | Nur Zeilen, die in beiden Tabellen übereinstimmen |
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 05-merge-queries-new-ss.png — Fenster "Abfragen zusammenführen" mit Tabellenauswahl, Schlüsselspalte und Join-Typ.</span>
 </div>
 
@@ -215,12 +215,12 @@ Im Power Query-Editor unter **Ansicht → Datenvorschau** stehen drei Profilieru
 </div>
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Power Query profiliert standardmäßig nur die ersten 1.000 Zeilen. Für eine vollständige Analyse: Statusleiste unten → Profilerstellungsstatus → <strong>Spaltenprofilerstellung basierend auf gesamtem Dataset</strong> auswählen.
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 06-column-statistics-ssm.png — Power Query-Editor mit aktivierten Profilierungsansichten: Spaltenqualität, Spaltenverteilung und Spaltenprofil über den Datenspalten.</span>
 </div>
 
@@ -235,7 +235,7 @@ Jede im Power Query-Editor ausgeführte Transformation wird intern als **M-Code*
 Der erweiterte Editor wird über **Ansicht → Erweiterter Editor** geöffnet.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 08-m-code.png — Erweiterter Editor im Power Query mit dem M-Code der aktuellen Abfrage.</span>
 </div>
 
@@ -247,7 +247,7 @@ Wichtige Eigenschaften von M-Code:
 - Der letzte Schritt steht in der `in`-Anweisung und definiert das finale Ergebnis der Abfrage
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   M-Code muss nicht aktiv geschrieben werden — die grafische Oberfläche erledigt das. Kenntnisse im Lesen von M-Code sind jedoch nützlich, um z. B. Datenbankverbindungsdetails direkt im Code zu ändern oder Schritte gezielt anzupassen.
 </div>
 
@@ -257,12 +257,12 @@ Wichtige Eigenschaften von M-Code:
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔧</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Power Query-Editor</div>
     <div class="pbi-summary-body">Zentrales Bereinigungswerkzeug. Alle Schritte werden als wiederholbare Sequenz gespeichert. Änderungen berühren nie die Originaldatenquelle.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🗂️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Strukturieren</div>
     <div class="pbi-summary-body">Kopfzeilen höher stufen, Spalten umbenennen, unnötige Zeilen und Spalten entfernen, Tabellen und Abfragen mit beschreibenden Namen versehen.</div>
   </div>
@@ -272,17 +272,17 @@ Wichtige Eigenschaften von M-Code:
     <div class="pbi-summary-body">Entpivotieren normalisiert breite Spaltenstrukturen in Zeilen (für DAX und Slicers). Pivotieren aggregiert flache Zeilen zu strukturierten Spalten.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔢</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Datentypen</div>
     <div class="pbi-summary-body">Immer im Power Query-Editor korrigieren, bevor die Daten geladen werden. Falsche Typen blockieren Berechnungen, Hierarchien und Beziehungen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔗</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Anfügen & Zusammenführen</div>
     <div class="pbi-summary-body">Anfügen: Zeilen stapeln (UNION). Zusammenführen: Spalten verknüpfen (JOIN) über eine Schlüsselspalte. Drei Join-Typen: links äußerer, vollständiger äußerer, innerer.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔍</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Profiling & M-Code</div>
     <div class="pbi-summary-body">Spaltenqualität, -verteilung und -profil aufdecken Anomalien und Ausreißer. M-Code im erweiterten Editor macht alle Schritte transparent und direkt bearbeitbar.</div>
   </div>

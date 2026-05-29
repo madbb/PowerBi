@@ -25,7 +25,7 @@ Filterung kann auf fünf Ebenen eines Berichts erfolgen:
 Filter auf Berichts-, Seiten- und Visualebene werden im **Bereich Filter** konfiguriert.
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Wenn RLS auf dem semantischen Modell aktiv ist, müssen Berichtsautoren darauf achten, dass Benutzer, die nur einen Teil der Daten sehen dürfen, nicht durch einen weiteren Filter vollständig keine Daten angezeigt bekommen — das ist verwirrend und wirkt wie ein Fehler.
 </div>
 
@@ -48,7 +48,7 @@ Der gesamte Filterbereich kann ausgeblendet werden, um zu verhindern, dass Beric
 Der Datenschnitt (Slicer) ist ein Visual mit einem einzigen Zweck: **andere Visuals filtern**. Es ist eines der am häufigsten verwendeten Visuals auf Berichtsseiten.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Ein Slicer ist kein Filter auf Seitenebene — er ist ein Visual, das Filter auf andere Visuals auf der gleichen Seite überträgt. Standardmäßig filtert er alle anderen Visuals, aber über Visualinteraktionen kann das eingeschränkt werden.
 </div>
 
@@ -110,7 +110,7 @@ Drillthrough navigiert den Berichtsnutzer zu einer Detailseite, wenn er mit der 
 4. Über die Zurück-Schaltfläche zur Ausgangsseite zurückkehren
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Tipp</span>
+  <span class="pbi-admonition-title"> Tipp</span>
   Berichtsnutzer wissen oft nicht, ob ein Visual Drillthrough unterstützt. Eine Schaltfläche mit Drillthrough-Aktion macht die Funktion sichtbar und intuitiv nutzbar.
 </div>
 
@@ -147,7 +147,7 @@ In Tabellen und Matrizen können Regeln definiert werden, um bestimmte Zellen he
 - Symbole (empfohlen statt reiner Farbe — barrierefreier)
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: conditional-formatting-icons.png — Matrixvisual „Lagerbestand" mit kreisförmigen Symbolen: ausgefüllter Kreis für höchsten, leerer Kreis für niedrigsten Wert.</span>
 </div>
 
@@ -180,7 +180,7 @@ Standardmäßig erfasst ein Lesezeichen alle drei Status-Typen. Welche davon ber
 Ein Lesezeichen kann auf **alle Visuals** oder nur auf **ausgewählte Visuals** angewendet werden. Der Bereich **Ausgewählte Visuals** ist wichtig, wenn das Lesezeichen nur bestimmte Elemente beeinflusst, ohne andere zu verändern.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Tipp</span>
+  <span class="pbi-admonition-title"> Tipp</span>
   Lesezeichen am besten erst am Ende der Entwicklung erstellen — nachdem alle Berichtselemente vorhanden sind. So wird das aufwendige Aktualisieren von Lesezeichen beim Hinzufügen neuer Elemente vermieden.
 </div>
 
@@ -195,7 +195,7 @@ Ein Lesezeichen kann auf **alle Visuals** oder nur auf **ausgewählte Visuals** 
 Zwei Lesezeichen mit Status „Anzeige" und Bereich „Ausgewählte Visuals" — je eines für jede Darstellungsvariante. Ein Visual sichtbar, das andere ausgeblendet. Zwei Schaltflächen, je eine für jedes Lesezeichen.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Ausgeblendete Visuals belasten die Leistung nicht — sie senden keine Abfragen. Das Austauschen von Visuals ist deshalb eine leistungsfreundliche Methode, um Berichtsnutzern Wahlmöglichkeiten zu bieten.
 </div>
 
@@ -235,7 +235,7 @@ Power BI platziert den Visualheader bevorzugt oben rechts am Objekt. Nur wenn do
 - QuickInfo-Symbol aktivieren: fügt ein **?**-Symbol hinzu, das beim Zeigen eine Erklärung oder eine Seiten-QuickInfo anzeigt
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Tipp</span>
+  <span class="pbi-admonition-title"> Tipp</span>
   Genügend Abstand zwischen Visuals lassen, damit Visualheader oben rechts sichtbar bleiben. Überlappende Visualheader machen die Symbole schwer erreichbar.
 </div>
 
@@ -254,7 +254,7 @@ Die einfachste Methode: Eine ganze Berichtsseite mit Anweisungen, Definitionen u
 Das QuickInfo-Symbol (?) im Visualheader zeigt beim Hover eine kompakte Erklärung an — ideal für visualspezifische Informationen: Berechnungslogik, Datenquelle, Einheit oder Definition.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: visual-header-help-icon.png — KPI-Visual mit Hilfe-Symbol; QuickInfo zeigt: „Turnover ratio = COGS divided by Avg inventory".</span>
 </div>
 
@@ -268,32 +268,32 @@ Eine Schaltfläche mit **Hilfe**-Aktion zeigt beim Klick ein vollseitiges Bild m
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔍</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Filterebenen</div>
     <div class="pbi-summary-body">RLS (Modell) → Bericht → Seite → Visual → Measure. Filterbereich für konfigurierbare, optisch zurückhaltende Filter. Filter sperren oder ausblenden, um sie vor Änderungen zu schützen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🎚️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Slicer</div>
     <div class="pbi-summary-body">Visueller Filter mit freier Platzierung und hoher Gestaltbarkeit. Dropdown-Layout spart Platz und beschleunigt das Laden. Synchronisierung ermöglicht seitenübergreifendes Filtern. Immer Reset-Schaltfläche bereitstellen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🖱️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Interaktive Techniken</div>
     <div class="pbi-summary-body">Visuelle Interaktionen (Kreuzfiltern), Drillthrough (Detailseite mit Filterkontext), Seiten-QuickInfos (Overlay ohne Interaktivität), Abfragereduzierung für DirectQuery-Leistung.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔖</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Lesezeichen</div>
     <div class="pbi-summary-body">Erfassen Daten-, Anzeige- und Seitenstatus. Ermöglichen: Slicer zurücksetzen, Visuals austauschen, direkte Drilltiefennavigation, Popup-Overlays. Bereich „Ausgewählte Visuals" für gezielte Wirkung nutzen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🧭</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Navigation & Visualheader</div>
     <div class="pbi-summary-body">Navigationsschaltflächen mit Hover-Formatierung und QuickInfo-Beschreibungen. Visualheader für dekorative Elemente deaktivieren. QuickInfo-Symbol für visualspezifische Kontextinformationen nutzen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">❓</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Integrierte Hilfe</div>
     <div class="pbi-summary-body">Informationsseite für Überblick und Definitionen. QuickInfo-Symbol im Visualheader für visualspezifische Erklärungen. Popup-Überlagerung mit Coach Marks für geführte Einführung.</div>
   </div>

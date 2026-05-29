@@ -9,7 +9,7 @@
 Nachdem Power Query-Abfragen angewendet und Daten geladen wurden, ist das Modell noch nicht fertig. Das Ziel der Modellkonfiguration ist eine **Semantikebene** über den Daten: ein Modell, das Berichtsanforderungen unterstützt, intuitiv zu bedienen ist und korrekte Ergebnisse liefert. Die Arbeit beginnt mit Beziehungen und erweitert sich auf Tabellen‑, Spalten‑, Hierarchie‑, Measure‑ und Parameterkonfigurationen.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Dieses Skript konzentriert sich auf Importmodelle. DirectQuery, zusammengesetzte Modelle, benutzerdefinierte Aggregationen und Sicherheit auf Zeilenebene (RLS) werden gesondert behandelt.
 </div>
 
@@ -28,7 +28,7 @@ Bevor Power Query-Abfragen geladen werden, können in den **Optionen → Daten l
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 1-1-options-relationships.png — Power BI Desktop-Optionen für Daten laden mit den Beziehungseinstellungen (automatisch erkennen, aktualisieren, löschen).</span>
 </div>
 
@@ -48,7 +48,7 @@ Jede Beziehung hat einen Kardinalitätstyp, der angibt, wie viele Zeilen einer T
 | **Viele-zu-viele (\*:\*)** | Keine eindeutige Seite | Wenn keine Spalte mit eindeutigen Werten vorhanden ist (z. B. Kategorie-Fakten) |
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 2-2-relationship-one-to-many.png — Modelldiagramm mit Eins-zu-viele-Beziehung zwischen der Tabelle „Product" (ProductKey) und der Tabelle „Sales" (ProductKey).</span>
 </div>
 
@@ -65,12 +65,12 @@ Die Kreuzfilterrichtung bestimmt, in welche Richtung sich Filter entlang einer B
 | Viele-zu-viele | Einzeln zu einer der beiden Seiten **oder** Beide |
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Bidirektionale Kreuzfilterung sollte vermieden oder minimiert werden. Sie verschlechtert die Abfrageleistung und kann zu unerwarteten Filterergebnissen führen. Ein triftiger Grund ist die Unterstützung von n:n-Analysen zwischen zwei Dimensionstabellen über eine Brückentabelle.
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 2-4-relationship-cross-filter-both.png — Modelldiagramm mit Brückentabelle SalespersonRegion und bidirektionaler Filterausbreitung zwischen Salesperson, Region und Sales.</span>
 </div>
 
@@ -83,7 +83,7 @@ Zwischen zwei Modelltabellen kann nur **eine aktive** Beziehung existieren. Werd
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 2-5-relationship-role-playing-dimension.png — Vergleich zweier Szenarien: eine Datumstabelle mit aktiver und inaktiver Beziehung vs. zwei Datumstabellen mit je einer aktiven Beziehung.</span>
 </div>
 
@@ -113,7 +113,7 @@ Für jede Modelltabelle können folgende Eigenschaften gesetzt werden:
 | **Ist ausgeblendet** | Tabelle nicht im Datenbereich anzeigen — für Brückentabellen oder Hilfstabellen sinnvoll |
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Mehrere Objekte können in der Modellansicht gleichzeitig ausgewählt und ihre Eigenschaften im Eigenschaftenbereich gemeinsam aktualisiert werden (Massenaktualisierung).
 </div>
 
@@ -124,7 +124,7 @@ Power BI Desktop enthält die Funktion **Automatisch Datum/Uhrzeit**, die für j
 Eine Datumstabelle muss als solche **markiert** werden, damit DAX-Zeitintelligenzfunktionen korrekte Ergebnisse liefern. Bei der Markierung wird die Datumsspalte ausgewählt. Power BI Desktop prüft automatisch, ob diese Spalte eindeutige Werte enthält, keine Leerwerte aufweist und lückenlos zusammenhängende Datumsangaben umfasst.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 3-1-table-mark-as-date-table.png — Fenster "Als Datumstabelle markieren" mit ausgewählter Datumsspalte.</span>
 </div>
 
@@ -153,7 +153,7 @@ Standardmäßig werden Textwerte alphabetisch und Zahlen/Datumsangaben numerisch
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 4-1-column-sort-order.png — Zwei Datenschnitte im Vergleich: einer mit falscher alphabetischer Monatsreihenfolge, einer mit korrekter chronologischer Reihenfolge nach "Nach Spalte sortieren".</span>
 </div>
 
@@ -166,7 +166,7 @@ Mit **Datenkategorie** wird der Inhalt einer Spalte semantisch beschrieben. Beso
 - **Bild-URL** — das verlinkte Bild kann direkt in Tabellen‑, Matrix‑, Datenschnitt‑ und Kartenvisuals angezeigt werden
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 4-2-column-data-categorize-spatial.png — Tabelle "Reseller" im Datenbereich mit drei Feldern, die mit dem räumlichen Symbol markiert sind.</span>
 </div>
 
@@ -175,7 +175,7 @@ Mit **Datenkategorie** wird der Inhalt einer Spalte semantisch beschrieben. Beso
 Mit **Zusammenfassen nach** wird die Standardaggregation einer numerischen Spalte festgelegt (Summe, Min, Max, Durchschnitt, Anzahl, Rabattanzahl oder Keine). Numerische Spalten erhalten im Datenbereich ein Sigma-Symbol (Ʃ).
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Wenn die Aggregation einer numerischen Spalte kontrolliert werden soll, empfiehlt es sich, ein Measure zu erstellen und die Spalte auszublenden. Dadurch wird verhindert, dass Berichtsautoren die Spalte versehentlich falsch aggregieren.
 </div>
 
@@ -193,12 +193,12 @@ Hierarchien werden einer Tabelle hinzugefügt und bestehen aus Ebenen, die auf S
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 5-1-hierarchy-date-table.png — Fiskalhierarchie im Datenbereich mit den Ebenen Year, Quarter und Month.</span>
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 5-2-hierarchy-matrix.png — Matrixvisual mit der Fiskalhierarchie in den Zeilen: Geschäftsjahr 2018 aufgeklappt bis auf Quartal 1 mit drei sichtbaren Monaten.</span>
 </div>
 
@@ -213,7 +213,7 @@ Ein **Measure** ist eine benannte DAX-Formel, die einer Modelltabelle hinzugefü
 Measures sind notwendig, wenn Berichtsautoren komplexe Berechnungen benötigen, die über einfache Spaltenaggregation hinausgehen — z. B. Umsatz abzüglich Kosten für den Gewinn, oder Berechnungen für das laufende Jahr (YTD). Measures werden auch bei der MDX-Abfrage (In Excel analysieren) benötigt.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 6-1-measure.png — Tabelle "Sales" im Datenbereich mit dem Feld "Gewinn", das mit einem Taschenrechnersymbol versehen ist.</span>
 </div>
 
@@ -222,14 +222,14 @@ Measures sind notwendig, wenn Berichtsautoren komplexe Berechnungen benötigen, 
 Wer noch keine DAX-Kenntnisse hat, kann mit **Quickmeasures** arbeiten: Eine Berechnungsvorlage wird ausgewählt (z. B. Durchschnitt pro Kategorie, Differenz zum Vorjahr), Felder werden per Drag & Drop zugewiesen, und Power BI Desktop generiert automatisch den DAX-Code.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 6-2-quick-measure.png — Quickmeasure-Bereich mit einer Liste von Berechnungsvorlagen.</span>
 </div>
 
 Für Measures können dieselben Eigenschaften wie für Spalten gesetzt werden: Beschreibung, Synonym, Anzeigeordner, Ist ausgeblendet sowie Formatierungseigenschaften. Mit der Eigenschaft **Startseite** kann ein Measure einer beliebigen Modelltabelle zugewiesen werden — unabhängig davon, in welcher Tabelle es ursprünglich erstellt wurde.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Copilot für Power BI kann verwendet werden, um automatisch eine Beschreibung für ein Measure zu generieren, indem die DAX-Formel analysiert wird.
 </div>
 
@@ -246,7 +246,7 @@ Definiert durch einen numerischen Datentyp, Mindest‑ und Maximalwerte, einen E
 Typischer Einsatz: **Was-wäre-wenn-Szenarien** — z. B. ein Datenschnitt für einen hypothetischen Wechselkurs, den Berichtsnutzer einstellen können. Ein Measure verwendet dann diesen Wert für Berechnungen.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 7-1-parameter.png — Datenbereich mit der berechneten Tabelle "Exchange Rate", deren Feld mit einem Fragezeichen-Symbol für Parameter markiert ist.</span>
 </div>
 
@@ -260,7 +260,7 @@ Ein Feldparameter fasst eine Gruppe verschiedener Modellfelder zusammen. Bericht
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 7-2-parameter-fields.png — Bericht mit dem Feldparameter "Product Grouping" als Datenschnitt; das Balkendiagramm zeigt Umsätze nach der ausgewählten Spalte "Color".</span>
 </div>
 
@@ -272,22 +272,22 @@ Parameter werden im Datenbereich mit einem Fragezeichensymbol (?) angezeigt.
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔗</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Beziehungen</div>
     <div class="pbi-summary-body">Kardinalität (1:*, 1:1, *:*) und Kreuzfilterrichtung (einzeln vs. beide) konfigurieren. Bidirektionale Filter vermeiden. Aktive vs. inaktive Beziehungen für Rollenspieldimensionen nutzen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🗄️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Tabellen</div>
     <div class="pbi-summary-body">Name, Beschreibung, Synonyme und Ausblenden konfigurieren. Datumstabellen markieren und Auto Datum/Uhrzeit deaktivieren für korrekte Zeitintelligenz.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📋</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Spalten</div>
     <div class="pbi-summary-body">Datentyp, Format, Sortierreihenfolge, Datenkategorie (räumlich, URL, Bild) und Standardaggregation festlegen. Anzeigeordner für Übersichtlichkeit nutzen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🏗️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Hierarchien</div>
     <div class="pbi-summary-body">Navigationspfade zwischen Spalten einer Tabelle definieren (z. B. Year → Quarter → Month). Ermöglichen Drill-up/down in Visuals ohne manuelle Konfiguration.</div>
   </div>
@@ -297,7 +297,7 @@ Parameter werden im Datenbereich mit einem Fragezeichensymbol (?) angezeigt.
     <div class="pbi-summary-body">Benannte DAX-Formeln für komplexe Zusammenfassungen. Quickmeasures für Einstieg ohne DAX-Kenntnisse. Name, Format, Startseite und Anzeigeordner konfigurieren.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">❓</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Parameter</div>
     <div class="pbi-summary-body">Numerischer Bereich: Was-wäre-wenn mit unverbundener Tabelle und Datenschnitt. Feldparameter: Berichtsnutzer wählt dynamisch, welches Feld ein Visual verwendet.</div>
   </div>

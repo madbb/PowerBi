@@ -38,7 +38,7 @@ Eine Grundvoraussetzung für wirksame Datenanalyse ist das **Vertrauen eines Unt
 Moderne Datenarbeit erfordert spezialisierte Rollen. Die folgende Tabelle gibt einen vollständigen Überblick — inklusive Überschneidungen und Abgrenzungen:
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Abbildung: Übersicht der fünf Datenrollen (roles-data-ss.png) — grafische Gegenüberstellung von Business Analyst, Data Analyst, Data Engineer, Analytics Engineer und Data Scientist.</span>
 </div>
 
@@ -60,7 +60,7 @@ Als Data Analyst arbeiten Sie eng mit dem Data Engineer zusammen, um Zugriff auf
 ## Aufgaben eines Data Analysts
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Abbildung: Die fünf Aufgabenbereiche eines Data Analysts (tasks-data-analyst-ss.png) — kreisförmige Darstellung der Bereiche Vorbereiten, Modellieren, Visualisieren, Analysieren und Verwalten.</span>
 </div>
 
@@ -75,7 +75,7 @@ Profilerstellung, Bereinigung und Transformation von Rohdaten — bevor ein Beri
 - **Datenschutz und Sicherheit** gewährleisten: Daten anonymisieren oder entfernen wo nötig, um personenbezogene Informationen zu schützen
 
 <div class="pbi-admonition pbi-warning">
-<span class="pbi-admonition-title">⚠️ Wichtig</span>
+<span class="pbi-admonition-title">️ Wichtig</span>
 Fehlerhafte oder falsche Daten führen zu ungültigen Berichten, Vertrauensverlust und negativen Geschäftsentscheidungen. Die Datenaufbereitung ist der zeitaufwändigste Schritt — ein iterativer Prozess der sich durch das gesamte Projekt zieht.
 </div>
 
@@ -90,7 +90,7 @@ Sobald die Daten aufbereitet sind, beginnt die Modellierung — die Definition w
 Ein effektives semantisches Modell macht Berichte genauer, ermöglicht schnellere Datenuntersuchung, verkürzt die Berichtserstellungszeit und vereinfacht zukünftige Wartung. Ein unzureichend konzipiertes Modell hat drastische Auswirkungen auf Genauigkeit und Leistung.
 
 <div class="pbi-admonition pbi-info">
-<span class="pbi-admonition-title">💡 Hinweis</span>
+<span class="pbi-admonition-title"> Hinweis</span>
 Wenn ein Bericht in Power BI langsam ausgeführt wird oder Aktualisierungen lange dauern, liegt die Ursache meist in der Datenvorbereitung oder Modellierung — nicht in der Visualisierung.
 </div>
 
@@ -128,17 +128,17 @@ Verantwortung für alle Power BI-Ressourcen einer Organisation:
 
 <div class="pbi-summary-grid">
 <div class="pbi-summary-card">
-  <div class="pbi-summary-icon">📊</div>
+  <div class="pbi-summary-icon"></div>
   <div class="pbi-summary-title">5 Analysekategorien</div>
   <div class="pbi-summary-body">Beschreibend · Diagnostisch · Prädiktiv · Präskriptiv · KI-gestützt</div>
 </div>
 <div class="pbi-summary-card">
-  <div class="pbi-summary-icon">👥</div>
+  <div class="pbi-summary-icon"></div>
   <div class="pbi-summary-title">5 Datenrollen</div>
   <div class="pbi-summary-body">Business Analyst · Data Analyst · Data Engineer · Analytics Engineer · Data Scientist</div>
 </div>
 <div class="pbi-summary-card">
-  <div class="pbi-summary-icon">✅</div>
+  <div class="pbi-summary-icon"></div>
   <div class="pbi-summary-title">5 Analyst-Aufgaben</div>
   <div class="pbi-summary-body">Vorbereiten · Modellieren · Visualisieren · Analysieren · Verwalten</div>
 </div>

@@ -1,6 +1,7 @@
 version: 1
 project:
   title: PL-300 Power BI Data Analyst
+  abstract: Kursmaterialien für die PL-300 Zertifizierung – Power BI Data Analyst.
   authors:
     - name: Enders Training
   toc:
@@ -37,7 +38,10 @@ project:
         - file: Skripte/Modul4/20_berichtsleistung_mobile.md
         - file: Skripte/Modul4/21_analysen_power_bi.md
     - file: downloads.md
-
+  exports:
+    - format: pdf
+      template: lapreprint-typst
+      output: exports/pbi-kurs.pdf
 site:
   options:
     logo: _static/logo.png

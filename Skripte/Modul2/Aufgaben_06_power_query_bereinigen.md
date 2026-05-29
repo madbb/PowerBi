@@ -44,10 +44,6 @@
     <span class="pbi-step-text">Prüfe im Bereich <strong>Angewendete Schritte</strong> rechts: Wie viele Schritte hat die Abfrage jetzt? Benenne den Schritt für die Stadtbereinigung in <strong>Städte normalisiert</strong> um — Rechtsklick auf den Schritt → <strong>Umbenennen</strong>.</span>
   </div>
 </div>
-
-<div class="pbi-task-answer">
-  <strong>e) Anzahl angewendeter Schritte nach allen Transformationen:</strong>
-  <div class="pbi-answer-field"></div>
 </div>
 
   </div>
@@ -87,12 +83,8 @@
     <span class="pbi-step-text">Beantworte schriftlich: Was würde passieren wenn <strong>Bestelldatum</strong> als Text im Modell bleibt? Nenne zwei konkrete Auswirkungen.</span>
   </div>
 </div>
-
-<div class="pbi-task-answer">
-  <strong>a) Spalten mit falschem Typ:</strong>
-  <div class="pbi-answer-field"></div>
   <strong>d) Zwei Auswirkungen von Bestelldatum als Text:</strong>
-  <div class="pbi-answer-field"></div>
+  
 </div>
 
   </div>
@@ -131,14 +123,10 @@
     <span class="pbi-step-text">Wechsle zur Abfrage <strong>Orders</strong>. Prüfe die Spaltenqualität für <strong>Lieferdatum</strong>. Wie viele leere Werte gibt es? Ist das ein Fehler oder erwartet — und warum?</span>
   </div>
 </div>
-
-<div class="pbi-task-answer">
-  <strong>c) CustomerID — unterschiedlich / eindeutig / Duplikate:</strong>
-  <div class="pbi-answer-field"></div>
   <strong>d) Segmente und Häufigkeit:</strong>
-  <div class="pbi-answer-field"></div>
+  
   <strong>e) Leere Werte Lieferdatum — Fehler oder erwartet?</strong>
-  <div class="pbi-answer-field"></div>
+  
 </div>
 
   </div>
@@ -182,12 +170,8 @@
     <span class="pbi-step-text">Beantworte schriftlich: Warum ist die schmale Tabellenstruktur für Power BI besser als die breite? Nenne zwei Gründe.</span>
   </div>
 </div>
-
-<div class="pbi-task-answer">
-  <strong>d) Anzahl Zeilen nach Entpivotieren und Begründung:</strong>
-  <div class="pbi-answer-field"></div>
   <strong>e) Zwei Gründe für normalisierte Struktur:</strong>
-  <div class="pbi-answer-field"></div>
+  
 </div>
 
   </div>
@@ -231,10 +215,6 @@
     <span class="pbi-step-text">Beantworte schriftlich: Was ist der Unterschied zwischen "Abfragen anfügen" und "Abfragen zusammenführen"? Wann nutzt du welche Operation?</span>
   </div>
 </div>
-
-<div class="pbi-task-answer">
-  <strong>e) Anfügen vs. Zusammenführen:</strong>
-  <div class="pbi-answer-field"></div>
 </div>
 
   </div>
@@ -269,14 +249,10 @@
     <span class="pbi-step-text">Schließe den Editor mit <strong>Fertig</strong> ohne Änderungen. Beantworte schriftlich: Was passiert wenn du in der Mitte der Schrittkette einen Schritt löschst auf den ein späterer Schritt verweist?</span>
   </div>
 </div>
-
-<div class="pbi-task-answer">
-  <strong>b) Variablenname des Bereinigungsschritts:</strong>
-  <div class="pbi-answer-field"></div>
   <strong>c) Letzter Schritt nach "in" und seine Bedeutung:</strong>
-  <div class="pbi-answer-field"></div>
+  
   <strong>d) Konsequenz beim Löschen eines abhängigen Schritts:</strong>
-  <div class="pbi-answer-field"></div>
+  
 </div>
 
   </div>
@@ -295,12 +271,8 @@
   <span class="pbi-reflect-label">R2</span>
   <span class="pbi-reflect-text">Du hast NULL-Werte in der Umsatzspalte. Dein Chef sagt: "Ersetze sie einfach durch 0." Ist das immer richtig? Wann könnte das problematisch sein?</span>
 </div>
-
-<div class="pbi-task-answer">
-  <strong>R1)</strong>
-  <div class="pbi-answer-field"></div>
   <strong>R2)</strong>
-  <div class="pbi-answer-field"></div>
+  
 </div>
 
 ---

@@ -19,7 +19,7 @@ Power BI bietet drei verschiedene Modellframeworks — Import, DirectQuery und z
 </div>
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Nicht alle Datasets stammen aus in Power BI Desktop entwickelten Modellen. Einige stellen Verbindungen mit extern gehosteten Modellen in Azure Analysis Services (AAS) oder SQL Server Analysis Services (SSAS) dar. Andere repräsentieren Echtzeitdatenstrukturen (Push-, Streaming- oder Hybriddatasets). Dieses Skript behandelt ausschließlich Modelle, die in Power BI Desktop entwickelt werden.
 </div>
 
@@ -51,7 +51,7 @@ Jedes Mal, wenn ein Visual in einem Power BI-Bericht gerendert wird, sendet Powe
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: model-frameworks-analytic-query-example.png — Power BI-Bericht mit Datenschnitt (Jahr 2021) und Säulendiagramm mit vierteljährlichen Umsätzen als Beispiel für die drei Abfragephasen.</span>
 </div>
 
@@ -72,7 +72,7 @@ Der empfohlene Entwurfsansatz ist das **Sternschema**:
 Im Sternschema bildet die Faktentabelle das Zentrum, die Dimensionstabellen bilden die Zacken des Sterns.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: model-frameworks-star-schema-design.png — Sternschema mit Faktentabelle im Zentrum und mehreren Dimensionstabellen als Zacken.</span>
 </div>
 
@@ -105,7 +105,7 @@ Ein Importmodell besteht ausschließlich aus Tabellen mit Speichermodus **Import
 - Liefert die **beste Abfrageleistung** — Daten sind im Arbeitsspeicher gespeichert und für Analyseabfragen optimiert
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: model-frameworks-import.png — Importmodell im Sternschema, das Daten aus verschiedenen Quellen lädt (relationale Datenbank, Excel, Social Media-Feed, Dataflow).</span>
 </div>
 
@@ -142,7 +142,7 @@ Importierte Daten sind nur so aktuell wie die letzte erfolgreiche Aktualisierung
 Bei jeder Standard-Aktualisierung werden alle Daten einer Tabelle gelöscht und neu geladen — bei großen Faktentabellen kann das eine erhebliche Last auf dem Quellsystem erzeugen. Die **inkrementelle Aktualisierung** löst dieses Problem, indem sie Tabellenpartitionen nach Zeitraum anlegt und nur die tatsächlich geänderten Partitionen aktualisiert.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Sind die Aktualisierungsgrenzen nicht tolerierbar, sind DirectQuery-Tabellen, eine Hybridtabelle oder ein Echtzeitdataset als Alternativen zu erwägen.
 </div>
 
@@ -153,7 +153,7 @@ Bei jeder Standard-Aktualisierung werden alle Daten einer Tabelle gelöscht und 
 Ein DirectQuery-Modell besteht aus Tabellen mit Speichermodus **DirectQuery**, die alle zur gleichen Quellgruppe gehören. Keine Daten werden im Modell gespeichert — jede Visualisierung sendet eine Live-Abfrage an die Datenquelle.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: model-frameworks-direct-query.png — DirectQuery-Modell im Sternschema: Power BI leitet alle Abfragen direkt an die Quelldatenbank (Azure SQL) weiter.</span>
 </div>
 
@@ -184,7 +184,7 @@ Ein DirectQuery-Modell besteht aus Tabellen mit Speichermodus **DirectQuery**, d
 Ein zusammengesetztes Modell hat **mehr als eine Quellgruppe** — typischerweise eine Import- und eine DirectQuery-Quellgruppe kombiniert.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: model-frameworks-composite.png — Zusammengesetztes Sternschema: einige Tabellen sind importiert, andere leiten Abfragen per DirectQuery an eine Azure SQL-Datenbank weiter.</span>
 </div>
 
@@ -222,7 +222,7 @@ Ein zusammengesetztes Modell hat **mehr als eine Quellgruppe** — typischerweis
 | Bestehendes Power BI-Dataset erweitern | **Zusammengesetzt** |
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   In Power BI Desktop lässt sich eine DirectQuery-Tabelle jederzeit in eine Importtabelle konvertieren. Der umgekehrte Weg — von Import zu DirectQuery — ist jedoch <strong>nicht möglich</strong>. Die Framework-Wahl sollte daher sorgfältig vor Beginn der Entwicklung getroffen werden.
 </div>
 
@@ -232,32 +232,32 @@ Ein zusammengesetztes Modell hat **mehr als eine Quellgruppe** — typischerweis
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📐</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Analyseabfrage</div>
     <div class="pbi-summary-body">Jedes Visual sendet eine Abfrage in drei Phasen: Filtern → Gruppieren → Zusammenfassen. Dimensionstabellen werden gefiltert/gruppiert, Faktentabellen werden zusammengefasst.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📥</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Importmodell</div>
     <div class="pbi-summary-body">Beste Leistung, volle Feature-Unterstützung. Einschränkungen: Modellgröße (1 GB / >10 GB Premium) und Aktualisierungsfrequenz (8×/48× täglich). Datenreduktion und inkrementelle Aktualisierung entschärfen die Limits.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔄</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">DirectQuery-Modell</div>
     <div class="pbi-summary-body">Live-Abfragen, keine Datenkopie. Geeignet für große Datenmengen, Quasi-Echtzeit und Datenhoheitspflichten. Eingeschränkte M-Transformationen, potenzielle Leistungsprobleme.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔀</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Zusammengesetztes Modell</div>
     <div class="pbi-summary-body">Mehr als eine Quellgruppe. Kombiniert Import und DirectQuery für Flexibilität. Schlüsselkonzepte: Aggregationstabellen, Dual-Modus, Hybridtabellen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">⚖️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Entscheidungsregel</div>
     <div class="pbi-summary-body">Import ist der Standard. DirectQuery bei sehr großen Daten oder Echtzeit. Zusammengesetzt, wenn DirectQuery-Leistung gesteigert oder ein Remotemodell erweitert werden soll.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">⚠️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Eingeschränkte Beziehungen</div>
     <div class="pbi-summary-body">Beziehungen zwischen Tabellen aus verschiedenen Quellgruppen haben keine garantierte „1"-Seite. Können zu abweichenden Berechnungsergebnissen führen — sorgfältig prüfen.</div>
   </div>

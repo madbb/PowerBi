@@ -19,7 +19,7 @@ Organisationen müssen Daten im großen Maßstab aufnehmen, vorbereiten, steuern
 Fabric integriert Funktionen aus bestehenden Microsoft-Tools — Power BI, Azure Synapse Analytics und Azure Data Factory — in eine einheitliche Plattform. Da alle Daten zentral in OneLake liegen, stehen dieselben Daten, die Berichte und Dashboards speisen, ohne separate Vorbereitungspipelines auch für KI-Funktionen wie Copilot, Daten-Agents und Fabric IQ zur Verfügung.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Fabric unterstützt auch eine <strong>Datengitter-Architektur</strong> (Data Mesh), die dezentralen Datenbesitz unter Beibehaltung zentraler Governance ermöglicht. Dadurch entfällt die Notwendigkeit eines direkten Azure-Ressourcenzugriffs.
 </div>
 
@@ -43,7 +43,7 @@ Fabric integriert Funktionen aus bestehenden Microsoft-Tools — Power BI, Azure
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: onelake-architecture.png — Diagramm der Fabric-Compute-Engines (Data Engineering, Data Warehouse, Data Factory, Power BI, Real-Time Intelligence), die alle auf denselben OneLake-Datenspeicher zugreifen.</span>
 </div>
 
@@ -70,7 +70,7 @@ Zugriff auf einen Arbeitsbereich wird über **vier Rollen** gesteuert:
 | **Viewer** | Nur Lesezugriff |
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Arbeitsbereichsrollen gelten für <em>alle</em> Elemente im Arbeitsbereich. Für feinere Zugriffssteuerung sollten zusätzlich <strong>Berechtigungen auf Elementebene</strong> auf Basis geschäftlicher Anforderungen vergeben werden.
 </div>
 
@@ -94,7 +94,7 @@ Beim Arbeiten mit dem OneLake-Katalog empfiehlt sich:
 - Nach **Schlüsselwort oder Elementtyp** filtern
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: onelake-catalog.png — Ansicht des OneLake-Katalogs in Microsoft Fabric mit Filtermöglichkeiten nach Arbeitsbereich, Domäne und Elementtyp.</span>
 </div>
 
@@ -123,7 +123,7 @@ Fabric löst diese Fragmentierung durch eine gemeinsame Plattform. Jede Rolle ar
 | **Low-/No-Code-Benutzer** | Kuratierte Datensätze über den OneLake-Katalog entdecken; Power BI-Vorlagen nutzen; einfache ETL per Datenfluss; Fragen per Copilot in natürlicher Sprache stellen |
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Jede Rolle trägt direkt zur KI-Fähigkeit der Organisation bei: Techniker, die saubere, kontrollierte Daten in OneLake bereitstellen, bilden die Grundlage für Copilot und KI-Agents. Analyseingenieure, die konsistente semantische Modelle erstellen, liefern den Geschäftskontext für KI-Antworten.
 </div>
 
@@ -180,7 +180,7 @@ Microsoft Copilot ist ein generativer KI-Assistent, der für alle Fabric-Workloa
 - **Bericht- und Insight-Generierung** — in Power BI generiert Copilot automatisch Berichte, erstellt Seitenzusammenfassungen und ermöglicht Fragen an Daten in natürlicher Sprache
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Copilot in Microsoft Fabric ist standardmäßig aktiviert. Administratoren können es im <strong>Admin-Portal → Mandanteneinstellungen</strong> deaktivieren oder den Zugriff für bestimmte Sicherheitsgruppen oder auf Kapazitätsebene steuern.
 </div>
 
@@ -207,32 +207,32 @@ Die Aktivierung erfolgt im **Admin-Portal → Mandanteneinstellungen** im Power 
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🏗️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Was ist Fabric?</div>
     <div class="pbi-summary-body">End-to-End-SaaS-Analyseplattform. Vereint Power BI, Azure Synapse Analytics und Azure Data Factory in einer integrierten Umgebung.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🌊</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">OneLake</div>
     <div class="pbi-summary-body">Zentraler Datensee auf Basis von ADLS Gen2. Alle Fabric-Workloads schreiben Daten im Delta-Parquet-Format — keine Duplizierung, keine Bewegung nötig.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔗</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Shortcuts</div>
     <div class="pbi-summary-body">Verweise auf externe Daten (ADLS, S3, Dataverse) ohne Kopieren. Fabric synchronisiert sich mit der Quelle und wahrt Datenkonsistenz.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">👥</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Rollen & Zusammenarbeit</div>
     <div class="pbi-summary-body">Data Engineer, Analytics Engineer, Analyst, Data Scientist und Low-Code-Benutzer arbeiten auf denselben OneLake-Daten — ohne Silos und Duplizierungen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">⚙️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Workloads</div>
     <div class="pbi-summary-body">9 spezialisierte Workloads: Data Engineering, Data Factory, Warehouse, Real-Time Intelligence, Data Science, Databases, Industry Solutions, IQ und Power BI.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🤖</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">KI-Integration</div>
     <div class="pbi-summary-body">Copilot (workloadübergreifend), Daten-Agents (natürlichsprachliche Abfragen) und Fabric IQ (Ontologien für KI-Reasoning) bauen auf denselben geregelten OneLake-Daten auf.</div>
   </div>

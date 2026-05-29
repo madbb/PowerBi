@@ -21,7 +21,7 @@ Mit DAX können einem semantischen Modell drei Arten von Berechnungen hinzugefü
 </div>
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Eine berechnete Tabelle kann <strong>nicht</strong> auf externe Datenquellen zugreifen. Dafür ist Power Query zuständig.
 </div>
 
@@ -36,7 +36,7 @@ Mit DAX können einem semantischen Modell drei Arten von Berechnungen hinzugefü
 ### Explizite vs. implizite Measures
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Der Begriff "Measure" bezieht sich in DAX immer auf <strong>explizite Measures</strong> — in DAX geschriebene Formeln. Davon zu unterscheiden sind <strong>implizite Measures</strong>: das sind normale Spalten, die von Visuals automatisch aggregiert werden können (z. B. Summe, Anzahl). Sie sind im Datenbereich mit dem Sigma-Symbol (∑) gekennzeichnet. Ein "berechnetes Measure" ist kein DAX-Begriff — "berechnet" wird ausschließlich für berechnete Tabellen und berechnete Spalten verwendet.
 </div>
 
@@ -56,12 +56,12 @@ Mit DAX können einem semantischen Modell drei Arten von Berechnungen hinzugefü
 **Rollenspieldimensionen** — Wenn eine Faktentabelle zwei Datumsspalten hat (z. B. Bestelldatum und Versanddatum), kann nur eine Beziehung zur Datumstabelle aktiv sein. Eine berechnete Tabelle dupliziert die Datumstabelle, sodass beide Beziehungen aktiv sein können.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-sales-data-relationships-1-ss.png — Modelldiagramm mit einer aktiven (durchgezogene Linie) und einer inaktiven (gestrichelten Linie) Beziehung zwischen Sales und Date.</span>
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-sales-data-relationships-2-ss.png — Modelldiagramm mit zwei Datumstabellen (Date und Ship Date), jeweils mit einer aktiven Beziehung zur Tabelle Sales.</span>
 </div>
 
@@ -91,7 +91,7 @@ Eine DAX-Formel setzt sich aus folgenden Elementen zusammen:
 - **Leerzeichen** — für Lesbarkeit und Formatierung (ohne Auswirkung auf Logik oder Leistung)
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Power BI Desktop bietet beim Schreiben von Formeln <strong>IntelliSense</strong> — eine automatische Vervollständigung, die Funktionen und Modellobjekte vorschlägt und bei ausgewählten Funktionen eine Beschreibung anzeigt. IntelliSense nutzen beschleunigt das Schreiben korrekter Formeln erheblich.
 </div>
 
@@ -132,7 +132,7 @@ Revenue = SUM(Sales[Sales Amount])
 ```
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Einige DAX-Funktionen setzen vollqualifizierte Spaltenverweise voraus. Es ist daher generell empfehlenswert, Spaltennamen <strong>immer</strong> mit dem Tabellennamen zu qualifizieren.
 </div>
 
@@ -145,7 +145,7 @@ Profit = [Revenue] - [Cost]
 ```
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Obwohl es technisch möglich ist, empfiehlt es sich, Measure-Referenzen <strong>niemals</strong> mit einem Tabellennamen zu qualifizieren. Measures sind Objekte auf Modellebene — die Zuweisung zu einer "Heimattabelle" ist rein kosmetisch zur Strukturierung im Datenbereich. Die Empfehlung lautet daher: Spalten immer mit Tabellennamen, Measures niemals.
 </div>
 
@@ -186,7 +186,7 @@ DIVIDE(
 ```
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Das externe Tool <strong>DAX Formatter</strong> (daxformatter.com) kann verwendet werden, um eine Formel aus Power BI Desktop einzufügen, automatisch formatieren zu lassen und dann zurück einzufügen.
 </div>
 
@@ -196,12 +196,12 @@ DIVIDE(
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📊</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Berechnete Tabelle</div>
     <div class="pbi-summary-body">Erzeugt eine neue Tabelle aus vorhandenen Modelldaten per DAX. Typische Einsatzfälle: Datumstabellen, Rollenspieldimensionen, Was-wäre-wenn-Parameter. Erhöht Modellgröße.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📋</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Berechnete Spalte</div>
     <div class="pbi-summary-body">Neue Spalte pro Tabellenzeile, augewertet bei Datenaktualisierung. Ergebnis wird gespeichert — erhöht Modellgröße. Für zeilenbasierte Attribute, die nicht aus der Quelle kommen.</div>
   </div>
@@ -211,17 +211,17 @@ DIVIDE(
     <div class="pbi-summary-body">Formel wird zur Abfragezeit ausgewertet, nie gespeichert. Für aggregierte KPIs und komplexe Berechnungen. Ergebnis hängt vom jeweiligen Filterkontext ab.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">✏️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Formelsyntax</div>
     <div class="pbi-summary-body"><code>Name = DAX-Formel</code> — Funktionen, Operatoren, Objektverweise, Konstanten, Variablen und Leerzeichen. IntelliSense hilft beim fehlerfreien Schreiben.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔗</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Objektreferenzen</div>
     <div class="pbi-summary-body">Tabellen: einfache Anführungszeichen (<code>'Date'</code>). Spalten: eckige Klammern mit Tabellenpräfix (<code>Sales[Amount]</code>). Measures: eckige Klammern ohne Präfix (<code>[Revenue]</code>).</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📐</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Formatierung</div>
     <div class="pbi-summary-body">Leerzeichen, Tabstopps und Zeilenumbrüche haben keine Auswirkung auf Logik oder Leistung. Gut formatierte Formeln sind leichter zu lesen und zu debuggen. Umschalt+Enter für Zeilenumbruch.</div>
   </div>

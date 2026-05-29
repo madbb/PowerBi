@@ -17,7 +17,7 @@ Bevor ein Bericht in Power BI entstehen kann, müssen Daten aus einer oder mehre
 Power BI kann Daten aus einer Vielzahl von Dateitypen laden, darunter Excel-Arbeitsmappen, CSV- und Textdateien sowie XML- und JSON-Dateien. Der Einstiegspunkt ist in Power BI Desktop immer **Start → Daten abrufen**.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 2-file-types-c.png — Symbole der unterstützten Flatfile-Formate (Excel, CSV, XML, JSON u. a.).</span>
 </div>
 
@@ -33,7 +33,7 @@ Der Speicherort einer Datei hat direkte Auswirkungen darauf, ob und wie Power BI
 | **SharePoint – Teamwebsite** | Wie OneDrive for Business; Verbindung über URL zum Stammordner oder direkte URL. |
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Cloud-basierte Speicherorte (OneDrive, SharePoint) sind die empfohlene Wahl, wenn sich Daten regelmäßig ändern. Für unveränderliche Daten ist der lokale Import ausreichend.
 </div>
 
@@ -49,7 +49,7 @@ Nach Auswahl der Datei öffnet sich das **Navigator**-Fenster, in dem alle entha
 Ändert sich der Speicherort einer Quelldatei, muss der Verbindungspfad in Power BI aktualisiert werden. Drei Wege stehen zur Verfügung: über die **Datenquelleneinstellungen**, die **Abfrageeinstellungen** oder den **Erweiterten Editor** in Power Query.
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Beim Ändern eines Dateipfads muss die Verbindung zur selben Datei mit identischer Struktur wiederhergestellt werden. Gelöschte oder umbenannte Spalten in der Quelldatei führen zu Fehlern im Berichtsmodell.
 </div>
 
@@ -76,7 +76,7 @@ Für die Authentifizierung stehen drei Methoden bereit:
 Statt im Navigator einzelne Tabellen auszuwählen, können Daten auch direkt über eine SQL-Abfrage in den erweiterten Optionen gefiltert geladen werden. Dies ermöglicht es, nur die benötigten Spalten und Zeilen zu importieren.
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Das Platzhalterzeichen <code>SELECT *</code> sollte vermieden werden — es lädt alle Spalten einer Tabelle, was zu redundanten Daten, Leistungsproblemen und zusätzlichem Normalisierungsaufwand führt. Immer nur die benötigten Spalten explizit angeben.
 </div>
 
@@ -137,7 +137,7 @@ NoSQL-Datenbanken (auch nicht-relational) speichern Daten ohne festes Tabellensc
 JSON-Daten liegen im Navigator zunächst als verschachtelte **Record**-Elemente vor — noch keine direkt nutzbare Tabellenstruktur. Im Power Query-Editor wird über die **Erweiterungs-Schaltfläche** (⇔) neben der Spaltenüberschrift ausgewählt, welche Felder extrahiert werden sollen. Nach dem Expandieren und Deaktivieren des Präfix-Kontrollkästchens entsteht eine reguläre Tabelle mit Zeilen und Spalten, die für Berichte genutzt werden kann.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 4-expand-record-ssm.png — Power Query-Editor mit Erweiterungsfunktion für verschachtelte JSON-Record-Spalten.</span>
 </div>
 
@@ -152,7 +152,7 @@ Viele Organisationen nutzen Cloud-Anwendungen wie SharePoint, OneDrive, Dynamics
 Nach Auswahl von **SharePoint Online-Liste** wird die URL der SharePoint-Website eingegeben (nicht der vollständige Dateipfad, nur die Website-URL). Nach der Authentifizierung mit dem Microsoft-Konto öffnet sich das Navigator-Fenster mit allen verfügbaren Listen und Tabellen der Website.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 5-navigator-window-view-tables-ss.png — Navigator-Fenster nach Verbindung mit SharePoint mit verfügbaren Listen.</span>
 </div>
 
@@ -163,7 +163,7 @@ Nach Auswahl von **SharePoint Online-Liste** wird die URL der SharePoint-Website
 Beim Aufbau eines semantischen Modells muss für jede Tabelle festgelegt werden, wie Power BI auf die Daten zugreift. Der Speichermodus wird in der **Modell**-Ansicht über den Eigenschaftenbereich der Tabelle konfiguriert.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 6-storage-mode-ssm.png — Dropdown „Speichermodus" im Eigenschaftenbereich einer Tabelle in der Modell-Ansicht.</span>
 </div>
 
@@ -174,7 +174,7 @@ Beim Aufbau eines semantischen Modells muss für jede Tabelle festgelegt werden,
 | **Dual** (Komposit) | Tabelle kann je nach Kontext sowohl importiert als auch per DirectQuery abgerufen werden. Power BI wählt automatisch die effizientere Methode. | Zusammengesetzte Modelle mit gemischten Quellen |
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Import ist die Standardeinstellung für neue Berichte und in den meisten Fällen die richtige Wahl. DirectQuery eignet sich besonders, wenn Sicherheitsrichtlinien keine lokalen Datenkopien erlauben oder wenn Datenmengen für einen Import zu groß sind.
 </div>
 
@@ -231,7 +231,7 @@ Als Faustregel gilt: Lässt sich eine Transformation in eine SQL-SELECT-Anweisun
 Mit der **Abfragediagnose** lässt sich messen, wie lange einzelne Transformationsschritte dauern. Aufruf im Power Query-Editor über **Start → Extras → Diagnose starten**. Nach den Schritten auf **Diagnose beenden** und **Schrittdiagnose** klicken, um die Laufzeiten je Schritt zu sehen.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 8-navigating-query-diagnostics-ss.png — Registerkarte „Tools" im Power Query-Editor mit den Optionen der Sitzungsdiagnose.</span>
 </div>
 
@@ -256,7 +256,7 @@ Importfehler entstehen aus vielen Quellen — Netzwerkprobleme, Berechtigungen, 
 | **Datentypfehler / leere Spalten** | Power BI interpretiert den Datentyp falsch | In der SQL-Abfrage expliziten Cast durchführen, z. B. `CAST(Spalte AS varchar(10))` |
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 9-data-import-query-timeout-ss.png — Fehlermeldung bei abgelaufenem Abfragetimeout beim Datenabruf aus SQL Server.</span>
 </div>
 
@@ -266,32 +266,32 @@ Importfehler entstehen aus vielen Quellen — Netzwerkprobleme, Berechtigungen, 
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📁</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Dateiquellen</div>
     <div class="pbi-summary-body">Excel, CSV, XML, JSON — lokal oder Cloud (OneDrive, SharePoint). Cloud-Speicher ermöglicht automatische Synchronisation bei Datenänderungen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🗄️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Relationale Datenbanken</div>
     <div class="pbi-summary-body">Verbindung per Servername + Datenbank; Import oder DirectQuery wählen. SQL-Abfragen gezielt formulieren — kein SELECT *, WHERE-Klauseln nutzen, Views bevorzugen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔧</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Parameter</div>
     <div class="pbi-summary-body">Dynamische Berichte durch Parameter in SQL-Abfragen. Einzelwert-Parameter über Power Query anlegen; Mehrfachwerte über benutzerdefinierte Funktionen aus einer Werteliste.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📦</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Speichermodi</div>
     <div class="pbi-summary-body">Import (Standard): lokale Kopie, volle Feature-Unterstützung. DirectQuery: Live-Abfrage, immer aktuell, keine lokale Kopie. Dual: gemischter Modus für zusammengesetzte Modelle.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">⚡</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Query Folding</div>
     <div class="pbi-summary-body">Transformationen werden als native Abfragen an die Quelle zurückgegeben statt lokal ausgeführt. Bessere Leistung, Voraussetzung für DirectQuery und Dual.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🛠️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Fehlerbehandlung</div>
     <div class="pbi-summary-body">Timeout → Abfrage reduzieren. Datei nicht gefunden → Pfad in Abfrageeinstellungen korrigieren. Datentypfehler → expliziten Cast in der SQL-Abfrage verwenden.</div>
   </div>

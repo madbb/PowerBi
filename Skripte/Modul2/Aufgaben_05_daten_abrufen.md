@@ -71,12 +71,8 @@ Lade alle vier CSV-Dateien in eine neue Power BI Desktop-Datei. Wähle dabei fü
     <span class="pbi-step-text">Beschreibe in zwei bis drei Sätzen ein realistisches Unternehmensszenario, in dem DirectQuery die bessere Wahl wäre als Import.</span>
   </div>
 </div>
-
-<div class="pbi-task-answer">
-  <strong>b) Zwei Gründe für Import:</strong>
-  <div class="pbi-answer-field"></div>
   <strong>c) Szenario für DirectQuery:</strong>
-  <div class="pbi-answer-field"></div>
+  
 </div>
 
   </div>
@@ -150,10 +146,6 @@ Lade alle vier CSV-Dateien in eine neue Power BI Desktop-Datei. Wähle dabei fü
     <span class="pbi-step-text">Beantworte schriftlich: Was ist der Unterschied zwischen einem Parameter und einem Datenschnitt im Bericht? Wann macht ein Parameter mehr Sinn?</span>
   </div>
 </div>
-
-<div class="pbi-task-answer">
-  <strong>d) Parameter vs. Datenschnitt:</strong>
-  <div class="pbi-answer-field"></div>
 </div>
 
   </div>
@@ -170,7 +162,7 @@ Lade alle vier CSV-Dateien in eine neue Power BI Desktop-Datei. Wähle dabei fü
   </div>
   <div class="pbi-task-body">
 
-Ordne jede Fehlermeldung der richtigen Ursache und Lösung zu. Trage die Buchstaben in die Tabelle unten ein.
+Ordne jede Fehlermeldung der richtigen Ursache und Lösung zu. Schreibe deine Zuordnung in deine Notizen.
 
 <div class="pbi-task-match">
 
@@ -195,17 +187,6 @@ Ordne jede Fehlermeldung der richtigen Ursache und Lösung zu. Trage die Buchsta
 - **III** — Weniger Spalten oder Zeilen abrufen, Abfrage aufteilen
 
 </div>
-
-<div class="pbi-task-answer">
-
-| Nr. | Ursache (A / B / C) | Lösung (I / II / III) |
-|---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-
-</div>
-
   </div>
 </div>
 
@@ -222,12 +203,8 @@ Ordne jede Fehlermeldung der richtigen Ursache und Lösung zu. Trage die Buchsta
   <span class="pbi-reflect-label">R2</span>
   <span class="pbi-reflect-text">Ein Kollege fragt: "Warum sollte ich im Navigator 'Daten transformieren' wählen statt direkt auf 'Laden' zu klicken?" Was antwortest du?</span>
 </div>
-
-<div class="pbi-task-answer">
-  <strong>R1)</strong>
-  <div class="pbi-answer-field"></div>
   <strong>R2)</strong>
-  <div class="pbi-answer-field"></div>
+  
 </div>
 
 ---

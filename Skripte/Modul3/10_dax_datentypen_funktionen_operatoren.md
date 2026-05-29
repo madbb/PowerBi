@@ -33,7 +33,7 @@ Modelldatentypen und DAX-Datentypen sind verwandt, aber nicht immer identisch:
 </div>
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   BLANK kann zu unerwarteten Ergebnissen führen, insbesondere bei Vergleichen. Die meisten Vergleichsoperatoren behandeln BLANK wie 0, eine leere Zeichenfolge oder FALSE — der Operator <code>==</code> (genau gleich) ist die Ausnahme: er gibt nur TRUE zurück, wenn der Wert tatsächlich 0 ist, nicht wenn er BLANK ist. Bei unerwarteten Ergebnissen mit <code>IF()</code> und <code>ISBLANK()</code> auf BLANK prüfen.
 </div>
 
@@ -86,12 +86,12 @@ DIVIDE(<Zähler>, <Nenner>[, <alternatives_ergebnis>])
 Führt eine Division durch und behandelt Division durch Null automatisch — ohne dass ein expliziter Test des Nenners notwendig ist. Wenn kein alternatives Ergebnis angegeben wird und der Nenner Null oder BLANK ist, gibt `DIVIDE` BLANK zurück. Die Funktion ist auch leistungsmäßig besser optimiert als eine manuelle Prüfung mit `IF`.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   <code>DIVIDE</code> verwenden, wenn der Nenner ein Ausdruck ist, der Null oder BLANK zurückgeben könnte. Wenn der Nenner hingegen ein konstanter Wert ist (z. B. <code>/ 100</code>), ist der einfache Divisionsoperator <code>/</code> effizienter, da er keine zusätzliche Nullprüfung durchführt.
 </div>
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   DAX-Funktionen lassen sich am schnellsten über eine Websuche mit dem Schlüsselwort <strong>DAX</strong> gefolgt vom Funktionsnamen finden. Die vollständige Referenz ist unter <em>DAX-Funktionsreferenz</em> in der Microsoft-Dokumentation verfügbar.
 </div>
 
@@ -126,7 +126,7 @@ Vergleichsoperatoren vergleichen zwei Werte und geben TRUE oder FALSE zurück:
 | `<>` | Ungleich |
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Alle Vergleichsoperatoren — außer <code>==</code> — behandeln BLANK wie 0, eine leere Zeichenfolge oder FALSE. Das bedeutet: <code>[Revenue] = 0</code> ist TRUE, wenn Revenue entweder 0 <em>oder</em> BLANK ist. Dagegen ist <code>[Revenue] == 0</code> nur TRUE, wenn Revenue exakt 0 ist.
 </div>
 
@@ -180,7 +180,7 @@ Wenn eine Formel mehrere Operatoren enthält, bestimmt die **Rangfolge** die Aus
 Bei gleicher Priorität gilt Auswertung von links nach rechts. Mit **Klammern** lässt sich die Reihenfolge gezielt ändern.
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Rangfolgefehler sind eine häufige Fehlerquelle. Das folgende Beispiel liefert ein falsches Ergebnis, weil die Multiplikation vor der Subtraktion ausgeführt wird:
 
 ```dax
@@ -267,32 +267,32 @@ Beide Formeln liefern dasselbe Ergebnis — die Version mit Variable läuft aber
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔢</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Datentypen</div>
     <div class="pbi-summary-body">7 Datentypen von Ganzzahl bis BLANK. BLANK ≠ Null — es bedeutet "kein Wert". Mit BLANK() erzeugen, mit ISBLANK() prüfen. Besondere Vorsicht bei Vergleichen mit BLANK.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📚</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Funktionsbibliothek</div>
     <div class="pbi-summary-body">80+ Excel-kompatible Funktionen plus DAX-spezifische für Beziehungen, Filter, Iteratoren und Zeitintelligenz. DISTINCTCOUNT für eindeutige Werte, DIVIDE für sichere Division.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">➕</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Operatoren</div>
     <div class="pbi-summary-body">Arithmetisch (+, -, *, /, ^), Vergleich (=, ==, >, <, <>, …), Text (&), Logisch (&&, ||, IN, NOT). Rangfolge wie in Excel — Klammern nutzen um Reihenfolge zu steuern.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">⚡</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">BLANK & Operatoren</div>
     <div class="pbi-summary-body">= und <> behandeln BLANK wie 0. == (genau gleich) unterscheidet zwischen 0 und BLANK. Arithmetisch wird BLANK als 0 behandelt, bei Textverkettung als leere Zeichenfolge.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📦</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Variablen</div>
     <div class="pbi-summary-body">VAR deklariert, RETURN gibt das Ergebnis zurück. Werden nur einmal berechnet — verbessern Lesbarkeit, Wartbarkeit und Leistung. Unverzichtbar bei komplexen Formeln.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">💡</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">DIVIDE vs. /</div>
     <div class="pbi-summary-body">DIVIDE verwenden wenn der Nenner Null oder BLANK sein kann — behandelt Division durch Null automatisch. Den Operator / verwenden wenn der Nenner eine Konstante ist — er ist dann schneller.</div>
   </div>

@@ -22,7 +22,7 @@ DAX-Zeitintelligenzfunktionen setzen zwingend voraus, dass das Modell mindestens
 Wie eine solche Datumstabelle per DAX oder Power Query erstellt und markiert wird, wurde in Skript 11 beschrieben.
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Die integrierten Zeitintelligenzfunktionen arbeiten mit Standardperioden: Jahren, Quartalen, Monaten. Für unregelmäßige Geschäftsperioden (z. B. 4-4-5-Kalender) oder Wochen-/Tagesanalysen müssen stattdessen <code>CALCULATE</code> mit eigenen Datumsfiltern verwendet werden.
 </div>
 
@@ -63,12 +63,12 @@ TOTALYTD(
 ```
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-matrix-revenue-ytd-activity-ssm.png — Matrixvisual mit Year und Month in den Zeilen sowie Revenue und Revenue YTD als Spalten. Die YTD-Werte steigen innerhalb jedes Jahres kumuliert an.</span>
 </div>
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   <code>TOTALYTD</code> akzeptiert nur einen einzigen optionalen Filterausdruck. Sind mehrere Filter notwendig, <code>CALCULATE</code> mit <code>DATESYTD</code> als Filterargument verwenden.
 </div>
 
@@ -108,7 +108,7 @@ RETURN
 ```
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-matrix-revenue-py-ssm.png — Matrixvisual: Revenue PY für GJ2019 entspricht den Revenue-Werten von GJ2018 im gleichen Monat.</span>
 </div>
 
@@ -131,7 +131,7 @@ RETURN
 ```
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-matrix-revenue-yoy-ssm.png — Matrixvisual mit Revenue YoY % als prozentuale Veränderung gegenüber dem Vorjahresmonat.</span>
 </div>
 
@@ -187,7 +187,7 @@ RETURN
 `DATESBETWEEN` mit BLANK als Startdatum beginnt beim allerersten Datum in der Datumstabelle. `MAX('Date'[Date])` gibt das letzte Datum im aktuellen Filterkontext zurück — also das Periodenende.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-matrix-customers-ltd-ssm.png — Matrixvisual mit Customers LTD: kumulierte Anzahl eindeutiger Kunden, die von Beginn bis zum jeweiligen Monatsende aktiv waren.</span>
 </div>
 
@@ -222,7 +222,7 @@ RETURN
 `MIN('Date'[Date]) - 1` gibt den Tag vor dem ersten Datum im Filterkontext zurück — da Power BI Datumsangaben intern als Zahlen speichert, lässt sich durch Subtraktion von 1 ein Tag zurückgehen.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-matrix-new-customers-ssm.png — Matrixvisual mit New Customers: Anzahl der Kunden, die in dem jeweiligen Monat erstmals aktiv waren.</span>
 </div>
 
@@ -260,17 +260,17 @@ CALCULATE(
 `LASTNONBLANK` ist eine Iteratorfunktion: Sie durchläuft alle Datumsangaben im Filterkontext in **absteigender** chronologischer Reihenfolge und gibt das erste Datum zurück, für das der übergebene Ausdruck nicht BLANK ergibt. Das innere `CALCULATE` ist notwendig, um den Zeilenkontext der Iteration in einen Filterkontext zu überführen (Kontextübergang).
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Das Gegenstück zu <code>LASTNONBLANK</code> ist <code>FIRSTNONBLANK</code> — sie iteriert in aufsteigender chronologischer Reihenfolge. Beide Funktionen erfordern den Kontextübergang über <code>CALCULATE</code> im Ausdrucksargument.
 </div>
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Momentaufnahme-Spalten wie <code>UnitsBalance</code> sollten im Modell <strong>ausgeblendet</strong> werden, damit Berichtsautoren sie nicht versehentlich mit einer einfachen Summe in Visuals verwenden. Das Measure <code>Stock on Hand</code> ist die einzige korrekte Aggregation.
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: dax-matrix-mountain-200-bike-stock-2020-june-ssm.png — Matrixvisual mit Stock on Hand per LASTNONBLANK: Nun werden auch Werte für Juni 2020 und die Jahresgesamtsumme korrekt angezeigt.</span>
 </div>
 
@@ -280,32 +280,32 @@ CALCULATE(
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📅</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Voraussetzung</div>
     <div class="pbi-summary-body">Markierte Datumstabelle mit eindeutigen, lückenlosen Datumsangaben über volle Jahre. Ohne sie funktionieren keine Zeitintelligenzfunktionen. Für unregelmäßige Perioden CALCULATE mit eigenen Datumsfiltern nutzen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📈</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">YTD / QTD / MTD</div>
     <div class="pbi-summary-body">TOTALYTD / TOTALQTD / TOTALMTD für kumulierte Werte. Jahresende bei abweichendem Geschäftsjahr als "MM-DD" angeben. DATESYTD usw. für die Verwendung in CALCULATE mit mehreren Filtern.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔄</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Vorjahresvergleich</div>
     <div class="pbi-summary-body">SAMEPERIODLASTYEAR für Revenue PY und YoY %-Wachstum. DATEADD für beliebige Zeitverschiebungen. PARALLELPERIOD für vollständige Periodenvergleiche. Variablen für Lesbarkeit und Leistung nutzen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">👥</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Neue Vorkommen</div>
     <div class="pbi-summary-body">DATESBETWEEN mit BLANK-Startdatum für LTD-Zählung. Neue Kunden = LTD − Kunden vor Periodenbeginn. MIN('Date'[Date]) - 1 für den Tag vor dem Periodenstart.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📦</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Momentaufnahmen</div>
     <div class="pbi-summary-body">Lagerbestand und Kontostände nie über Zeit summieren. LASTDATE für den letzten Periodenstand. LASTNONBLANK wenn Lücken in den Daten möglich sind — iteriert rückwärts bis zum ersten Nicht-BLANK-Ergebnis.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🗓️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Wichtige Funktionen im Überblick</div>
     <div class="pbi-summary-body">TOTALYTD / DATESYTD · SAMEPERIODLASTYEAR · DATEADD · DATESBETWEEN · DATESINPERIOD · FIRSTDATE / LASTDATE · FIRSTNONBLANK / LASTNONBLANK · PREVIOUSYEAR / NEXTYEAR</div>
   </div>

@@ -39,7 +39,7 @@ Alle Berichtsobjekte teilen einige gemeinsame Eigenschaften in den **Formatoptio
 7. Optional: **Analyseoptionen** nutzen (Trendlinien, Prognosen, Anomalieerkennung)
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Tipp</span>
+  <span class="pbi-admonition-title"> Tipp</span>
   Die Formatoptionen enthalten ein Suchfeld — damit lassen sich spezifische Einstellungen schnell finden statt durch alle Abschnitte zu scrollen. Änderung testen, dann bei Bedarf mit <strong>Strg+Z</strong> rückgängig machen.
 </div>
 
@@ -95,7 +95,7 @@ Die Wahl des richtigen Visualtyps hängt davon ab, welche Frage beantwortet werd
 Balken- und Säulendiagramme eignen sich am besten für den Vergleich von Werten zwischen Kategorien. Nach dem Wert sortieren (absteigend), nicht alphabetisch — außer wenn eine festgelegte Reihenfolge existiert (z. B. Prozessschritte).
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 5-2-select-visual-categorical.png — Balkendiagramm für sechs Produkte in absteigender Umsatzreihenfolge.</span>
 </div>
 
@@ -108,7 +108,7 @@ Für Daten im Zeitverlauf immer Linien- oder Säulendiagramm verwenden. Die X-Ac
 Liniendiagramme eignen sich für **konsistente Datenflüsse** — wenn für jeden Zeitraum Werte vorliegen. Wenn Lücken möglich sind (fehlende Perioden), ist ein Säulendiagramm besser: Es zeigt die Lücken explizit als fehlende Säulen, statt sie mit einer Linie zu überbrücken.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 5-5-select-visual-time-series-missing-periods.png — Vergleich Liniendiagramm vs. Säulendiagramm: Das Säulendiagramm zeigt fehlende Perioden als leere Stellen, das Liniendiagramm verbindet sie mit einer Linie.</span>
 </div>
 
@@ -121,7 +121,7 @@ Weitere Kernvisuals: Gestapeltes Säulendiagramm, Flächendiagramm, Menübanddia
 Proportionale Visuals zeigen, wie sich ein Wert auf eine Dimension verteilt. Wichtig: Proportionale Visuals können **keine positiven und negativen Werte gleichzeitig** darstellen — nur dann verwenden, wenn alle Werte das gleiche Vorzeichen haben.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 5-6-select-visual-proportional-stacked-bar.png — Gestapeltes 100%-Balkendiagramm: Produktumsatzanteile nach Filiale.</span>
 </div>
 
@@ -132,7 +132,7 @@ Weitere Kernvisuals: 100% gestapeltes Säulendiagramm, Kreisdiagramm, Ringdiagra
 Kartenvisuals zeigen einen einzelnen, sofort erkennbaren Wert. Ideal für Dashboards und Analyseberichte, um wichtige KPIs auf einen Blick zu kommunizieren. Mehrzeilige Karten zeigen mehrere Werte in einem Visual.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 5-8-select-visual-card.png — Kartenvisual mit einem einzelnen Umsatzwert.</span>
 </div>
 
@@ -143,7 +143,7 @@ Tabellen haben feste Spalten mit gruppierten oder zusammengefassten Daten. Matri
 **Bedingte Formatierung** (Hintergrundfarben, Schriftfarben, Datenbalken, Symbole) macht Rastervisuals besonders aussagekräftig — Werte werden mit kontextuellen Indikatoren versehen.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 5-9-select-visual-grid-table.png — Tabellenvisual mit Umsatz und Einheiten nach Produkt, sortiert nach Umsatz mit Datenbalken für bedingte Formatierung.</span>
 </div>
 
@@ -154,7 +154,7 @@ Leistungsvisuals vergleichen einen Istwert mit einem Zielwert und zeigen Abweich
 Das **KPI-Visual** braucht drei Eingaben: die zu verfolgende Metrik, ein Messziel und eine Zeitreihe.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 5-11-select-visual-performance.png — KPI-Visual mit Gesamtumsatz, Zielwert und Abweichung.</span>
 </div>
 
@@ -168,7 +168,7 @@ Wenn das semantische Modell räumliche Daten enthält, können Kartenvisuals ein
 - **Flächenkartogramm**: gut für Länder- oder Bundesstaatsebene — zeigt relative Werte durch Farbabstufungen
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Kartenvisuals nehmen viel Platz ein. Wenn die geografische Lage keine besondere Rolle spielt, reicht oft auch ein kategorisches Visual (z. B. Balkendiagramm nach Region).
 </div>
 
@@ -185,32 +185,32 @@ Wenn mehrere Visualtypen geeignet wären, kann auch der verfügbare Platz die Wa
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📊</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Visuals</div>
     <div class="pbi-summary-body">Über 30 Kernvisuals + benutzerdefinierte Visuals aus AppSource. Wells mit Modellfeldern befüllen, Filteroptionen, Sortierung und Formatierung konfigurieren. Analyseoptionen ergänzen Visuals mit Trendlinien, Prognosen und Anomalieerkennung.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔲</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Elemente</div>
     <div class="pbi-summary-body">Textfelder (inkl. dynamischer Werte), Schaltflächen (6 Aktionen), Formen und Bilder. Ermöglichen Navigation, integrierte Hilfe und App-ähnliche Interaktionen ohne Modellanbindung.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📈</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Kategorisch & Zeitreihen</div>
     <div class="pbi-summary-body">Balken/Säulen für Kategorienvergleiche (immer nach Wert sortieren). Liniendiagramm für konsistente Zeitreihen, Säulendiagramm wenn Lücken möglich. Zeitachse immer links nach rechts.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🥧</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Proportional & Numerisch</div>
     <div class="pbi-summary-body">Gestapelte Diagramme, Kreis- und Ringdiagramme für Anteile (nur bei gleichem Vorzeichen). Kartenvisuals für einzelne Schlüsselwerte. Kein Mischen von positiven und negativen Werten in proportionalen Visuals.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📋</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Raster & Leistung</div>
     <div class="pbi-summary-body">Tabellen und Matrizen mit bedingter Formatierung für detaillierte Informationen und hierarchische Navigation. KPI-Visual für Zielvergleiche (Metrik + Ziel + Zeitreihe).</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🗺️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Geografisch & Platz</div>
     <div class="pbi-summary-body">Blasenkarte für Stadtebene, Flächenkartogramm für Länder/Bundesstaaten. Bei gleichwertigen Optionen: Breiter Bereich → horizontales Diagramm, hoher Bereich → vertikales Diagramm.</div>
   </div>

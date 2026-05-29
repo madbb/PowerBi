@@ -23,7 +23,7 @@ Ein kleineres semantisches Modell verbraucht weniger Arbeitsspeicher, aktualisie
 - Daten nach Möglichkeit vorab zusammenfassen
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Für die tiefer gehende Optimierung komplexer Unternehmensmodelle — insbesondere Abfragepläne und Datenbankoptimierung — empfiehlt sich die Zusammenarbeit mit einem Data Engineer. Die in diesem Skript beschriebenen Techniken bilden jedoch eine solide Grundlage.
 </div>
 
@@ -40,7 +40,7 @@ Das erste Werkzeug für jede Optimierung ist der **Leistungsanalyse**-Bereich in
 | **Andere** | Wartezeiten, Abfragevorbereitung, Hintergrundprozesse |
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Vor dem Start der Leistungsanalyse beide Caches leeren:
   <br>• <strong>Visueller Cache</strong>: Power BI Desktop schließen, eine leere Seite hinzufügen, speichern und auf der leeren Seite wieder öffnen
   <br>• <strong>Daten-Engine-Cache</strong>: Power BI Desktop neu starten oder DAX Studio → "Cache löschen"
@@ -48,7 +48,7 @@ Das erste Werkzeug für jede Optimierung ist der **Leistungsanalyse**-Bereich in
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 2-performance-analyzer-overview-ssm.png — Bereich Leistungsanalyse mit der Schaltfläche "Aufzeichnung starten" und den Ergebnissen nach einer Interaktion.</span>
 </div>
 
@@ -57,7 +57,7 @@ Das erste Werkzeug für jede Optimierung ist der **Leistungsanalyse**-Bereich in
 Die Ergebnisse nach Gesamtdauer (absteigend) sortieren. DAX-Abfragen über **120 Millisekunden** sind ein guter Ausgangspunkt für die Untersuchung. Mit der Schaltfläche **Abfrage kopieren** lässt sich der DAX-Ausdruck in die Zwischenablage kopieren und in **DAX Studio** für tiefere Analyse einfügen.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 2-categories-performance-analyze-results-ss.png — Ergebnisse der Leistungsanalyse mit den drei Kategorien DAX-Abfrage, Visualanzeige und Andere für jedes Visual.</span>
 </div>
 
@@ -78,7 +78,7 @@ Power Query bietet drei Datenvorschau-Optionen (**Ansicht**-Menüband):
 - **Spaltenprofil** — Statistikdiagramm und Verteilungsdiagramm
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Standardmäßig analysiert Power Query nur die ersten 1.000 Zeilen. Für das gesamte Dataset die Einstellung am unteren Rand des Fensters auf <em>"Spaltenprofilierung basierend auf dem gesamten DataSet"</em> umstellen.
 </div>
 
@@ -222,7 +222,7 @@ Aggregationen können direkt im Power Query-Editor erstellt werden:
 4. **Schließen und übernehmen**
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 6-aggregate-group-ssm.png — Power Query-Fenster "Gruppieren nach" mit einer Gruppierungsspalte (OrderDate) und mehreren hinzugefügten Aggregationsspalten.</span>
 </div>
 
@@ -232,7 +232,7 @@ Aggregationen können direkt im Power Query-Editor erstellt werden:
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 6-aggregate-data-after-less-rows-ssm.png — Power Query-Editor nach der Aggregation: Zeilenanzahl auf 30 reduziert, gegenüber 999+ vorher.</span>
 </div>
 
@@ -246,32 +246,32 @@ Aggregationen können direkt im Power Query-Editor erstellt werden:
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔍</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Leistungsanalyse</div>
     <div class="pbi-summary-body">Caches leeren, dann Aufzeichnung starten. Drei Kategorien: DAX-Abfrage, Visualanzeige, Andere. DAX > 120 ms genauer untersuchen. DAX Studio für tiefere Abfrageanalyse. Ergebnisse nach Gesamtdauer sortieren.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📦</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Variablen</div>
     <div class="pbi-summary-body">Jede Variable wird nur einmal ausgewertet — bei wiederholter Nutzung deutlicher Leistungsgewinn. Verbessern Lesbarkeit, vereinfachen Debugging durch temporäres RETURN einer Variablen, ersetzen EARLIER/EARLIEST.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📊</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Kardinalität</div>
     <div class="pbi-summary-body">Hohe Spalten-Kardinalität (viele eindeutige Werte) verschlechtert Leistung. Unnötige Spalten entfernen. Beziehungskardinalität korrekt konfigurieren. Voraggregation auf Tages-/Monatsebene reduziert Modell drastisch.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔄</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">DirectQuery optimieren</div>
     <div class="pbi-summary-body">Leistung hängt von Quelldatenbank ab. Indizes optimieren, Transformationen auf DB-Ebene auslagern. In Power BI: Visuals reduzieren, Abfragereduzierungsoptionen nutzen. Leistungsanalyse für Abfrageüberwachung.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🗜️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Aggregationen</div>
     <div class="pbi-summary-body">Daten auf höherer Granularität zusammenfassen (Tages-/Monatsebene). In Power Query per "Gruppieren nach" erstellen. Reduziert Zeilen dramatisch — bis zu 99% Modellverkleinerung möglich. Über "Aggregationen verwalten" anpassen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">⚙️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Auto Datum/Uhrzeit</div>
     <div class="pbi-summary-body">Erstellt für jede Datumsspalte ausgeblendete berechnete Tabellen. Vergrößert das Modell und verlangsamt Aktualisierungen. Bei eigener Datumstabelle deaktivieren: Optionen → Daten laden → Zeitintelligenz.</div>
   </div>

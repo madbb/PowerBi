@@ -38,7 +38,7 @@ Die Ergebnisse zeigen für jedes Berichtselement die Dauer in Millisekunden, auf
 Ergebnisse nach Gesamtdauer (absteigend) sortieren. **DAX-Abfragen über 120 Millisekunden** sind ein guter Ausgangspunkt für genauere Untersuchungen.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 11-performance-analyzer-results-ss.png — Leistungsanalysator-Ergebnisse mit expandierten Elementen und den drei Kategorien pro Visual.</span>
 </div>
 
@@ -58,7 +58,7 @@ Der häufigste Grund für schlechte Leistung: zu viele Visuals auf einer Seite. 
 - Drillthrough-Seiten und QuickInfos statt zusätzlicher Visuals auf der Hauptseite verwenden
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 11-too-many-visuals-report-page-ss.png — Berichtsseite, die durch zu viele Visuals überladen wirkt.</span>
 </div>
 
@@ -91,7 +91,7 @@ Alle Power BI-Berichte können auf dem Smartphone im Querformat angezeigt werden
 5. Größe und Position der Visuals auf dem Canvas anpassen
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 12-open-mobile-layout-ss.png — Mobile Layout-Ansicht mit Telefon-Canvas links und Bereich „Visualisierungen" rechts.</span>
 </div>
 
@@ -109,7 +109,7 @@ Für Slicer in der mobilen Ansicht gibt es besondere Konfigurationsoptionen (im 
 - **Ausrichtung**: vertikal, horizontal oder **responsiv** (responsiv = skaliert mit der Slicer-Größe; wird bei sehr kleiner Darstellung zu einem Filtersymbol)
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 12-configure-slicers-mobile-layout-ss.png — Slicer-Konfiguration für mobile Ansicht mit responsiver Ausrichtungsoption.</span>
 </div>
 
@@ -123,32 +123,32 @@ Wenn ein Bericht mit einer mobilen Ansicht veröffentlicht wird, werden Desktop-
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔬</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Leistungsanalysator</div>
     <div class="pbi-summary-body">Caches leeren, dann Aufzeichnung starten. Drei Kategorien pro Visual: DAX-Abfrage, Visualanzeige, Andere. DAX > 120 ms genauer untersuchen. Abfrage in DAX Studio exportieren für tiefere Analyse.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">⚡</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Leistung verbessern</div>
     <div class="pbi-summary-body">Visuals reduzieren und Felder je Visual begrenzen (< 100). Drillthrough statt zusätzlicher Hauptseiten-Visuals. DAX-Logik optimieren (Variablen, KEEPFILTERS statt FILTER). Auto Datum/Uhrzeit deaktivieren.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📱</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Mobile Layout</div>
     <div class="pbi-summary-body">Über Ansicht → Layout für Mobilgeräte. Visuals per Drag & Drop in den Telefon-Canvas. Nur relevante, mobilgeeignete Visuals verwenden. Desktop- und mobile Version werden gleichzeitig veröffentlicht.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📐</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Responsive Visuals</div>
     <div class="pbi-summary-body">Power BI-Visuals passen sich dynamisch an die verfügbare Größe an. Reaktionsfähigkeit kann deaktiviert werden. Bei Bedarf Sichtbarkeitsindikator im Visualisierungsbereich beachten (Lesezeichen-Status).</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🎚️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Mobile Slicer</div>
     <div class="pbi-summary-body">Ausrichtung „Responsiv" für mobile Slicer: skaliert mit der Größe, wird bei sehr kleiner Darstellung zum Filtersymbol. Einzel- vs. Mehrfachauswahl im normalen Bearbeitungsmodus konfigurieren.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🌐</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Externe Faktoren</div>
     <div class="pbi-summary-body">Wenn Power BI Desktop gut läuft, aber Benutzer schlechte Leistung melden: Netzwerk, Server, Firewall und IT-Infrastruktur untersuchen. Leistungsprobleme haben nicht immer eine Ursache im Bericht selbst.</div>
   </div>

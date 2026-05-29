@@ -9,7 +9,7 @@
 **Visuelle Berechnungen** sind DAX-Berechnungen, die nicht im semantischen Modell, sondern direkt im Visual gespeichert werden. Sie wurden eingeführt, um gängige Berechnungen wie laufende Summen, gleitende Durchschnitte oder Vorjahresvergleiche einfacher zugänglich zu machen — ohne die volle Komplexität von Filterkontext und Modellbeziehungen.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Visuelle Berechnungen befinden sich zum Zeitpunkt der Erstellung dieses Skripts in der Vorschauversion (Preview). Einschränkungen und verfügbare Funktionen können sich noch ändern. Aktuelle Informationen sind in der Microsoft-Dokumentation verfügbar.
 </div>
 
@@ -48,7 +48,7 @@ Das Fenster für visuelle Berechnungen öffnet sich über **Neues Measure → Ne
 3. **Visuelle Matrix** — die Rohdaten des Visuals mit Echtzeitvorschau der Berechnung
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: visual-calculation-overview.png — Fenster für visuelle Berechnungen mit den drei Abschnitten: Visuelle Vorschau (oben), Bearbeitungsleiste (Mitte), Visuelle Matrix (unten).</span>
 </div>
 
@@ -61,12 +61,12 @@ Profit = [Sales Amount] - [Total Product Cost]
 Diese visuelle Berechnung subtrahiert die Gesamtproduktkosten vom Umsatz — Zeile für Zeile, genau wie eine berechnete Spalte, aber zur Abfragezeit und direkt im Visual.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   In visuellen Berechnungen sind keine Aggregatfunktionen wie <code>SUM</code> notwendig — die Daten im Visual sind bereits aggregiert. Das Hinzufügen unnötiger Aggregate erschwert die Lesbarkeit. Aggregate nur einsetzen, wenn sie inhaltlich sinnvoll sind.
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: profit-visual-calculation.png — Matrixvisual mit Geschäftsjahr in den Zeilen sowie den Spalten Sales Amount, Total Product Cost und der neuen visuellen Berechnung Profit.</span>
 </div>
 
@@ -77,7 +77,7 @@ Wenn die Quellfelder einer visuellen Berechnung nicht im Visual erscheinen solle
 Ausgeblendete Felder bleiben in der visuellen Matrix erhalten und sind für andere visuelle Berechnungen weiterhin nutzbar, werden aber nicht im resultierenden Visual angezeigt.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: hide-fields.png — Bearbeitungsmodus für visuelle Berechnungen mit hervorgehobener Einblenden/Ausblenden-Funktion für Felder.</span>
 </div>
 
@@ -158,7 +158,7 @@ Bei `HIGHESTPARENT` ist Jahr die höchste Ebene — die Summe startet zu Beginn 
 </div>
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Der Reset-Parameter setzt eine mehrstufige Hierarchie auf der Achse voraus. Wenn die Achse nur eine Ebene hat, kann stattdessen <code>PARTITIONBY</code> verwendet werden.
 </div>
 
@@ -186,17 +186,17 @@ Die Entscheidung hängt von Anwendungsfall und Anforderung ab:
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📊</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Was sind visuelle Berechnungen?</div>
     <div class="pbi-summary-body">DAX-Ausdrücke, die direkt im Visual gespeichert werden. Können nur auf Daten zugreifen, die im Visual sichtbar sind. Kein Filterkontext-Wissen nötig — einfacher als Measures für viele häufige Berechnungen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🛠️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Erstellen</div>
     <div class="pbi-summary-body">Über "Neue Berechnung" wenn ein Visual ausgewählt ist. Drei Bereiche: Visuelle Vorschau, Bearbeitungsleiste, Visuelle Matrix mit Echtzeitvorschau. Felder können ausgeblendet werden, ohne sie zu löschen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📋</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Vorlagen</div>
     <div class="pbi-summary-body">Laufende Summe, Gleitender Durchschnitt, Prozent des übergeordneten Elements, Durchschnitt untergeordneter Elemente, Vergleich vorheriger, Vergleich nächster. Jede Vorlage fügt automatisch den DAX-Code ein.</div>
   </div>
@@ -206,12 +206,12 @@ Die Entscheidung hängt von Anwendungsfall und Anforderung ab:
     <div class="pbi-summary-body">Steuert die Durchlaufrichtung: ROWS (Standard), COLUMNS, ROWS COLUMNS, COLUMNS ROWS. Legt fest, in welcher Reihenfolge die visuelle Matrix für die Berechnung durchlaufen wird.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔄</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Reset-Parameter</div>
     <div class="pbi-summary-body">Steuert Neustart bei kumulativen Berechnungen: NONE (läuft durch), HIGHESTPARENT (bei höchstem übergeordneten Element), LOWESTPARENT (bei niedrigstem), oder numerische Hierarchieebene.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">⚖️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Wann welche Berechnungsart?</div>
     <div class="pbi-summary-body">Visuelle Berechnung: visual-spezifisch, einfache Aggregation, Leistung. Measure: wiederverwendbar, Modellbeziehungen, CALCULATE/Filterkontext, zentrale Verwaltung. Beide ergänzen sich.</div>
   </div>

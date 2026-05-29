@@ -17,7 +17,7 @@ Power BI ist nicht nur ein Visualisierungswerkzeug — es bietet eine breite Pal
 Power BI unterstützt viele statistische DAX-Funktionen für schnelle Zusammenfassungen: `AVERAGE`, `MIN`, `MAX`, `STDEV.P`, `STDEV.S`, `VAR.P`, `VAR.S`, `MEDIAN` und weitere.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Tipp</span>
+  <span class="pbi-admonition-title"> Tipp</span>
   Statistische Funktionen können über Rechtsklick auf ein Feld im Bereich „Visualisierungen" als Schnellfunktionen angewendet werden. Für bessere Leistung empfiehlt es sich jedoch, die Measures explizit in DAX zu erstellen.
 </div>
 
@@ -72,7 +72,7 @@ Y-Achse: Order Qty
 ```
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 3-scatter-chart-outlier-ss.png — Punktdiagramm mit mehreren konzentrierten Datenpunkten und einem deutlich abgegrenzten Ausreißer.</span>
 </div>
 
@@ -112,7 +112,7 @@ Zwei oder mehr Datenpunkte können direkt in einem Visual manuell zu einer Grupp
 Die neue Gruppe erscheint automatisch in der Legende und im Bereich **Daten** und kann in allen anderen Visuals verwendet werden.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 4-updated-visual-group-ssm.png — Balkendiagramm nach Gruppierung: Bundesstaaten mit Umsatz > 500.000 $ sind in einem Farbton, die übrigen in einem anderen.</span>
 </div>
 
@@ -141,14 +141,14 @@ Im Bereich **Daten** rechtsklick auf das Feld → **Neue Gruppe** → Gruppentyp
 3. Im Fenster **Cluster** optional die Anzahl der Cluster festlegen (leer = Power BI wählt automatisch)
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 5-clustering-applied-scatter-chart-ss.png — Punktdiagramm nach Anwendung von 3 Clustern: Datenpunkte sind in drei farblich unterschiedlichen Gruppen sichtbar.</span>
 </div>
 
 Das neue Clusterfeld wird der Legende des Punktdiagramms hinzugefügt, dem Datenmodell hinzugefügt und ist für alle anderen Visuals verfügbar.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Für Clustering mit mehr als zwei Measures ein Tabellenvisual verwenden, alle benötigten Felder hinzufügen und dann den Clustering-Algorithmus darauf anwenden.
 </div>
 
@@ -171,7 +171,7 @@ Linien-, Flächen- und Punktdiagramme eignen sich am besten für Zeitreihendaten
 Das benutzerdefinierte Visual **Play Axis** (aus Microsoft AppSource) fungiert als animierter Datenschnitt — es durchläuft automatisch alle Zeitperioden und zeigt, wie sich die Daten verändern. Mit einem Datumsfeld (z. B. `Quarter`) wird das Visual verbunden; Wiedergabe, Pause und Neustart werden über Steuerungsschaltflächen gesteuert.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Hinweis</span>
+  <span class="pbi-admonition-title"> Hinweis</span>
   Vor dem Import benutzerdefinierter Visuals prüfen, ob die Organisation deren Verwendung erlaubt. Als Alternative steht die native <strong>Abspielachse</strong> des Punktdiagrammvisuals zur Verfügung.
 </div>
 
@@ -189,7 +189,7 @@ Die Funktion **Analysieren** generiert automatisch zusätzliche Analysen für ei
 Ein neues Fenster öffnet sich mit einem automatisch generierten Visual. Mit dem **+**-Symbol in der oberen rechten Ecke lässt sich dieses Visual direkt dem Bericht hinzufügen.
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Hinweis</span>
+  <span class="pbi-admonition-title">️ Hinweis</span>
   Die Funktion „Analysieren" funktioniert nicht, wenn nicht-numerische Filter oder Measurefilter auf das Visual angewendet wurden.
 </div>
 
@@ -225,7 +225,7 @@ Das Measure `Sales Forecast Percentage Value` liefert den aktuellen Schieberegle
 Eine konstante Bezugslinie (z. B. Umsatzziel von 2 Mio. $) kann dem Visual über den Analysebereich hinzugefügt werden. So sehen Berichtsnutzer sofort, bei welchem Parameterwert das Ziel erreicht wird.
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 3-add-constant-line-ss.png — Säulendiagramm mit Ist- und Prognosesäule plus Bezugslinie bei 2 Mio. $; der Schieberegler zeigt 1,40 % erforderliches Wachstum.</span>
 </div>
 
@@ -236,7 +236,7 @@ Eine konstante Bezugslinie (z. B. Umsatzziel von 2 Mio. $) kann dem Visual über
 Power BI enthält drei KI-Visuals, die maschinelles Lernen nutzen, um tiefe Erkenntnisse interaktiv bereitzustellen.
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Tipp</span>
+  <span class="pbi-admonition-title"> Tipp</span>
   KI-Visuals sollten so groß wie möglich angelegt werden, damit Berichtsnutzer vollständig mit den Daten interagieren können.
 </div>
 
@@ -250,7 +250,7 @@ Analysiert automatisch, welche Faktoren eine bestimmte Metrik beeinflussen. Das 
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: ai-visual-key-influencers.png — Wichtigste Einflussfaktoren Visual: Links Einflussfaktorenliste, rechts Vergleichsvisualisierung für den ausgewählten Faktor.</span>
 </div>
 
@@ -264,7 +264,7 @@ Visualisiert Daten über mehrere Dimensionen hinweg mit beliebig tiefem Drill-do
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: ai-visual-decomposition-tree.png — Analysebaumvisual mit zwei Aufgliederungsebenen: Produktkategorie (fixiert) und Region (KI-Vorschlag).</span>
 </div>
 
@@ -285,7 +285,7 @@ Power BI analysiert die Frage und generiert automatisch das passende Diagramm od
 - Vorgeschlagene Fragen im Visual hinterlegen
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: ai-visual-qna.png — Q&A-Visual mit der Frage „Revenue won by sales owner" und einem automatisch generierten Balkendiagramm als Antwort.</span>
 </div>
 
@@ -295,32 +295,32 @@ Power BI analysiert die Frage und generiert automatisch das passende Diagramm od
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📊</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Statistiken & Top-N</div>
     <div class="pbi-summary-body">DAX-Statistikfunktionen (AVERAGE, STDEV, MEDIAN usw.) für eigene Measures. Histogramme mit Quantisierungsgruppen. Top-N über Q&A, Filter-Typ oder DAX TOPN-Funktion.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🎯</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Ausreißer</div>
     <div class="pbi-summary-body">Punktdiagramm für visuelle Ausreißererkennung. DAX-Measures für dynamische Ausreißeridentifikation (besser als berechnete Spalten). Gefundene Ausreißer mit Slicern isolieren und tiefer analysieren.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🗂️</div>
+    <div class="pbi-summary-icon">️</div>
     <div class="pbi-summary-title">Gruppierung & Clustering</div>
     <div class="pbi-summary-body">Manuelle Gruppen: Strg+Klick im Visual → Gruppendaten. Quantisierung: kontinuierliche Werte in gleich große Intervalle aufteilen. Automatisches Clustering: Power BI findet ähnliche Datenpunkte per KI.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📈</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Zeitreihen</div>
     <div class="pbi-summary-body">Linien-/Punktdiagramm mit Trendlinien, Prognosen und Anomalieerkennung. Play-Axis-Visual für animierte Zeitreihen. Grundregel: Zeitachse von links nach rechts, fehlende Perioden → Säulendiagramm bevorzugen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔮</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Was-wäre-wenn</div>
     <div class="pbi-summary-body">Parameter über Modellierung → Neuer Parameter erstellen. Power BI legt berechnete Tabelle und Measure automatisch an. Measures referenzieren den Parameter-Wert. Bezugslinie zeigt Schwellenwert im Visual.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🤖</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">KI-Visuals</div>
     <div class="pbi-summary-body">Wichtigste Einflussfaktoren: welche Faktoren beeinflussen eine Metrik. Analysebaum: mehrdimensionaler Drill-down mit KI-Vorschlägen. Q&A: natürlichsprachliche Fragen auf Englisch beantworten.</div>
   </div>

@@ -27,7 +27,7 @@ Das Bestimmen der Zielgruppe ist einer der wichtigsten Schritte beim Berichtsdes
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 3-1-report-audience-mapping.jpg — Diagramm mit der Zuordnung der drei Zielgruppentypen zu den entsprechenden Berichtstypen.</span>
 </div>
 
@@ -44,7 +44,7 @@ Das primäre Ziel ist schnelles Überwachen und Interpretieren. Das Dashboard ze
 Leitfragen: *„Wie geht es uns?"* und *„Sind wir am Ziel?"*
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 3-2-report-type-dashboard.png — Dashboard mit KPI-Karten, Statusanzeigen und Trendlinien.</span>
 </div>
 
@@ -53,7 +53,7 @@ Leitfragen: *„Wie geht es uns?"* und *„Sind wir am Ziel?"*
 Der häufigste Berichtstyp. Ziel ist die Beantwortung vieler verschiedener Fragen durch interaktive Exploration — mit Slicern, Drill-down, Drillthrough und QuickInfos. Analyseberichte gehen über *„Wie geht es uns?"* hinaus zu *„Warum ist das passiert?"* und *„Was könnte als Nächstes passieren?"*
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 3-3-report-type-analytical-report.png — Analysebericht mit Datumsbereichsslicer und interaktiven Visuals zur Umsatzanalyse.</span>
 </div>
 
@@ -62,12 +62,12 @@ Der häufigste Berichtstyp. Ziel ist die Beantwortung vieler verschiedener Frage
 Ermöglicht die Überwachung von Echtzeit- oder aktuellen Daten und direkte Aktionen. Operative Berichte enthalten oft Schaltflächen, über die Benutzer in externe Systeme wechseln können — z. B. um eine Bestellung auszulösen oder einen Wartungsauftrag einzuleiten. Die Anzahl der Analysefunktionen wird bewusst minimiert, um den Fokus auf den operativen Ablauf zu halten.
 
 <div class="pbi-admonition pbi-warning">
-  <span class="pbi-admonition-title">⚠️ Wichtig</span>
+  <span class="pbi-admonition-title">️ Wichtig</span>
   Bei operativen Berichten kann übermäßiges Klicken oder ein unlogischer Ablauf zu hoher Frustration und Produktivitätsverlust führen. UX-Qualität ist hier besonders kritisch.
 </div>
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 3-4-report-type-operational-report.png — Operativer Bestandsbericht mit Echtzeit-Lagerstatistiken und Schaltfläche „Auftrag senden".</span>
 </div>
 
@@ -93,7 +93,7 @@ Der Formfaktor ist die Größe und Ausrichtung des Geräts:
 | AR/MR-Gerät | Variabel | Bericht überlagert die reale Umgebung |
 
 <div class="pbi-screenshot">
-  <span class="pbi-screenshot-label">📷 Screenshot</span>
+  <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 4-1-form-factor.jpg — Vergleich desselben Berichts auf großem Monitor vs. mobilem Gerät im Hochformat.</span>
 </div>
 
@@ -112,7 +112,7 @@ Das Berichtsdesign sollte das Branding der Organisation widerspiegeln. Ein volls
 - Texteinstellungen (Schriftarten, Größen, Farben)
 
 <div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title">💡 Tipp</span>
+  <span class="pbi-admonition-title"> Tipp</span>
   Speichere Bilder und Themes in einem zentralen Repository. So werden Änderungen automatisch in alle Berichte übernommen — ohne manuelle Anpassung in jedem einzelnen Bericht.
 </div>
 
@@ -160,32 +160,32 @@ Berichte können abonniert werden, sodass sie nach einem festen Zeitplan als Dok
 
 <div class="pbi-summary-grid">
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">👥</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Drei Zielgruppen</div>
     <div class="pbi-summary-body">Führungskraft (schnelle Übersichten), Analyst (tiefe Exploration), Arbeitskraft im Informationsbereich (operative Entscheidungen + Aktionen). Die Zielgruppe bestimmt Typ und Komplexität des Berichts.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📊</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Vier Berichtstypen</div>
     <div class="pbi-summary-body">Dashboard (KPI-Übersicht), Analysebericht (interaktive Exploration), Operativer Bericht (Echtzeit + Aktionen), Bildungsbericht (Kontext für unbekannte Zielgruppen). Kombinationen möglich.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">📱</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Formfaktor & Eingabe</div>
     <div class="pbi-summary-body">Gerätegröße und Ausrichtung bestimmen Anzahl und Komplexität der Visuals. Eingabemethode (Maus, Touch, Geste) beeinflusst Abstände, interaktive Elemente und Slicer-Gestaltung.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🎨</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Stil & Design</div>
     <div class="pbi-summary-body">Theme mit Logo, Farbpalette und Schriftarten aus zentralem Repository. Änderungen wirken automatisch auf alle Berichte. Farben: ausreichend Kontrast, sparsam einsetzen.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">♿</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">Barrierefreiheit</div>
     <div class="pbi-summary-body">Von Anfang an mitdenken: große Schriften, Kontrast, Tastaturnavigation, Alternativtexte, Tabulatorreihenfolge. Status nicht nur über Farbe kommunizieren — auch Symbole verwenden.</div>
   </div>
   <div class="pbi-summary-card">
-    <div class="pbi-summary-icon">🔁</div>
+    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">UX-Prioritäten</div>
     <div class="pbi-summary-body">Drill-down/through für Detailtiefe, Datenzugriff über Export/Q&A/Warnungen, Was-wäre-wenn für Szenarios, Abonnements und Kommentare für Zusammenarbeit.</div>
   </div>
