@@ -88,12 +88,12 @@
 
 ---
 
-## Aufgabe 3 — Datentypen korrigieren
+## Aufgabe 3 — Datentypen korrigieren und Bestelldatum bereinigen
 
 <div class="pbi-task">
   <div class="pbi-task-header">
     <span class="pbi-task-num">3</span>
-    <span class="pbi-task-title">Falsche Datentypen in Orders identifizieren und beheben</span>
+    <span class="pbi-task-title">Gemischte Datumsformate erkennen, Einzelpreis bereinigen, alle Typen setzen</span>
   </div>
   <div class="pbi-task-body">
 
@@ -105,38 +105,54 @@
 <div class="pbi-task-steps">
   <div class="pbi-task-step">
     <span class="pbi-step-label">a</span>
-    <span class="pbi-step-text">Wechsle zur Abfrage <strong>Orders</strong>. Sieh dir die Spalte <strong>Bestelldatum</strong> an. Aktiviere <strong>Ansicht → Spaltenprofil</strong> und klicke auf die Spalte. Du wirst bemerken, dass die Spalte zwar wie Datumsangaben aussieht, aber drei verschiedene Formate enthält. Notiere welche drei Formate du erkennst — ein Beispiel für jedes.</span>
+    <span class="pbi-step-text">Wechsle zur Abfrage <strong>Orders</strong>. Aktiviere <strong>Ansicht → Spaltenprofil</strong> und klicke auf die Spalte <strong>Bestelldatum</strong>. Sieh dir die Werte im Spaltenprofil unten an. Notiere die drei verschiedenen Datumsformate die du erkennst — schreibe je ein konkretes Beispiel auf.</span>
   </div>
   <div class="pbi-task-step">
     <span class="pbi-step-label">b</span>
-    <span class="pbi-step-text">Versuche die Spalte <strong>Bestelldatum</strong> direkt auf den Typ <strong>Datum</strong> zu ändern: Klick auf das Typ-Symbol links der Spaltenüberschrift → <strong>Datum</strong>. Was passiert? Wie viele Fehler werden angezeigt und warum? Notiere deine Beobachtung.</span>
+    <span class="pbi-step-text">Versuche <strong>Bestelldatum</strong> direkt auf den Typ <strong>Datum</strong> zu setzen: Klick auf das Typ-Symbol → <strong>Datum</strong>. Beobachte die roten Fehlermarkierungen. Wie viele Fehler entstehen und warum reicht eine direkte Typ-Konvertierung hier nicht? Lösche den Schritt danach wieder im Bereich <strong>Angewendete Schritte</strong>.</span>
   </div>
   <div class="pbi-task-step">
     <span class="pbi-step-label">c</span>
-    <span class="pbi-step-text">Lösche den fehlgeschlagenen Typ-Schritt wieder im Bereich <strong>Angewendete Schritte</strong> (X links neben dem Schritt). Die korrekte Bereinigung von gemischten Datumsformaten erfordert M-Code und wird in einer späteren Einheit behandelt. Belasse <strong>Bestelldatum</strong> vorerst als Typ <strong>Text</strong> — setze den Typ explizit auf <strong>Text</strong>.</span>
+    <span class="pbi-step-text">Die zwei Formate <strong>YYYY-MM-DD</strong> (2.115 Werte) und <strong>DD.MM.YYYY</strong> (454 Werte) lassen sich eindeutig erkennen und umwandeln. Das Slash-Format (431 Werte) enthält beide Schreibweisen DD/MM und MM/DD gemischt und ist nicht automatisch auflösbar — diese Werte werden als <code>null</code> markiert. Füge eine <strong>Benutzerdefinierte Spalte</strong> hinzu: <strong>Spalte hinzufügen → Benutzerdefinierte Spalte</strong>. Benenne sie <strong>BestelldatumBereinigt</strong> und trage folgenden Ausdruck ein:</span>
   </div>
+</div>
+
+```
+if Text.Contains([Bestelldatum], ".") then
+    Date.FromText([Bestelldatum], [Format="DD.MM.YYYY"])
+else if Text.Length([Bestelldatum]) = 10
+    and Text.Middle([Bestelldatum], 4, 1) = "-" then
+    Date.FromText([Bestelldatum], [Format="YYYY-MM-DD"])
+else
+    null
+```
+
+<div class="pbi-task-steps">
   <div class="pbi-task-step">
     <span class="pbi-step-label">d</span>
-    <span class="pbi-step-text">Korrigiere <strong>Lieferdatum</strong> auf den Typ <strong>Datum</strong>. Diese Spalte ist einheitlich im Format YYYY-MM-DD und kann direkt konvertiert werden. Wie viele Fehler entstehen? Schau dir im Spaltenprofil an, wie viele leere Werte die Spalte hat — ist das ein Fehler oder erwartet?</span>
+    <span class="pbi-step-text">Prüfe die neue Spalte <strong>BestelldatumBereinigt</strong> im Spaltenprofil: Wie viele Nullwerte entstehen? Das sind die 431 Werte im Slash-Format, die sich nicht eindeutig zuordnen lassen. Setze den Typ der neuen Spalte auf <strong>Datum</strong>. Entferne danach die originale Spalte <strong>Bestelldatum</strong> und benenne <strong>BestelldatumBereinigt</strong> in <strong>Bestelldatum</strong> um.</span>
   </div>
   <div class="pbi-task-step">
     <span class="pbi-step-label">e</span>
-    <span class="pbi-step-text">Wechsle jetzt zur Spalte <strong>Einzelpreis</strong>. Versuche den Typ auf <strong>Dezimalzahl</strong> zu setzen. Wie viele Fehler entstehen? Untersuche die Fehler: Klicke auf einen der Fehlerwerte. Was ist das Problem mit diesen Einträgen? (Tipp: Schau auf das Dezimaltrennzeichen.)</span>
+    <span class="pbi-step-text">Korrigiere <strong>Lieferdatum</strong> direkt auf den Typ <strong>Datum</strong>. Diese Spalte ist durchgängig im Format YYYY-MM-DD. Entstehen Fehler oder nur leere Werte? Was ist der Unterschied zwischen einem Fehler und einem Nullwert in Power Query?</span>
   </div>
   <div class="pbi-task-step">
     <span class="pbi-step-label">f</span>
-    <span class="pbi-step-text">Lösche den fehlgeschlagenen Typ-Schritt. Bereinige zuerst die Spalte <strong>Einzelpreis</strong>: Wähle <strong>Transformieren → Werte ersetzen</strong>. Ersetze <code>,</code> (Komma) durch <code>.</code> (Punkt). Setze danach den Typ auf <strong>Dezimalzahl</strong>. Wie viele Fehler gibt es jetzt noch?</span>
+    <span class="pbi-step-text">Wechsle zur Spalte <strong>Einzelpreis</strong>. Versuche den Typ auf <strong>Dezimalzahl</strong> zu setzen. Wie viele Fehler entstehen (225)? Klicke auf einen Fehlerwert und schau dir den Originalwert an. Lösche den Schritt. Bereinige danach mit <strong>Transformieren → Werte ersetzen</strong>: Ersetze <code>,</code> durch <code>.</code>. Setze dann den Typ — wie viele Fehler bleiben?</span>
   </div>
   <div class="pbi-task-step">
     <span class="pbi-step-label">g</span>
-    <span class="pbi-step-text">Korrigiere die restlichen numerischen Spalten: <strong>Menge</strong> auf <strong>Ganzzahl</strong>, <strong>Rabatt</strong> auf <strong>Dezimalzahl</strong>. Setze für <strong>CustomerID</strong>, <strong>ProductID</strong>, <strong>SalesRepID</strong>, <strong>OrderID</strong> den Typ <strong>Text</strong> — IDs werden nie berechnet.</span>
+    <span class="pbi-step-text">Korrigiere die restlichen Spalten: <strong>Menge</strong> auf <strong>Ganzzahl</strong>, <strong>Rabatt</strong> auf <strong>Dezimalzahl</strong>. Setze für <strong>OrderID</strong>, <strong>CustomerID</strong>, <strong>ProductID</strong>, <strong>SalesRepID</strong> den Typ <strong>Text</strong> — IDs werden nie berechnet, sie dienen nur als Schlüssel.</span>
   </div>
   <div class="pbi-task-step">
     <span class="pbi-step-label">h</span>
     <span class="pbi-step-text">Beantworte schriftlich: Was würde passieren, wenn <strong>Bestelldatum</strong> als Text im Modell bleibt? Nenne zwei konkrete Auswirkungen auf Berichte und DAX-Berechnungen.</span>
   </div>
 </div>
-  <strong>b) Beobachtung bei Typ-Änderung Bestelldatum:</strong>
+
+  <strong>b) Beobachtung bei direkter Typ-Änderung Bestelldatum:</strong>
+  
+  <strong>e) Unterschied Fehler vs. Nullwert:</strong>
   
   <strong>h) Zwei Auswirkungen von Bestelldatum als Text:</strong>
   
@@ -334,7 +350,7 @@
   </div>
   <div class="pbi-checklist-item">
     <span class="pbi-checklist-icon">☐</span>
-    <span class="pbi-checklist-label"><strong>Aufgabe 3</strong> Datentypen in Orders: Bestelldatum-Formatproblem erkannt und dokumentiert, Einzelpreis-Komma bereinigt (225 Werte), alle Typen gesetzt</span>
+    <span class="pbi-checklist-label"><strong>Aufgabe 3</strong> Datentypen in Orders: Bestelldatum per benutzerdefinierter Spalte bereinigt (2.569 konvertiert, 431 null), Einzelpreis-Komma bereinigt (225 Werte), alle Typen gesetzt</span>
   </div>
   <div class="pbi-checklist-item">
     <span class="pbi-checklist-icon">☐</span>
