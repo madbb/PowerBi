@@ -19,7 +19,7 @@ project:
         - file: Skripte/Modul2/06_power_query_bereinigen.md
         - file: Skripte/Modul2/Aufgaben_06_power_query_bereinigen
         - file: Skripte/Modul2/07_modellframework.md
-        - file: Skripte/Modul2/Aufgaben_07_modellframework.md
+        - file: Skripte/Modul2/aufgaben_07_modellframework.md
         - file: Skripte/Modul2/aufgaben_abschluss_krankenhaus
     - title: Modul 3 – Semantisches Modell & DAX
       children:
