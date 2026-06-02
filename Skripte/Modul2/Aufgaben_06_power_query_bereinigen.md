@@ -113,24 +113,91 @@
   </div>
   <div class="pbi-task-step">
     <span class="pbi-step-label">c</span>
-    <span class="pbi-step-text">Die zwei Formate <strong>YYYY-MM-DD</strong> (2.115 Werte) und <strong>DD.MM.YYYY</strong> (454 Werte) lassen sich eindeutig erkennen und umwandeln. Das Slash-Format (431 Werte) enthält beide Schreibweisen DD/MM und MM/DD gemischt und ist nicht automatisch auflösbar — diese Werte werden als <code>null</code> markiert. Füge eine <strong>Benutzerdefinierte Spalte</strong> hinzu: <strong>Spalte hinzufügen → Benutzerdefinierte Spalte</strong>. Benenne sie <strong>BestelldatumBereinigt</strong> und trage folgenden Ausdruck ein:</span>
+    <span class="pbi-step-text">Füge eine neue Spalte ein: <strong>Spalte hinzufügen → Benutzerdefinierte Spalte</strong>. Benenne sie <strong>BestelldatumBereinigt</strong> und trage den folgenden Ausdruck ein. Lies vorher die Erklärung unten — sie erklärt jeden Teil des Codes.</span>
   </div>
 </div>
 
 ```
 if Text.Contains([Bestelldatum], ".") then
-    Date.FromText([Bestelldatum], [Format="DD.MM.YYYY"])
-else if Text.Length([Bestelldatum]) = 10
-    and Text.Middle([Bestelldatum], 4, 1) = "-" then
-    Date.FromText([Bestelldatum], [Format="YYYY-MM-DD"])
+    #date(
+        Number.From(Text.End([Bestelldatum], 4)),
+        Number.From(Text.Middle([Bestelldatum], 3, 2)),
+        Number.From(Text.Start([Bestelldatum], 2))
+    )
+else if Text.Middle([Bestelldatum], 4, 1) = "-" then
+    #date(
+        Number.From(Text.Start([Bestelldatum], 4)),
+        Number.From(Text.Middle([Bestelldatum], 5, 2)),
+        Number.From(Text.End([Bestelldatum], 2))
+    )
 else
-    null
+    let
+        p1 = Number.From(Text.Start([Bestelldatum], 2)),
+        p2 = Number.From(Text.Middle([Bestelldatum], 3, 2)),
+        yr = Number.From(Text.End([Bestelldatum], 4))
+    in
+        if p1 > 12 then #date(yr, p2, p1)
+        else if p2 > 12 then #date(yr, p1, p2)
+        else #date(yr, p2, p1)
 ```
+
+<div class="pbi-admonition pbi-info">
+  <span class="pbi-admonition-title">Code-Erklärung</span>
+
+**Grundprinzip:** M kennt keine automatische Formaterkennung bei gemischten Datumsformaten. Statt Power BI raten zu lassen, bauen wir das Datum manuell aus Textteilen zusammen. Der Konstruktor <code>#date(Jahr, Monat, Tag)</code> erwartet drei Zahlen — wir schneiden sie per Position aus dem Text heraus und wandeln sie mit <code>Number.From()</code> in Zahlen um.
+
+**Zweig 1 — Punkt erkannt: DD.MM.YYYY**
+
+Beispielwert: `25.04.2022`
+
+```
+Text.Start([Bestelldatum], 2)    -- "25"  -> Tag   (erste 2 Zeichen)
+Text.Middle([Bestelldatum], 3, 2) -- "04"  -> Monat (ab Position 3, Länge 2)
+Text.End([Bestelldatum], 4)      -- "2022" -> Jahr  (letzte 4 Zeichen)
+```
+
+`Text.Contains([Bestelldatum], ".")` erkennt dieses Format sicher — ein Punkt kommt in keinem der anderen Formate vor.
+
+**Zweig 2 — Bindestrich an Position 4: YYYY-MM-DD**
+
+Beispielwert: `2022-07-31`
+
+```
+Text.Start([Bestelldatum], 4)    -- "2022" -> Jahr  (erste 4 Zeichen)
+Text.Middle([Bestelldatum], 5, 2) -- "07"   -> Monat (ab Position 5, Länge 2)
+Text.End([Bestelldatum], 2)      -- "31"   -> Tag   (letzte 2 Zeichen)
+```
+
+`Text.Middle([Bestelldatum], 4, 1) = "-"` prüft ob das fünfte Zeichen (Index 4) ein Bindestrich ist. Das ist beim ISO-Format immer der Fall.
+
+**Zweig 3 — Slash-Format: DD/MM/YYYY oder MM/DD/YYYY gemischt**
+
+Das Slash-Format ist in den Daten nicht einheitlich. Einige Werte sind DD/MM (`22/05/2023`), andere MM/DD (`12/15/2024`). Eine direkte Annahme würde in beiden Richtungen falsche Daten erzeugen.
+
+Der `let`-Block speichert die drei Textteile als Zwischenwerte, damit der folgende `if`-Ausdruck sie mehrfach nutzen kann — direkte lokale Variablen gibt es in M-Ausdrücken nicht.
+
+```
+p1 = erster Teil  (z.B. "12" oder "22")
+p2 = zweiter Teil (z.B. "06" oder "05")
+yr = Jahr         (letzter Teil, immer 4-stellig)
+```
+
+Die Entscheidungslogik:
+
+```
+if p1 > 12 then #date(yr, p2, p1)   -- p1 kann kein Monat sein -> DD/MM
+else if p2 > 12 then #date(yr, p1, p2) -- p2 kann kein Monat sein -> MM/DD
+else #date(yr, p2, p1)              -- beide <= 12: nicht eindeutig, DD/MM als Annahme
+```
+
+Werte wie `01/08/2024` fallen in den letzten Fall — beide Teile könnten Monat oder Tag sein. Der Code trifft die Annahme DD/MM und behandelt sie als 1. August 2024. Das ist eine bewusste Entscheidung, keine sichere Konvertierung. In einem echten Projekt würde man die Quelle befragen oder den Zeitraum gegen andere Daten plausibilisieren.
+
+</div>
 
 <div class="pbi-task-steps">
   <div class="pbi-task-step">
     <span class="pbi-step-label">d</span>
-    <span class="pbi-step-text">Prüfe die neue Spalte <strong>BestelldatumBereinigt</strong> im Spaltenprofil: Wie viele Nullwerte entstehen? Das sind die 431 Werte im Slash-Format, die sich nicht eindeutig zuordnen lassen. Setze den Typ der neuen Spalte auf <strong>Datum</strong>. Entferne danach die originale Spalte <strong>Bestelldatum</strong> und benenne <strong>BestelldatumBereinigt</strong> in <strong>Bestelldatum</strong> um.</span>
+    <span class="pbi-step-text">Prüfe die neue Spalte <strong>BestelldatumBereinigt</strong> im Spaltenprofil: Entstehen Fehler oder Nullwerte? Es sollten weder Fehler noch Nullwerte auftreten — alle 3.000 Werte werden konvertiert. Setze den Typ der neuen Spalte auf <strong>Datum</strong>. Entferne danach die originale Spalte <strong>Bestelldatum</strong> und benenne <strong>BestelldatumBereinigt</strong> in <strong>Bestelldatum</strong> um.</span>
   </div>
   <div class="pbi-task-step">
     <span class="pbi-step-label">e</span>
@@ -350,7 +417,7 @@ else
   </div>
   <div class="pbi-checklist-item">
     <span class="pbi-checklist-icon">☐</span>
-    <span class="pbi-checklist-label"><strong>Aufgabe 3</strong> Datentypen in Orders: Bestelldatum per benutzerdefinierter Spalte bereinigt (2.569 konvertiert, 431 null), Einzelpreis-Komma bereinigt (225 Werte), alle Typen gesetzt</span>
+    <span class="pbi-checklist-label"><strong>Aufgabe 3</strong> Datentypen in Orders: Bestelldatum per benutzerdefinierter Spalte bereinigt (alle 3.000 Werte konvertiert), Einzelpreis-Komma bereinigt (225 Werte), alle Typen gesetzt</span>
   </div>
   <div class="pbi-checklist-item">
     <span class="pbi-checklist-icon">☐</span>
