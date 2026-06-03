@@ -24,7 +24,7 @@ project:
         - file: Skripte/Modul2/07_modellframework.md
         - file: Skripte/Modul2/aufgaben_07_modellframework.md
         - file: Skripte/Modul2/aufgaben_abschluss_krankenhaus.md
-        - file: Skripte\Modul2\aufgaben_krankenhaus_transformieren.md
+        - file: Skripte/Modul2/aufgaben_krankenhaus_transformieren.md
     - title: Modul 3 – Semantisches Modell & DAX
       children:
         - file: Skripte/Modul3/08_semantisches_modell_konfigurieren.md
