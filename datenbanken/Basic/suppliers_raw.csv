@@ -1,0 +1,16 @@
+LiefNr;lieferant_name;KATEGORIE;Ansprechpartner;email_adresse;tel;Einkaufspreis;aktiv_ja_nein;aufgenommen_am
+L001;TechParts GmbH;hardware;Müller Thomas;t.mueller@techparts.de;0231-4412200;312.50;ja;2021-03-15
+L002;SOFTLINE AG;Software;Schneider A.;;0201-8821100;89.00;ja;2019-07-01
+L003;techparts gmbh;Hardware;Müller Thomas;t.mueller@techparts.de;0231-4412200;312.50;ja;2022-01-10
+L004;Zubehör Express;zubehör;Weber Kai;k.weber@zexpress.de;+49 211 5544332;44.99;ja;2020-11-23
+L005;GLOBAL SERVICES INT.;Dienstleistung;;gs@global-si.com;;975.00;nein;2018-05-30
+L006;Netzwerk Profis KG;hardware;;n.profis@nwprofis.de;02234-667788;189.00;ja;2023-02-14
+L007;SoftLine AG;software;Becker R.;r.becker@softline.ag;0201-8821177;120.00;ja;2020-09-09
+L008;Dell Reseller Nord;Hardware;Krause Petra;p.krause@drnord.de;04031-991100;NULL;ja;2021-06-18
+L009;zubehör express;Zubehör;Weber Kai;k.weber@zexpress.de;+49 211 5544332;52.00;ja;2022-08-04
+L010;Consulting Hub;DIENSTLEISTUNG;Lange B.;b.lange@chub.de;;1250.00;ja;2017-12-01
+L011;PC World Dortmund;Hardware;Homann Lars;l.homann@pcwd.de;0231-1234567;445.00;ja;2024-01-20
+L012;PC WORLD DORTMUND;hardware;Homann L.;l.homann@pcwd.de;0231-1234567;445.00;ja;2024-01-20
+L013;Cloud First GmbH;Software;Zimmer C.;c.zimmer@cloudfirst.de;069-55443322;310.00;nein;2019-03-11
+L014;Netzwerk Profis KG;Hardware;;n.profis@nwprofis.de;02234-667788;195.00;ja;2020-07-07
+L015;Officeline;zubehör;Meyer Sandra;s.meyer@officeline.de;0211-8877665;28.50;ja;2022-10-31

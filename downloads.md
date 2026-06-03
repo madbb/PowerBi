@@ -11,4 +11,5 @@ Hier findest du alle Datendateien für den Kurs.
 | [orders_2025.csv](datenbanken/Basic/orders_2025.csv) | Bestellungen 2025 |
 | [products.csv](datenbanken/Basic/products.csv) | Produktkatalog |
 | [salesreps.csv](datenbanken/Basic/salesreps.csv) | Vertriebsmitarbeiter |
-| [monthly_sales_wide.csv](datenbanken/Basic/monthly_sales_wide.csv) | Monatliche Verkäufe |
+| [monthly_sales_wide.csv](datenbanken/Basic/monthly_sales_wide.csv) | 
+| [suppliers_raw.csv](datenbanken/Basic/suppliers_raw.csv) | Monatliche Verkäufe |
