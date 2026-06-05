@@ -6,7 +6,7 @@
   <div class="pbi-page-sub">Spalten erstellen, Struktur umformen, Abfragen kombinieren und Abfragetypen verstehen</div>
 </div>
 
-Bereinigte Daten aus Skript 06a sind der Ausgangspunkt. Transformationen gehen einen Schritt weiter: Sie verändern nicht einzelne Werte, sondern die Struktur und den Inhalt der Tabellen. Neue Spalten entstehen aus vorhandenen Feldern, breite Tabellen werden normalisiert, mehrere Quellen werden kombiniert. Alles passiert weiterhin im Power Query-Editor, alle Schritte bleiben reproduzierbar.
+Bereinigte und strukturierte Daten aus Skript 06a sind der Ausgangspunkt. In diesem Skript entstehen neue Inhalte die nicht in der Quelle stehen: neue Spalten aus vorhandenen Feldern, aggregierte Sichten, kombinierte Tabellen. Dazu kommen die Abfragetypen Verweis und Duplikat als Grundlage für sauber aufgebaute Modelle.
 
 ---
 
@@ -53,35 +53,6 @@ Nützlich bei komplexen Textoperationen, die sich schwer in eine Formel fassen l
 ---
 
 ## Datenstruktur umformen
-
-### Entpivotieren
-
-Wenn Kategoriewerte als separate Spalten nebeneinander stehen — sogenanntes breites Format — müssen sie in eine normalisierte Zeilenstruktur umgewandelt werden. DAX kann mit breiten Tabellen nicht sinnvoll rechnen, und Datenschnitte auf Spaltenebene sind nicht möglich.
-
-Vorgehen: Die betroffenen Spalten markieren → **Transformieren → Entpivotieren**. Die entstehenden Spalten heißen standardmäßig `Attribut` (enthält die ehemaligen Spaltenüberschriften) und `Wert` (enthält die ehemaligen Zellwerte). Beide sollten anschließend sinnvoll umbenannt werden.
-
-Variante: **Andere Spalten entpivotieren** — alle Spalten außer den markierten werden entpivotiert. Praktisch wenn viele Spalten transformiert werden sollen.
-
-<div class="pbi-example">
-  <span class="pbi-badge">Beispiel</span>
-  Eine Tabelle hat die Spalten <em>Region</em>, <em>Jan</em>, <em>Feb</em> bis <em>Dez</em>. Nach dem Entpivotieren der 12 Monatsspalten entstehen drei Spalten: <em>Region</em>, <em>Monat</em> und <em>Umsatz</em>. Statt 5 Zeilen mit 13 Spalten gibt es jetzt 60 Zeilen mit 3 Spalten. DAX-Measures können nun über die Wertspalte aggregieren, ein Datenschnitt kann nach Monat filtern.
-</div>
-
-<div class="pbi-screenshot">
-  <span class="pbi-screenshot-label"> Screenshot</span>
-  <span class="pbi-screenshot-desc">Dateiname: 02-unpivot-ss.png — Power Query mit dem Ergebnis des Entpivotierens: aus zwölf Monatsspalten wurden die Spalten Monat und Umsatz.</span>
-</div>
-
-### Pivotieren
-
-Pivotieren ist der umgekehrte Vorgang: Eindeutige Zeilenwerte einer Spalte werden zu neuen Spaltenüberschriften, die dazugehörigen Werte werden aggregiert.
-
-Aufruf: **Transformieren → Spalte pivotieren**. Im Dialog wird die Wertespalte und eine Aggregatfunktion gewählt (Summe, Anzahl, Minimum, Maximum, Durchschnitt, Median).
-
-<div class="pbi-admonition pbi-info">
-  <span class="pbi-admonition-title"> Hinweis</span>
-  Pivotieren wird seltener benötigt als Entpivotieren. Typischer Einsatz: Berichte oder Exporte, die eine breite Struktur erfordern, zum Beispiel eine Kreuztabelle als Ausgabe.
-</div>
 
 ### Transponieren
 
@@ -164,14 +135,14 @@ Aufruf: **Start → Abfragen zusammenführen → Als neue Abfrage zusammenführe
 
 **Verfügbare Join-Typen:**
 
-| Join-Typ | Verhalten | SQL-Entsprechung |
-|---|---|---|
-| **Linker äußerer Join** | Alle Zeilen der ersten Tabelle, nur übereinstimmende der zweiten. Keine Übereinstimmung ergibt NULL. | `LEFT OUTER JOIN` |
-| **Rechter äußerer Join** | Alle Zeilen der zweiten Tabelle, nur übereinstimmende der ersten. | `RIGHT OUTER JOIN` |
-| **Vollständiger äußerer Join** | Alle Zeilen beider Tabellen, nicht übereinstimmende Seiten erhalten NULL. | `FULL OUTER JOIN` |
-| **Innerer Join** | Nur Zeilen, die in beiden Tabellen einen passenden Schlüssel haben. | `INNER JOIN` |
-| **Linker Anti-Join** | Nur Zeilen der ersten Tabelle, für die es keinen Treffer in der zweiten gibt. | `LEFT ANTI JOIN` |
-| **Rechter Anti-Join** | Nur Zeilen der zweiten Tabelle, für die es keinen Treffer in der ersten gibt. | `RIGHT ANTI JOIN` |
+| Join-Typ | Verhalten | SQL-Entsprechung | PL-300 |
+|---|---|---|---|
+| **Linker äußerer Join** | Alle Zeilen der ersten Tabelle, nur übereinstimmende der zweiten. Keine Übereinstimmung ergibt NULL. | `LEFT OUTER JOIN` | Prüfungsstoff |
+| **Vollständiger äußerer Join** | Alle Zeilen beider Tabellen, nicht übereinstimmende Seiten erhalten NULL. | `FULL OUTER JOIN` | Prüfungsstoff |
+| **Innerer Join** | Nur Zeilen, die in beiden Tabellen einen passenden Schlüssel haben. | `INNER JOIN` | Prüfungsstoff |
+| **Rechter äußerer Join** | Alle Zeilen der zweiten Tabelle, nur übereinstimmende der ersten. | `RIGHT OUTER JOIN` | |
+| **Linker Anti-Join** | Nur Zeilen der ersten Tabelle, für die es keinen Treffer in der zweiten gibt. | `LEFT ANTI JOIN` | |
+| **Rechter Anti-Join** | Nur Zeilen der zweiten Tabelle, für die es keinen Treffer in der ersten gibt. | `RIGHT ANTI JOIN` | |
 
 <div class="pbi-example">
   <span class="pbi-badge">Beispiel</span>
@@ -181,6 +152,11 @@ Aufruf: **Start → Abfragen zusammenführen → Als neue Abfrage zusammenführe
 <div class="pbi-screenshot">
   <span class="pbi-screenshot-label"> Screenshot</span>
   <span class="pbi-screenshot-desc">Dateiname: 05-merge-queries-new-ss.png — Fenster "Abfragen zusammenführen" mit Tabellenauswahl, markierten Schlüsselspalten und Auswahl des Join-Typs.</span>
+</div>
+
+<div class="pbi-screenshot">
+  <span class="pbi-screenshot-label"> Screenshot</span>
+  <span class="pbi-screenshot-desc">Dateiname: 05-merge-queries-final-view-ss.png — Ergebnis nach dem Zusammenführen: neue Spalte vom Typ Table in der zusammengeführten Abfrage, bereit zum Expandieren.</span>
 </div>
 
 ---
@@ -224,8 +200,8 @@ Typischer Einsatz: Man möchte eine bestehende Abfrage als Ausgangspunkt für Ex
   </div>
   <div class="pbi-summary-card">
     <div class="pbi-summary-icon">↔️</div>
-    <div class="pbi-summary-title">Entpivotieren und Pivotieren</div>
-    <div class="pbi-summary-body">Entpivotieren normalisiert breite Spaltenstrukturen in Zeilen. Pivotieren aggregiert Zeilen zu strukturierten Spalten. Transponieren dreht Zeilen und Spalten komplett um.</div>
+    <div class="pbi-summary-title">Transponieren und Gruppieren</div>
+    <div class="pbi-summary-body">Transponieren dreht Zeilen und Spalten komplett um — nützlich wenn die Quelle kopfüber geliefert wird. Gruppieren und Aggregieren fasst Zeilen zusammen (SQL GROUP BY), geeignet für Voraggregation großer Tabellen.</div>
   </div>
   <div class="pbi-summary-card">
     <div class="pbi-summary-icon"></div>
