@@ -205,11 +205,6 @@ Typischer Einsatz: Man möchte eine bestehende Abfrage als Ausgangspunkt für Ex
   </div>
   <div class="pbi-summary-card">
     <div class="pbi-summary-icon"></div>
-    <div class="pbi-summary-title">Gruppieren und Aggregieren</div>
-    <div class="pbi-summary-body">Zeilen nach einer oder mehreren Spalten zusammenfassen, numerische Felder aggregieren. Entspricht SQL GROUP BY. Nützlich für Voraggregation großer Tabellen.</div>
-  </div>
-  <div class="pbi-summary-card">
-    <div class="pbi-summary-icon"></div>
     <div class="pbi-summary-title">JSON und XML expandieren</div>
     <div class="pbi-summary-body">Verschachtelte Record- und List-Spalten aus NoSQL-Quellen über das Erweiterungs-Symbol aufklappen. Präfix-Option deaktivieren für saubere Spaltennamen.</div>
   </div>
