@@ -30,6 +30,28 @@
 > **Erwartete Antwort:** Ein fester Wert bleibt unverändert. Eine Formel rechnet neu wenn sich die Quelldaten ändern.
 > In DAX gibt es das auch - aber mit drei verschiedenen Varianten, je nachdem wann und wie die Berechnung ausgewertet wird.
 
+### Demo: Wo legt man DAX-Berechnungen an?
+
+**Drei Einstiegspunkte zeigen - einmal kurz durchklicken:**
+
+**Berechnete Tabelle anlegen:**
+- Modellierungsansicht öffnen (viertes Symbol in der linken Leiste) [PRÜFEN: Symbol-Position kann je nach Power BI Version variieren]
+- Oben im Menüband: Registerkarte "Modellierung" - "Neue Tabelle"
+- In der Bearbeitungsleiste erscheint: `Tabelle =`
+- Das ist der Einstiegspunkt für berechnete Tabellen
+
+**Berechnete Spalte anlegen:**
+- In der Datensicht: eine Tabelle im Datenbereich rechts anklicken, z.B. orders
+- Registerkarte "Tabellentools" erscheint oben - "Neue Spalte" [PRÜFEN: Alternativ Rechtsklick auf Tabellenkopf in der Datensicht]
+- In der Bearbeitungsleiste erscheint: `Spalte =`
+
+**Measure anlegen:**
+- Rechtsklick auf eine Tabelle im Datenbereich rechts - "Neues Measure"
+- Oder: Registerkarte "Modellierung" - "Neues Measure" [PRÜFEN: Menüband-Position]
+- In der Bearbeitungsleiste erscheint: `Measure =`
+
+*Alle drei Typen werden in derselben Bearbeitungsleiste oben geschrieben. Der Unterschied liegt im Einstiegspunkt und darin was die Formel zurückgeben muss.*
+
 **Die drei Berechnungstypen vorstellen:**
 
 **Berechnete Tabelle:**
@@ -110,6 +132,27 @@
 
 **Überleitung:** Jetzt schauen wir uns an, wie eine DAX-Formel aufgebaut ist - unabhängig vom Typ.
 
+### Demo: Erstes Measure in der Bearbeitungsleiste schreiben
+
+**Demo - Schritt für Schritt:**
+- Rechtsklick auf Tabelle orders im Datenbereich rechts - "Neues Measure"
+- Bearbeitungsleiste ist jetzt aktiv, Cursor steht hinter `Measure =`
+- Alten Namen "Measure" löschen, "Umsatz" eintippen
+- Gleichheitszeichen steht bereits da
+- "SUM" eintippen - IntelliSense zeigt Vorschläge
+  *IntelliSense: die automatische Vervollständigung. Beim Tippen erscheinen passende Funktionen, Tabellen und Spalten als Liste. Pfeil nach unten + Tab oder Enter übernimmt den markierten Vorschlag.*
+- SUM aus der Liste wählen oder austippen - öffnende Klammer setzen
+- "orders" eintippen - IntelliSense zeigt die Tabelle
+- Eckige Klammer öffnen - IntelliSense zeigt alle Spalten aus orders
+- "Einzelpreis" wählen - schließende Klammer setzen
+- Ergebnis: `Umsatz = SUM(orders[Einzelpreis])`
+- Enter drücken - Measure erscheint in orders mit Taschenrechnersymbol
+
+**Bewusst einen Fehler einbauen und zeigen:**
+- Neues Measure - diesmal nur `[Einzelpreis]` ohne Tabellenname eintippen
+- Power BI zeigt eine Fehlermeldung oder löst es mehrdeutig auf
+- Zeigt warum vollqualifiziert besser ist: `orders[Einzelpreis]` statt `[Einzelpreis]`
+
 **Das Grundmuster zeigen:**
 
 ```
@@ -152,6 +195,33 @@ Berechnungsname = DAX-Formel
 
 > **Erwartete Antwort:** Keine Ahnung - mal sehen.
 > In DAX gibt es klare Regeln je nach Objekttyp:
+
+### Demo: Alle drei Referenztypen live eintippen
+
+**Demo - ein Measure das alle drei Typen zeigt:**
+- Neues Measure in orders anlegen
+- Folgende Formel schrittweise eintippen und dabei erklären:
+
+```
+Test = COUNTROWS('orders')
+```
+
+- `'orders'` in einfachen Anführungszeichen: das ist eine Tabellenreferenz
+- Jetzt zeigen dass orders ohne Anführungszeichen auch funktioniert - weil kein Leerzeichen und kein reserviertes Wort
+- Dann `'Date'` als Gegenbeispiel: Date IST ein reserviertes Wort in DAX, deshalb immer Anführungszeichen [PRÜFEN: Gilt sobald eine Tabelle "Date" im Modell existiert]
+
+**Zweites Beispiel - Spaltenreferenz:**
+```
+Umsatz = SUM(orders[Einzelpreis])
+```
+- `orders[Einzelpreis]`: Tabellenname direkt, Spaltenname in eckigen Klammern, kein Punkt dazwischen
+
+**Drittes Beispiel - Measure referenziert anderes Measure:**
+```
+Umsatz mit Menge = [Umsatz] * SUM(orders[Menge])
+```
+- `[Umsatz]` in eckigen Klammern ohne Tabellenname: das ist eine Measure-Referenz
+- Bewusst `orders[Umsatz]` versuchen - Power BI gibt Fehler, weil Measures nicht tabellenqualifiziert werden
 
 **Tabellenreferenzen:**
 - Tabellennamen in einfache Anführungszeichen setzen
@@ -205,6 +275,16 @@ Profit = [Revenue] - [Cost]
 ## Block 5 - Formelformatierung
 
 **Überleitung:** DAX verzeiht schlechte Formatierung vollständig - Leerzeichen, Einrückungen und Zeilenumbrüche ändern nichts an der Logik. Aber lesbare Formeln spart beim nächsten Mal viel Zeit.
+
+### Demo: Zeilenumbruch in der Bearbeitungsleiste
+
+**Demo:**
+- Bestehendes Measure "Umsatz" anklicken - Formel erscheint in der Bearbeitungsleiste
+- Bearbeitungsleiste durch Ziehen am unteren Rand vergrößern [PRÜFEN: Ob das in aktueller Version so funktioniert - alternativ gibt es einen Pfeil zum Aufklappen rechts in der Leiste]
+- Cursor nach SUM( setzen
+- Umschalt+Enter: Zeilenumbruch ohne die Formel zu schreiben
+- Einrückung mit Leertaste oder Tab hinzufügen
+- Enter alleine würde die Formel abschließen - das ist der häufige Anfängerfehler
 
 **Die zwei Versionen derselben Formel zeigen:**
 

@@ -22,71 +22,146 @@
 
 ## Block 1 - Beziehungen konfigurieren
 
-**Frage ans Plenum:** Was passiert, wenn ihr in einem Bericht nach Produktkategorie filtert, aber Kategorie und Umsatz in verschiedenen Tabellen liegen?
+**Frage ans Plenum:** Wir haben gerade vier Tabellen aus Power Query geladen: orders, customers, products, salesreps. Was fehlt noch, bevor wir sinnvoll damit arbeiten können?
 
-> **Erwartete Antwort:** Ohne Beziehung passiert nichts. Der Filter greift nicht über Tabellengrenzen hinaus.
-> Beziehungen sind der Mechanismus, der Filterkontext von einer Tabelle in eine andere überträgt.
+> **Erwartete Antwort:** Die Tabellen wissen nichts voneinander. Es fehlen die Verbindungen.
+> Genau. Power BI hat vier Inseln. Beziehungen bauen die Brücken.
 
-*Filterkontext ist einer der Grundbegriffe in Power BI. Er beschreibt, welche Daten aktuell "aktiv" sind, also durch welche Filter die Datenmenge eingeschränkt wurde. Wenn ich auf eine Kachel "Region Süd" klicke, ist der Filterkontext "Region = Süd". Dieser Kontext muss über Beziehungen von Tabelle zu Tabelle fließen.*
+*Filterkontext ist einer der Grundbegriffe in Power BI. Er beschreibt, welche Daten aktuell "aktiv" sind, also durch welche Filter die Datenmenge eingeschränkt wurde. Wenn ich auf eine Kachel "Region Süd" klicke, ist der Filterkontext "Region = Süd". Dieser Kontext muss über Beziehungen von Tabelle zu Tabelle fließen - sonst bleibt jede Tabelle für sich.*
 
-**Beziehungsgrundlagen durchgehen:**
+**Wichtiger Hinweis vorab:**
+- Die automatische Beziehungserkennung in Power BI Desktop ist deaktiviert worden
+  *In den Optionen unter "Daten laden" gibt es die Einstellung "Beziehungen aus Datenquellen beim ersten Laden importieren" und "Beziehungen beim Aktualisieren von Daten aktualisieren oder löschen". In professionellen Modellen werden diese Optionen deaktiviert. Warum: Power BI erkennt Beziehungen anhand gleicher Spaltennamen - das ist fehleranfällig und erzeugt oft falsche oder unvollständige Verbindungen. Wir bauen alles manuell.*
 
+---
+
+### Schritt 1 - Modellansicht öffnen und Überblick verschaffen
+
+**Demo:**
+- Modellansicht über das dritte Symbol in der linken Leiste öffnen
+- Vier Tabellen liegen unverbunden im Diagramm
+- Tabellen per Drag & Drop im Diagramm anordnen: orders in die Mitte, customers, products, salesreps drumherum
+  *Das ist kein technischer Schritt, sondern ein visueller. Die Anordnung ändert nichts am Modell. Aber ein Sternschema das auch wie ein Stern aussieht, ist leichter zu lesen und zu prüfen.*
+
+**Frage ans Plenum:** Welche Tabelle ist die Faktentabelle, welche sind Dimensionen?
+
+> **Erwartete Antwort:** orders ist die Faktentabelle. customers, products, salesreps sind Dimensionen.
+> orders enthält die Transaktionen - eine Zeile pro Bestellung. Die anderen Tabellen beschreiben die Beteiligten.
+
+---
+
+### Schritt 2 - Schlüsselspalten identifizieren
+
+**Tabellen und ihre Schlüssel kurz zeigen:**
+
+| Tabelle | Primärschlüssel | Eindeutig? |
+|---|---|---|
+| customers | CustomerID (K0001, K0002, ...) | Ja - jeder Kunde genau einmal |
+| products | ProductID (P0001, P0002, ...) | Ja - jedes Produkt genau einmal |
+| salesreps | SalesRepID (SR001, SR002, ...) | Ja - jeder Vertreter genau einmal |
+| orders | OrderID (O00001, O00002, ...) | Ja - jede Bestellung genau einmal |
+| orders | CustomerID | Nein - derselbe Kunde kauft mehrfach |
+| orders | ProductID | Nein - dasselbe Produkt wird mehrfach bestellt |
+| orders | SalesRepID | Nein - derselbe Vertreter hat mehrere Bestellungen |
+
+*Die Spalten CustomerID, ProductID und SalesRepID kommen in orders als Fremdschlüssel vor. Sie zeigen auf die Primärschlüssel der Dimensionstabellen. Das ist die Grundlage jeder Beziehung.*
+
+**Beziehungsgrundlage ansprechen:**
 - Jede Beziehung verbindet genau eine Spalte aus Tabelle A mit einer Spalte aus Tabelle B
-- Datentypen müssen übereinstimmen
-  *Wenn in der Bestelltabelle KundenID eine Ganzzahl ist und in der Kundentabelle KundenID ein Text, kann Power BI keine Beziehung anlegen. Die Typen müssen vor der Modellierung übereinstimmen - das ist eine Aufgabe für Power Query.*
-- Bei mehrspaltigen Schlüsseln in der Quelle: in Power Query zu einer einspaltigen Schlüsselspalte zusammenführen
-  *Mehrspaltiger Schlüssel bedeutet: In der Quelldatenbank wird eine Zeile erst durch die Kombination mehrerer Spalten eindeutig, zum Beispiel Auftragsnummer + Positionsnummer. Power BI kann nur über eine einzige Spalte verknüpfen. Lösung: die Spalten in Power Query zusammenkleben, z.B. "1042-5".*
+- Datentypen beider Spalten müssen übereinstimmen - das haben wir in Power Query sichergestellt
+  *Wenn CustomerID in orders ein Text ist und in customers eine Zahl, kann Power BI keine Beziehung anlegen. Das ist eine der häufigsten Fehlerquellen. Immer in Power Query prüfen.*
 
-**Kardinalitätstypen als Tabelle zeigen:**
+---
 
-*Kardinalität beschreibt das Verhältnis zwischen den Zeilen auf beiden Seiten einer Beziehung. Wie viele Zeilen in Tabelle B passen zu einer Zeile in Tabelle A?*
+### Schritt 3 - Erste Beziehung anlegen: customers zu orders
 
-- **1:*** (Eins-zu-viele): häufigster Typ, Dimensionstabelle zur Faktentabelle
-  *Beispiel: Ein Kunde (1) hat viele Bestellungen (*). Die Kundentabelle hat eindeutige KundenIDs (jeder Kunde genau einmal). Die Bestelltabelle hat dieselbe KundenID mehrfach (für jede Bestellung dieses Kunden).*
+**Demo:**
+- In der Modellansicht: Spalte CustomerID in customers anklicken, gedrückt halten, auf CustomerID in orders ziehen und loslassen
+- Power BI legt die Beziehung an und zeigt eine Linie zwischen den Tabellen
+- Doppelklick auf die Linie: Beziehungseigenschaften öffnen sich
 
-- ***:1** (Viele-zu-eins): dasselbe, andere Richtung
-  *Dasselbe Verhältnis, nur von der Faktentabelle aus gesehen. Viele Bestellungen gehören zu einem Kunden.*
+**Was in den Eigenschaften zu sehen ist - erklären:**
+- Kardinalität: Eins-zu-viele (1:*) - customers ist die 1-Seite, orders die *-Seite
+  *Power BI erkennt das automatisch: CustomerID in customers ist eindeutig (kein Wert doppelt), CustomerID in orders kommt mehrfach vor. Daraus folgt: 1 zu viele.*
+- Kreuzfilterrichtung: Einzeln, von customers zu orders
+  *Der Pfeil zeigt in die Richtung, in die Filter fließen. Ein Filter auf customers (z.B. Segment = "Großkunde") filtert automatisch die Bestellungen dieses Segments in orders. Andersherum passiert das nicht.*
 
-- **1:1** (Eins-zu-eins): selten, besser in Power Query zusammenführen
-  *Eins-zu-eins bedeutet: Jede Zeile in Tabelle A hat genau eine passende Zeile in Tabelle B. Wenn das so ist, können beide Tabellen in der Regel in Power Query zu einer einzigen zusammengeführt werden. Zwei getrennte Tabellen bei 1:1 sind meist unnötig.*
+**Fenster schließen. Zurück im Diagramm:**
+- Das 1-Symbol steht bei customers (eindeutige Seite)
+- Das *-Symbol steht bei orders (mehrfach-Seite)
+- Der Pfeil zeigt von customers nach orders
 
-- ***:** (Viele-zu-viele): wenn keine eindeutige Seite vorhanden ist
-  *Viele-zu-viele bedeutet: Eine Zeile in Tabelle A kann zu mehreren Zeilen in Tabelle B passen, und umgekehrt. Zum Beispiel: Studenten und Kurse. Ein Student besucht mehrere Kurse, ein Kurs hat mehrere Studenten. Das ist der komplexeste Typ und erfordert besondere Sorgfalt.*
+---
 
-**Kreuzfilterrichtung erklären:**
-- Einzeln (Standard bei 1:*): Filter fließt von der 1-Seite zur *-Seite
-  *Standard und richtig: Ein Filter auf der Kundentabelle (1-Seite) filtert die Bestelltabelle (*-Seite) automatisch mit. Andersherum passiert das nicht.*
-- Beide: Filter fließt in beide Richtungen
+### Schritt 4 - Restliche Beziehungen anlegen
 
-**Warnung zu bidirektionaler Filterung betonen:**
-- Verschlechtert Abfrageleistung
-- Kann zu unerwarteten Ergebnissen führen
-  *Unerwartetes Ergebnis bedeutet oft: Ein Visual zeigt plötzlich andere Zahlen als erwartet, weil ein Filter von einer unerwarteten Seite reinkommt. Das ist schwer zu debuggen.*
-- Nur nutzen wenn es einen triftigen Grund gibt, z.B. n:n-Analyse über Brückentabelle
-  *Brückentabelle (auch: Zwischentabelle oder Junction Table) ist eine Hilfstabelle, die eine Viele-zu-viele-Beziehung auflöst. Beispiel: Studenten-Kurse-Tabelle mit einer Zeile pro Kombination aus StudentID und KursID. Für Analysen quer über diese Brückentabelle kann bidirektionale Filterung sinnvoll sein.*
+**Demo, alle drei in Folge:**
+- ProductID aus products auf ProductID in orders ziehen
+- SalesRepID aus salesreps auf SalesRepID in orders ziehen
 
-**Aktive vs. inaktive Beziehungen ansprechen:**
-- Nur eine aktive Beziehung zwischen zwei Tabellen möglich
-- Zweite Beziehung wird inaktiv gesetzt
-  *Inaktiv bedeutet: Die Beziehung ist im Modell vorhanden und sichtbar, wird aber standardmäßig nicht für Filter und Berechnungen verwendet. Sie erscheint im Diagramm als gestrichelte Linie.*
-- Inaktive Beziehung gezielt per USERELATIONSHIP in DAX aktivieren
-  *USERELATIONSHIP ist eine DAX-Funktion, mit der man in einem bestimmten Measure explizit sagt: "Für diese Berechnung nutze diese inaktive Beziehung statt der aktiven." So kann man z.B. das Versanddatum statt des Bestelldatums für eine spezifische Kennzahl nutzen.*
+**Ergebnis zeigen und kommentieren:**
+- orders hat jetzt drei Beziehungslinien, eine zu jeder Dimensionstabelle
+- Alle drei sind 1:* mit Filterrichtung von der Dimension zur Faktentabelle
+- Das ist das Sternschema - orders in der Mitte, Dimensionen als Zacken
 
-**Rollenspieldimension kurz erklären:**
-- Beispiel: Datumstabelle mit Bestelldatum und Versanddatum in der Faktentabelle
-  *Rollenspieldimension bedeutet: Dieselbe Tabelle (hier: Datum) spielt mehrere Rollen. Einmal ist sie das Bestelldatum, einmal das Versanddatum. Power BI kann aber nur eine aktive Beziehung zwischen zwei Tabellen haben.*
-- Lösung 1: eine aktive, eine inaktive Beziehung + USERELATIONSHIP
-- Lösung 2: zwei separate Datumstabellen
+**Frage ans Plenum:** Warum zeigt der Pfeil immer von der Dimensionstabelle zur Faktentabelle und nicht umgekehrt?
 
-**Demo: Modellansicht öffnen, Beziehungen anlegen**
-- Drag & Drop zwischen Spalten im Diagramm
-- Doppelklick auf Linie: Eigenschaften zeigen
-- 1 und * Symbole, Pfeilrichtung
+> **Erwartete Antwort:** Weil die Dimensionen filtern und die Faktentabelle gefiltert wird.
+> Genau. Ich wähle eine Region in customers aus - und orders zeigt nur noch die Bestellungen dieser Region. Das ist die natürliche Richtung. Andersherum würde bedeuten: Eine Bestellung filtert zurück, welche Kunden angezeigt werden. Das ergibt in den meisten Fällen keinen Sinn.
 
-**Frage ans Plenum:** Wir haben customers, orders, products, salesreps. Welche Tabelle ist die Faktentabelle?
+---
 
-> **Erwartete Antwort:** orders. Die anderen sind Dimensionen.
-> Beziehungen gehen von den Dimensionen (1-Seite) zur Faktentabelle (mehrere-Seite).
+### Kardinalitätstypen im Überblick
+
+*Bevor wir zu den weiteren Szenarien kommen - kurzer Überblick über alle vier Typen, damit der Kontext klar ist.*
+
+| Kardinalität | Bedeutung | Unser Beispiel | Typischer Einsatz |
+|---|---|---|---|
+| 1:* (Eins-zu-viele) | 1-Seite hat eindeutige Werte, *-Seite mehrfache | customers zu orders | Standard: Dimension zu Faktentabelle |
+| *:1 (Viele-zu-eins) | Dasselbe, andere Blickrichtung | orders zu customers | Identisch, nur anders beschrieben |
+| 1:1 (Eins-zu-eins) | Beide Seiten eindeutig | - | Selten - besser in Power Query zusammenführen |
+| *:* (Viele-zu-viele) | Keine eindeutige Seite | - | Komplex - nur mit gutem Grund |
+
+---
+
+### Kreuzfilterrichtung - was passiert bei "Beide"
+
+**Szenario zeigen - konkret mit unseren Daten:**
+
+Standardfall (Einzeln): Ein Datenschnitt auf customers.Segment = "Großkunde" filtert orders - es erscheinen nur Bestellungen von Großkunden. Die Tabelle salesreps wird davon nicht berührt.
+
+Was passiert bei bidirektionaler Filterung: Der Filter fließt auch in die andere Richtung. Jetzt filtert orders auch zurück nach customers. Das klingt harmlos, kann aber dazu führen, dass ein Visual "Anzahl Kunden pro Vertreter" plötzlich falsche Werte zeigt - weil ein Filter aus einer Bestellaggregation zurück in die Kundentabelle läuft und Kunden ohne Bestellungen im aktuellen Kontext ausblendet.
+
+**Klare Regel:**
+- Kreuzfilterrichtung bleibt auf Einzeln - das ist der Standard und in 90% der Fälle richtig
+- Bidirektional nur wenn es einen konkreten fachlichen Grund gibt
+
+  *Der einzige häufige Grund: eine Brückentabelle, die eine Viele-zu-viele-Beziehung zwischen zwei Dimensionstabellen auflöst. Beispiel: ein Vertreter betreut mehrere Regionen, eine Region hat mehrere Vertreter. Dann gibt es eine Zwischentabelle mit SalesRepID und RegionID. Bidirektionale Filterung erlaubt dann Analysen in beide Richtungen über diese Brücke.*
+
+---
+
+### Aktive und inaktive Beziehungen - das Bestelldatum-Szenario
+
+**Auf unsere Daten zeigen:**
+- orders hat zwei Datumsspalten: Bestelldatum und Lieferdatum
+- Wenn wir später eine Datumstabelle einbinden wollen, entsteht ein Problem
+
+**Problem erklären:**
+- Eine Datumstabelle kann nur eine aktive Beziehung zu orders haben
+- Zweite Verbindung wird automatisch inaktiv gesetzt und als gestrichelte Linie angezeigt
+  *Inaktiv bedeutet: Die Beziehung ist im Modell sichtbar, wird aber für Filter und Berechnungen nicht verwendet. Power BI ignoriert sie standardmäßig.*
+
+**Lösungen:**
+- Lösung 1: eine aktive Beziehung (Bestelldatum), eine inaktive (Lieferdatum) - inaktive per USERELATIONSHIP in einem DAX-Measure gezielt aktivieren
+  *USERELATIONSHIP ist eine DAX-Funktion. Man sagt damit: "Für diese Berechnung verwende nicht die aktive Beziehung, sondern diese hier." So kann ein Measure "Umsatz nach Lieferdatum" die inaktive Beziehung nutzen, während alle anderen Visuals mit dem Bestelldatum arbeiten.*
+- Lösung 2: zwei separate Datumstabellen mit je einer aktiven Beziehung
+
+*Das nennt sich Rollenspieldimension - dieselbe Dimension (Datum) spielt mehrere Rollen im Modell. Das Datum-Szenario ist das klassische Beispiel.*
+
+**Frage ans Plenum:** Wann würdet ihr Lösung 1 wählen, wann Lösung 2?
+
+> **Erwartete Antworten:** Lösung 1 wenn das Lieferdatum selten gebraucht wird. Lösung 2 wenn beide Daten gleichwertig für Berichte genutzt werden.
+> Beides ist korrekt. Lösung 2 ist einfacher zu verstehen und zu warten. Lösung 1 spart eine Tabelle im Modell.
 
 ---
 
@@ -94,23 +169,42 @@
 
 **Überleitung:** Beziehungen stehen. Jetzt verfeinern wir das Modell. Tabelleneigenschaften sind der erste Schritt.
 
-**Tabelleneigenschaften kurz durchgehen:**
+### Demo: Tabelleneigenschaften aufrufen
+
+**Demo:**
+- In der Modellansicht: auf den Tabellenkopf von customers klicken (nicht auf eine Spalte, sondern auf den Namen oben)
+- Rechts im Bereich "Eigenschaften" erscheinen die Einstellungen zur Tabelle
+- Alternativ: Rechtsklick auf den Tabellenkopf - Eigenschaften
+
+**Eigenschaften kurz durchgehen:**
 
 - Name: benutzerfreundlich, wird mit Power Query-Abfragename synchronisiert
-- Beschriftung: erscheint als Tooltip im Datenbereich
-  *Tooltip ist der kleine Hilfetext, der erscheint wenn man mit der Maus über ein Element fährt ohne zu klicken. Eine gute Beschriftung hilft Berichtsautoren zu verstehen, was diese Tabelle enthält.*
+  *Wenn man die Tabelle in Power Query umbenennt, ändert sich der Name hier automatisch mit. Umgekehrt gilt das nicht - Umbenennung hier hat keinen Einfluss auf Power Query.*
+- Beschreibung: erscheint als Tooltip im Datenbereich
+  *Tooltip ist der kleine Hilfetext, der erscheint wenn man mit der Maus über ein Element fährt ohne zu klicken. Eine gute Beschreibung hilft Berichtsautoren zu verstehen, was diese Tabelle enthält.*
 - Synonyme: alternative Namen für Q&A und Copilot
-  *Q&A ist eine Power BI-Funktion, bei der man eine Frage in natürlicher Sprache stellt und Power BI ein Visual generiert. Synonyme helfen dabei: Wenn die Tabelle "customers" heißt, aber Schüler "Kunden" tippen, wird das durch ein Synonym erkannt.*
-- Ist ausgeblendet: für Brückentabellen und Hilfstabellen sinnvoll
+  *Q&A ist eine Power BI-Funktion, bei der man eine Frage in natürlicher Sprache stellt und Power BI ein Visual generiert. Synonyme helfen dabei: Wenn die Tabelle "customers" heißt, aber jemand "Kunden" tippt, wird das durch ein Synonym erkannt.*
+- Ist ausgeblendet: Tabelle wird im Datenbereich nicht angezeigt
+  *Sinnvoll für Brückentabellen und reine Hilfstabellen, die Berichtsautoren nicht direkt nutzen sollen.*
 
-**Datumstabellen markieren ansprechen:**
+### Demo: Auto Datum/Uhrzeit deaktivieren
 
-- Auto Datum/Uhrzeit deaktivieren: Optionen - Daten laden - Auto Datum/Uhrzeit deaktivieren
-  *Auto Datum/Uhrzeit ist eine Power BI-Standardeinstellung, die für jede Datumsspalte automatisch eine versteckte Hilfstabelle erstellt. Das klingt hilfreich, bläht aber das Modell auf - vor allem wenn es viele Datumsspalten gibt.*
-- Stattdessen eigene Datumstabelle verwenden
-  *Eine eigene Datumstabelle ist eine Tabelle mit einer Zeile pro Tag und Spalten für Jahr, Quartal, Monat, Wochentag usw. Sie wird einmal zentral erstellt und dann mit allen Datumsspalten im Modell verbunden.*
-- Markierung: Tabellentools - Als Datumstabelle markieren
-- Voraussetzung: eindeutige Werte, keine Leerwerte, lückenlose Datumsangaben
+**Demo:**
+- Datei - Optionen und Einstellungen - Optionen
+- Abschnitt "Aktuelle Datei" - "Daten laden"
+- Haken bei "Auto Datum/Uhrzeit" entfernen - OK
+
+  *Auto Datum/Uhrzeit ist eine Power BI-Standardeinstellung, die für jede Datumsspalte automatisch eine versteckte Hilfstabelle im Hintergrund erstellt. Das klingt hilfreich, bläht aber das Modell auf - vor allem wenn es viele Datumsspalten gibt. Wir deaktivieren das und verwenden später eine eigene Datumstabelle.*
+
+**Hinweis für Schüler:** Diese Einstellung gilt nur für die aktuelle Datei. Bei einer neuen .pbix-Datei muss sie neu gesetzt werden - oder man deaktiviert sie einmalig unter "Globale Einstellungen".
+
+### Demo: Als Datumstabelle markieren (Vorschau)
+
+*Das ist noch kein Schritt den wir jetzt durchführen - wir haben noch keine Datumstabelle. Aber der Pfad ist wichtig zu kennen:*
+- Tabelle in der Modellansicht anklicken
+- Oben in der Menüleiste erscheinen "Tabellentools"
+- Tabellentools - Als Datumstabelle markieren - Als Datumstabelle markieren
+- Power BI prüft automatisch: eindeutige Werte, keine Leerwerte, lückenlose Datumsangaben
 
 **Frage ans Plenum:** Warum sollte Auto Datum/Uhrzeit deaktiviert werden?
 
@@ -128,27 +222,50 @@
 
 *MonthKey ist eine Hilfsspalte mit einer Zahl für den Monat: Januar = 1, Februar = 2 usw. Man sortiert dann die lesbare "2024 Jan"-Spalte nach der numerischen MonthKey-Spalte. Power BI zeigt "Jan" an, sortiert aber nach der Zahl.*
 
-**Spalteneigenschaften kurz durchgehen:**
+### Demo: Spalteneigenschaften aufrufen
+
+**Demo:**
+- In der Modellansicht: auf eine Spalte in einer Tabelle klicken, z.B. Einzelpreis in orders
+- Rechts im Bereich "Eigenschaften" erscheinen die Spalteneinstellungen
+- Alternativ: In der Datensicht dieselbe Spalte anklicken - Spaltentools erscheinen oben in der Menüleiste
+
+**Eigenschaften kurz erklären:**
 
 - Datentyp: bestimmt wie Werte gespeichert werden
+  *Beispiel: Dezimalzahl, Ganzzahl, Text, Datum, Wahr/Falsch. Der Datentyp sollte in Power Query bereits korrekt gesetzt worden sein. Hier kann er nachträglich angepasst werden - aber Power Query ist der bessere Ort dafür.*
 - Format: bestimmt wie Werte in Visuals dargestellt werden
   *Beispiel: Eine Zahl wie 1234567 kann als "1.234.567 EUR" formatiert werden. Der Datentyp bleibt Dezimalzahl, die Darstellung ändert sich durch das Format.*
 - Nach Spalte sortieren: andere Spalte als Sortiergrundlage festlegen
+  *Wichtig für Monatsnamen, Wochentage, jede Spalte wo alphabetische Sortierung falsch wäre.*
 - Datenkategorie: semantische Beschreibung für räumliche Werte, Web-URLs, Bild-URLs
   *Datenkategorie teilt Power BI mit, was die Werte in dieser Spalte bedeuten. Wenn eine Spalte Städtenamen enthält und die Datenkategorie "Stadt" gesetzt ist, kann Power BI die Daten automatisch auf einer Landkarte darstellen.*
 - Zusammenfassen nach: Standardaggregation für numerische Spalten
-  *Wenn man eine numerische Spalte aus dem Datenbereich in ein Visual zieht, aggregiert Power BI sie automatisch. Standardmäßig ist das "Summe". Wenn man z.B. eine Jahresspalte hat, soll die nicht summiert werden - man stellt dann "Keine" ein.*
+  *Wenn man eine numerische Spalte aus dem Datenbereich in ein Visual zieht, aggregiert Power BI sie automatisch. Standardmäßig ist das "Summe". PLZ oder OrderID sollen nicht summiert werden - Zusammenfassen nach = Keine.*
 
-**Anzeigeordner ansprechen:**
-- Spalten und Measures in Ordner gruppieren
-  *Anzeigeordner ist ein logischer Ordner im Datenbereich (rechte Seite in der Berichtsansicht). Er sortiert nichts in der Datenbank, sondern nur die Darstellung für den Berichtsautor.*
-- Datenbereich übersichtlicher bei vielen Feldern
-- Sinnvoll ab 10+ Feldern in einer Tabelle
+### Demo: Zusammenfassen nach korrigieren
 
-**Wichtige Empfehlung:**
+**Konkretes Beispiel mit unseren Daten:**
+- Spalte PLZ in customers anklicken
+- Rechts: Zusammenfassen nach steht vermutlich auf "Summe"
+- Das ergibt keinen Sinn - PLZ ist keine messbare Größe
+- Zusammenfassen nach auf "Keine" setzen
+
+*Das ist eine der häufigsten Fehlerquellen in Power BI-Berichten: Numerische Spalten die eigentlich Kennungen sind (PLZ, OrderID, Artikelnummer) werden automatisch summiert. Das Ergebnis sieht wie eine echte Zahl aus, ist aber Unsinn.*
+
+### Demo: Anzeigeordner erstellen
+
+**Demo:**
+- Spalte Einzelpreis in orders anklicken
+- Rechts unter "Anzeigeordner" einen Namen eingeben, z.B. "Kennzahlen"
+- Dasselbe für Menge und Rabatt
+- Im Datenbereich (rechte Seite in der Berichtsansicht) sind die drei Spalten jetzt im Ordner "Kennzahlen" gruppiert
+
+  *Anzeigeordner ist ein logischer Ordner im Datenbereich - er sortiert nichts in der Datenbank, nur die Darstellung für den Berichtsautor. Sinnvoll ab 8-10 Feldern in einer Tabelle.*
+
+**Wichtige Empfehlung betonen:**
 - Numerische Spalten die nicht aggregiert werden sollen: Zusammenfassen nach = Keine
-- Oder: Spalte ausblenden und Measure erstellen
-  *Das ist oft die bessere Lösung: Die rohe numerische Spalte ausblenden, sodass Berichtsautoren sie nicht versehentlich falsch nutzen, und stattdessen ein explizites Measure erstellen, das die gewünschte Berechnung klar definiert.*
+- Oder Spalte ausblenden und stattdessen ein explizites Measure erstellen
+  *Das ist oft die sauberere Lösung: Die rohe numerische Spalte ausblenden, damit Berichtsautoren sie nicht versehentlich falsch nutzen. Stattdessen ein Measure erstellen, das die gewünschte Berechnung klar definiert. Das kommt in Skript 09 und 11.*
 
 ---
 
@@ -156,21 +273,31 @@
 
 **Überleitung:** Datumshierarchien kennen die meisten aus Excel. In Power BI lassen sie sich für beliebige Spalten erstellen.
 
-**Hierarchien erklären:**
-- Definieren natürliche Navigationspfade zwischen Spalten einer Tabelle
-  *Navigationspfad bedeutet: Eine Abfolge vom Groben zum Feinen. Jahr ist grob, Quartal ist feiner, Monat noch feiner, Tag am feinsten. Eine Hierarchie definiert diesen Weg.*
-- Beispiel Datum: Year - Quarter - Month
-- Berichtsautoren können im Visual auf- und abwärts navigieren (Drill-up/down)
-  *Drill-down bedeutet: Vom groben Level in ein feineres Level wechseln. Ich sehe Jahreszahlen, klicke auf 2024, und sehe dann die Quartale von 2024. Drill-up ist die Rückrichtung.*
+**Frage ans Plenum:** Welche Navigationspfade würden in unseren Daten Sinn machen?
+
+> **Erwartete Antworten:** Datum: Jahr - Quartal - Monat. Geographie: Region - Stadt. Produkt: Kategorie - Produktname.
+> Genau. Eine Hierarchie definiert diesen Weg vom Groben zum Feinen und macht ihn in Visuals klickbar.
+
+*Drill-down bedeutet: Vom groben Level in ein feineres Level wechseln. Ich sehe Jahreszahlen, klicke auf 2024, und sehe dann die Monate von 2024. Drill-up ist die Rückrichtung.*
+
+### Demo: Hierarchie in customers anlegen
+
+**Demo:**
+- Modellansicht - Tabelle customers
+- Rechtsklick auf die Spalte Region - "Hierarchie erstellen"
+- Eine neue Hierarchie "Region Hierarchie" erscheint unter der Tabelle
+- Spalte Stadt per Drag & Drop auf die neue Hierarchie ziehen - als zweite Ebene hinzugefügt
+- Reihenfolge prüfen: Region oben (grob), Stadt unten (fein)
+- Hierarchiename anpassen: Doppelklick - z.B. "Geographie"
+
+**Ergebnis zeigen:**
+- Im Datenbereich (Berichtsansicht) erscheint customers.Geographie als aufklappbare Hierarchie
+- Berichtsautor zieht die Hierarchie ins Visual - Drill-up/down ist automatisch aktiviert
 
 **Einschränkung betonen:**
 - Hierarchieebenen müssen aus Spalten derselben Tabelle stammen
-- Keine tabellenübergreifenden Hierarchien
-
-**Demo: Hierarchie anlegen**
-- Rechtsklick auf Spalte im Datenbereich - Hierarchie erstellen
-- Weitere Spalten per Drag & Drop als Ebenen hinzufügen
-- Reihenfolge der Ebenen anpassen
+- Keine tabellenübergreifenden Hierarchien möglich
+  *Wer z.B. eine Hierarchie "Kategorie - Produktname - Kunde" über mehrere Tabellen will, muss die Spalten vorher in Power Query in einer gemeinsamen Tabelle zusammenführen.*
 
 **Frage ans Plenum:** Braucht ein Berichtsautor eine Hierarchie um Drill-down zu nutzen?
 
@@ -184,35 +311,53 @@
 **Frage ans Plenum:** Was ist der Unterschied zwischen einer berechneten Spalte und einem Measure?
 
 > **Erwartete Antwort:** Berechnete Spalte: wird für jede Zeile berechnet und im Modell gespeichert. Measure: wird zur Abfragezeit berechnet, kein Speicherverbrauch.
-> Measures sind flexibler und performanter. Für fast alle Berechnungen die Erste Wahl.
+> Measures sind flexibler und performanter. Für fast alle Berechnungen die erste Wahl.
 
 *Abfragezeit bedeutet: der Moment, in dem ein Visual gerendert wird. Das Measure wird nicht vorab berechnet, sondern immer neu - und dabei automatisch im aktuellen Filterkontext. Das macht Measures so flexibel: Derselbe "Umsatz"-Measure zeigt den richtigen Wert, egal ob er in einem Jahreschart, einem Regionenfilter oder einer Kundentabelle steht.*
 
-**Measures kurz erklären:**
-- Benannte DAX-Formel, einer Modelltabelle zugeordnet
-- Taschenrechnersymbol im Datenbereich
-  *Das Taschenrechnersymbol unterscheidet Measures von normalen Spalten (die ein anderes Symbol haben). So erkennt man im Datenbereich auf einen Blick, was eine Berechnung und was eine Rohdatenspalte ist.*
-- Name muss im gesamten Modell eindeutig sein
-- Startseite: Measure kann einer beliebigen Tabelle zugeordnet werden
+### Demo: Einfaches Measure erstellen
 
-**Quickmeasures ansprechen:**
-- Ohne DAX-Kenntnisse Berechnungsvorlage auswählen
-- Felder zuweisen, Power BI generiert DAX-Code
-- Gut zum Einstieg und zum Verstehen von DAX-Mustern
-  *Quickmeasures sind fertige Vorlagen für häufige Berechnungen: prozentualer Anteil, laufende Summe, Vergleich zu Vorperiode. Man wählt die Vorlage, befüllt die Felder - Power BI schreibt den DAX-Code. Wer DAX lernen will, liest diesen generierten Code und versteht das Muster.*
+**Demo:**
+- Modellansicht oder Datensicht - Tabelle orders anklicken
+- Startseite - Neues Measure (oder Rechtsklick auf Tabelle - Neues Measure)
+- In der Bearbeitungsleiste erscheint: `Measure =`
+- Formel eingeben: `Umsatz = SUM(orders[Einzelpreis] * orders[Menge])`
+- Enter - das Measure erscheint in der Tabelle orders mit Taschenrechnersymbol
 
-**Numerischer Bereichsparameter:**
-- Erzeugt automatisch unverbundene Tabelle und Measure
-- Berichtsnutzer stellt Wert über Datenschnitt ein
-  *Unverbundene Tabelle bedeutet: Diese Tabelle hat keine Beziehung zu anderen Tabellen im Modell. Sie enthält nur die Werte für den Parameter-Datenschnitt. Das Measure liest den ausgewählten Wert aus dieser Tabelle.*
-- Klassischer Einsatz: Was-wäre-wenn-Szenarien, Wechselkurs, Rabattsatz
-  *Was-wäre-wenn-Szenarien: Wie entwickelt sich der Umsatz wenn der Wechselkurs 1,10 statt 1,05 ist? Der Benutzer schiebt den Datenschnitt, das Measure rechnet sofort neu. Kein Neuaufruf der Datenbank, alles im Modell.*
+  *Das Taschenrechnersymbol unterscheidet Measures von normalen Spalten. So erkennt man im Datenbereich auf einen Blick, was eine Berechnung und was eine Rohdatenspalte ist. Der Name muss im gesamten Modell eindeutig sein - zwei Measures mit demselben Namen sind nicht möglich.*
 
-**Feldparameter:**
-- Gruppe verschiedener Modellfelder
+**Hinweis:** Ein Measure kann jeder Tabelle zugeordnet werden - nicht nur orders. Manche Modellbauer legen eine leere Tabelle "Measures" an und sammeln dort alle Measures zentral. Das ist Geschmackssache, aber ordentlich.
+
+### Demo: Quickmeasure als Einstieg zeigen
+
+**Demo:**
+- Rechtsklick auf Tabelle orders - Schnellmeasure
+- Berechnungsfenster öffnet sich: verschiedene Vorlagen wählbar
+- Vorlage "Prozentualer Anteil am Gesamtergebnis" wählen
+- Feld zuweisen - OK
+- Power BI generiert den DAX-Code - im Measure anzeigen und lesen
+
+  *Quickmeasures sind fertige Vorlagen für häufige Berechnungen: prozentualer Anteil, laufende Summe, Vergleich zu Vorperiode. Wer DAX lernen will, liest den generierten Code und versteht das Muster. Das ist ein guter Einstieg.*
+
+### Numerischer Bereichsparameter - Konzept erklären
+
+**Szenario erklären:**
+- Aufgabe: Berichtsnutzer soll einen Rabattsatz zwischen 0% und 20% einstellen können
+- Ein Datenschnitt soll diesen Wert steuern
+- Das Ergebnis: Umsatz nach Rabatt ändert sich in Echtzeit
+
+**Demo:**
+- Modellierung - Neuer Parameter - Numerischer Bereich
+- Name: "Rabattsatz", Minimum: 0, Maximum: 0.2, Inkrement: 0.01
+- OK - Power BI erstellt automatisch eine neue Tabelle und ein Measure
+- Im Bericht erscheint automatisch ein Datenschnitt für den Parameter
+
+  *Unverbundene Tabelle bedeutet: Diese Tabelle hat keine Beziehung zu anderen Tabellen im Modell. Sie enthält nur die Werte für den Datenschnitt. Das Measure liest den ausgewählten Wert aus dieser Tabelle. Das Measure in einem Bericht-Visual nutzen: Umsatz * (1 - [Rabattsatz]).*
+
+**Feldparameter kurz ansprechen:**
+- Gruppe verschiedener Modellfelder - Berichtsnutzer wählt dynamisch welches Feld ein Visual verwendet
   *Feldparameter ist eine Sammlung von Feldern (Spalten oder Measures), aus denen der Berichtsnutzer eines auswählen kann. Das ausgewählte Feld wird dann dynamisch in einem Visual verwendet.*
-- Berichtsnutzer wählt dynamisch welches Feld ein Visual verwendet
-- Beispiel: Produktgruppierung nach Kategorie, Unterkategorie, Produkt oder Farbe
+- Beispiel: Berichtsnutzer wählt ob er Umsatz nach Kategorie, Region oder Kanal sehen will - ein Visual, drei mögliche Ansichten
 
 **Frage ans Plenum:** Wann würdet ihr einen Feldparameter einsetzen statt einfach mehrere Visuals nebeneinander?
 

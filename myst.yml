@@ -3,7 +3,7 @@ project:
   title: PL-300 Power BI Data Analyst
   abstract: Kursmaterialien für die PL-300 Zertifizierung – Power BI Data Analyst.
   authors:
-    - name: Enders Training
+    - name: Marcel Döbbel & Tankred Grosch
   toc:
     - file: index.md
     - title: Modul 1 – Power BI Grundlagen & Fabric
@@ -29,7 +29,9 @@ project:
     - title: Modul 3 – Semantisches Modell & DAX
       children:
         - file: Skripte/Modul3/08_semantisches_modell_konfigurieren.md
+        - file: Skripte/Modul3/aufgaben_08_semantisches_modell.md
         - file: Skripte/Modul3/09_dax_grundlagen_berechnungstypen.md
+        - file: Skripte/Modul3/aufgaben_09_dax_grundlagen.md
         - file: Skripte/Modul3/10_dax_datentypen_funktionen_operatoren.md
         - file: Skripte/Modul3/11_dax_berechnungen_erstellen.md
         - file: Skripte/Modul3/12_dax_filterkontext_calculate.md
