@@ -37,6 +37,7 @@ project:
         - file: Skripte/Modul3/11_dax_berechnungen_erstellen.md
         - file: Skripte/Modul3/aufgaben_11_dax_berechnungen_erstellen.md
         - file: Skripte/Modul3/12_dax_filterkontext_calculate.md
+        - file: Skripte/Modul3/aufgaben_12_dax_filterkontext_calculate.md
         - file: Skripte/Modul3/13_dax_zeitintelligenz.md
         - file: Skripte/Modul3/14_visuelle_berechnungen.md
         - file: Skripte/Modul3/15_modelloptimierung.md
