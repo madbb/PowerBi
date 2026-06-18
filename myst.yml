@@ -34,7 +34,6 @@ project:
         - file: Skripte/Modul3/aufgaben_09_dax_grundlagen.md
         - file: Skripte/Modul3/10_dax_datentypen_funktionen_operatoren.md
         - file: Skripte/Modul3/aufgaben_10_dax_datentypen_funktionen.md
-        - file: Skripte/Modul3/11_dax_berechnungen_erstellen.md
         - file: Skripte/Modul3/aufgaben_11_dax_berechnungen_erstellen.md
         - file: Skripte/Modul3/12_dax_filterkontext_calculate.md
         - file: Skripte/Modul3/aufgaben_12_dax_filterkontext_calculate.md
