@@ -39,6 +39,8 @@ project:
         - file: Skripte/Modul3/12_dax_filterkontext_calculate.md
         - file: Skripte/Modul3/aufgaben_12_dax_filterkontext_calculate.md
         - file: Skripte/Modul3/13_dax_zeitintelligenz.md
+        - file: Skripte/Modul3/aufgaben_12_13_hospital_szenario
+        - file: Skripte/Modul3/aufgaben_12_13_hospital_szenario_2
         - file: Skripte/Modul3/14_visuelle_berechnungen.md
         - file: Skripte/Modul3/15_modelloptimierung.md
     - title: Modul 4 – Analysen
