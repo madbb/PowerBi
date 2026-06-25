@@ -34,6 +34,7 @@ project:
         - file: Skripte/Modul3/aufgaben_09_dax_grundlagen.md
         - file: Skripte/Modul3/10_dax_datentypen_funktionen_operatoren.md
         - file: Skripte/Modul3/aufgaben_10_dax_datentypen_funktionen.md
+        - file: Skripte/Modul3/11_dax_berechnungen_erstellen.md
         - file: Skripte/Modul3/aufgaben_11_dax_berechnungen_erstellen.md
         - file: Skripte/Modul3/12_dax_filterkontext_calculate.md
         - file: Skripte/Modul3/aufgaben_12_dax_filterkontext_calculate.md
@@ -61,7 +62,15 @@ project:
         - file: Skripte/Modul4/aufgaben_18_19_produktmanager.md
         - file: Skripte/Modul4/aufgaben_19_krankenhaus.md
         - file: Skripte/Modul4/23_berichtsleistung_mobile.md
+        - file: Skripte/Modul4/aufgaben_23_berichtsleistung_mobile.md
         - file: Skripte/Modul4/24_analysen_power_bi.md
+        - file: Skripte/Modul4/aufgaben_24_analysen_power_bi.md
+    - title: Modul 5 – Power BI Service, Verwaltung & Sicherheit
+      children:
+        - file: Skripte/Modul5/25_power_bi_service_arbeitsbereiche.md
+        - file: Skripte/Modul5/26_semantische_modelle_verwalten.md
+        - file: Skripte/Modul5/27_inhalte_verteilen_apps.md
+        - file: Skripte/Modul5/28_datensicherheit_rls.md
     - file: downloads.md
   exports:
     - format: pdf
