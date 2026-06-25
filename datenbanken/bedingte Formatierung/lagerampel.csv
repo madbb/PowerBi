@@ -1,0 +1,13 @@
+﻿Artikel_ID;Bezeichnung;Kategorie;Lagerbestand;Mindestbestand;Maximalbestand;Bestandsquote_Pct;Letzter_Eingang_Tage;Bestandsstatus;Status_Farbe
+ART-001;Laptop Basic 15 Zoll;Laptops;12;5;50;24,0;45;Niedrig;orange
+ART-002;Laptop Pro 15 Zoll;Laptops;3;5;40;7,5;90;Kritisch;red
+ART-003;Desktop Mini;Desktop-PCs;28;8;60;46,7;21;Optimal;green
+ART-004;Desktop Tower;Desktop-PCs;67;10;70;95,7;12;Überschuss;blue
+ART-005;Monitor 24 Zoll;Monitore;35;10;80;43,8;30;Optimal;green
+ART-006;Monitor 27 Zoll;Monitore;8;10;80;10,0;78;Kritisch;red
+ART-007;Tastatur kabellos;Zubehör;92;20;100;92,0;7;Überschuss;blue
+ART-008;Maus optisch;Zubehör;45;20;100;45,0;15;Optimal;green
+ART-009;USB-C Hub;Zubehör;18;15;80;22,5;55;Niedrig;orange
+ART-010;Netzwerk-Switch;Netzwerk;2;5;30;6,7;105;Kritisch;red
+ART-011;WLAN-Router;Netzwerk;22;8;40;55,0;20;Optimal;green
+ART-012;SSD 500 GB;Speicher;78;15;80;97,5;5;Überschuss;blue

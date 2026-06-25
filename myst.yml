@@ -38,22 +38,30 @@ project:
         - file: Skripte/Modul3/12_dax_filterkontext_calculate.md
         - file: Skripte/Modul3/aufgaben_12_dax_filterkontext_calculate.md
         - file: Skripte/Modul3/13_dax_zeitintelligenz.md
-        - file: Skripte/Modul3/aufgaben_12_13_hospital_szenario
-        - file: Skripte/Modul3/aufgaben_12_13_hospital_szenario_2
+        - file: Skripte/Modul3/aufgaben_12_13_hospital_szenario.md
+        - file: Skripte/Modul3/aufgaben_12_13_hospital_szenario_2.md
         - file: Skripte/Modul3/14_visuelle_berechnungen.md
-        - file: Skripte/Modul3/aufgaben_14_visuelle_berechnungen
+        - file: Skripte/Modul3/aufgaben_14_visuelle_berechnungen.md
         - file: Skripte/Modul3/15_modelloptimierung.md
-    - title: Modul 4 – Analysen
+    - title: Modul 4 – Berichte, Visuals & Analysen
       children:
         - file: Skripte/Modul4/16_berichtsanforderungen.md
         - file: Skripte/Modul4/17_berichte_layouten_gestalten.md
         - file: Skripte/Modul4/18_berichtsobjekte_visual_auswahl.md
+        - title: Visual-Referenz
+          children:
+            - file: Skripte/Modul4/visuals_referenz.md
+            - file: Skripte/Modul4/visuals_referenz_2.md
+            - file: Skripte/Modul4/visuals_referenz_3.md
+            - file: Skripte/Modul4/visuals_referenz_4.md
+            - file: Skripte/Modul4/visuals_referenz_5.md
+            - file: Skripte/Modul4/visuals_referenz_6.md
         - file: Skripte/Modul4/19_filtern_interaktivitaet_ux.md
-        - file: Skripte/Modul4/aufgaben_18_19_regionalmanager
-        - file: Skripte/Modul4/aufgaben_18_19_produktmanager
-        - file: Skripte/Modul4/aufgaben_19_krankenhaus
-        - file: Skripte/Modul4/20_berichtsleistung_mobile.md
-        - file: Skripte/Modul4/21_analysen_power_bi.md
+        - file: Skripte/Modul4/aufgaben_18_19_regionalmanager.md
+        - file: Skripte/Modul4/aufgaben_18_19_produktmanager.md
+        - file: Skripte/Modul4/aufgaben_19_krankenhaus.md
+        - file: Skripte/Modul4/23_berichtsleistung_mobile.md
+        - file: Skripte/Modul4/24_analysen_power_bi.md
     - file: downloads.md
   exports:
     - format: pdf

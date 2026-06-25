@@ -1,0 +1,9 @@
+﻿Region;Verkaufsleiter;Umsatz_2024;Umsatz_2023;Wachstum_EUR;Wachstum_Pct;Zielwert_2024;Zielerreichung_Pct;Kundenzufriedenheit;Ranking;Ampel_Hex;Region_URL
+Nord;Schmidt;520000;479000;41000;8,56;500000;104,0;4,2;3;#27AE60;https://techtrade.intern/regionen/nord
+Süd;Müller;860000;765000;95000;12,42;800000;107,5;4,6;1;#27AE60;https://techtrade.intern/regionen/sued
+West;Weber;624000;605000;19000;3,14;650000;96,0;3,8;5;#F39C12;https://techtrade.intern/regionen/west
+Ost;Fischer;352000;372000;-20000;-5,38;450000;78,2;3,1;8;#C0392B;https://techtrade.intern/regionen/ost
+Mitte;Bauer;745000;679000;66000;9,72;700000;106,4;4,4;2;#27AE60;https://techtrade.intern/regionen/mitte
+Südwest;Hoffmann;418000;445000;-27000;-6,07;500000;83,6;3,5;7;#C0392B;https://techtrade.intern/regionen/suedwest
+Nordost;Richter;296000;248000;48000;19,35;300000;98,7;4,0;4;#F39C12;https://techtrade.intern/regionen/nordost
+Bayern;Wagner;715000;728000;-13000;-1,79;800000;89,4;3,7;6;#F39C12;https://techtrade.intern/regionen/bayern
